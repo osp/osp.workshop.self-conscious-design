@@ -1,0 +1,333 @@
+<html>
+    <head>
+	<meta charset="utf-8">
+        <script type="text/javascript" src="jquery.min.js"></script>
+        <script>
+            var ratios = {}
+
+            function proportionate () {
+                for (selector in ratios) {
+                    for (property in ratios[selector]) {
+                        var obj = $(selector)
+                        var value = eval (ratios[selector][property])
+                        setProperty (selector, property, value);
+                    }
+                }
+            }
+
+            function setProperty (selector, key, value) {
+                dictionary = {
+                    'rotate': {
+                        'transform': 'rotate(%ideg)',
+                        '-ms-transform': 'rotate(%ideg)',
+                        '-moz-transform': 'rotate(%ideg)',
+                        '-webkit-transform': 'rotate(%ideg)',
+                        '-o-transform': 'rotate(%ideg)',
+                    }
+                }
+
+                if (dictionary[key] != undefined) {
+                    for (translate_key in dictionary[key]) {
+                        $(selector).css (translate_key, dictionary[key][translate_key].replace ('%s', value).replace ('%i', parseInt (value)))
+                    }
+                } else {
+                    $(selector).css (key, value)
+                }
+            }
+
+            function parseToObject (input) {
+                input = input.replace (/\n/gm, '')
+                block_patt = /([\.#]?[a-zA-Z0-9]+)\s*\{([^}]+)\}/g
+                ratios = {}
+                // Walk through all the CSS blocks
+                while (block = block_patt.exec(input)) {
+                    // Extract selector and imploded rules.
+                    selector = '#__CANVAS ' + block[1]
+                    rules = block[2]
+                    frm_rules = {} // Formatted rules
+                    rule_patt = /\s*([^:]*)\s*:\s*([^;]+);/g
+                    while (rule = rule_patt.exec(rules)) {
+                        // Find the property and its value
+                        property = rule[1]
+                        value = rule[2]
+                        frm_value = value // Formatted value
+                        value_patt = /([\.#]?[a-zA-Z0-9_-]+)\.([a-zA-Z_-]+)/g
+                        // Turn .obj.width to $('.obj').width()
+                        while (chunks = value_patt.exec (value)) {
+                            obj = chunks[1]
+                            attr = chunks[2]
+                            
+                            if (obj == 'self') {
+                                // Self is the shortcut to the object
+                                obj = 'obj'
+                            } else if (obj == 'window' || obj == 'screen' && obj == 'document') {
+                                // We don't want objects between quotes, then jQuery will parse them as string selector
+                                obj = '$(' + obj + ')'
+                            } else {
+                                obj = '$(\'#__CANVAS ' + obj + '\')'
+                            }
+
+                            if (attr == 'width' || attr == 'height' || attr == 'innerWidth' || attr == 'innerHeight') {
+                                attr += '()'
+                            } else {
+                                attr = 'css(\'' + attr + '\')' 
+                            }
+
+                            frm_value = frm_value.replace (chunks[0], obj + '.' + attr)
+                        }
+
+                        frm_rules[property] = frm_value;
+                    }
+
+                    ratios[selector] = frm_rules
+                }
+            }
+
+
+            function buildObjectList (selector, inputHook) {
+                var children = $(selector + ' > *').not ('.__HIDE')
+                
+                var list = jQuery ('<ul></ul>')
+                list.data ('inputHook', inputHook)
+                list.data ('selector', selector)
+                inputHook.append(list)
+                for (var i=0;i<children.length;i++) {
+                    var child = children[i]
+
+                    item = jQuery('<li class="__TAG">' + child.tagName.toLowerCase() + '</li>')
+
+                    if ($(child).attr('id') != '')
+                        item.append ('#' + $(child).attr('id'))
+
+                    if ($(child).attr('class') != '')
+                        item.append ('.' + $(child).attr('class').replace (/\s/g, '.'))
+
+                    item.data ('obj', child)
+
+                    var delLink = jQuery('<span class="__TAG_DELETE">X</span>');
+
+                    delLink.click (function () {
+                        if (confirm ("Are you sure?")) {
+                            $($(this).parent().data('obj')).remove()
+                            rebuildObjectList ()
+                        }
+                    })
+
+                    item.append (delLink)
+                    item.hover (
+                        function (e) {
+                            $($(this).data('obj')).addClass ('__HILITE')
+                        },
+                        
+                        function (e) {
+                            $($(this).data('obj')).removeClass ('__HILITE')
+                        })
+                    
+                    tagSelector = child.tagName.toLowerCase()
+                    if ($(child).attr('id') != '')
+                        tagSelector += '#' + $(child).attr('id')
+                    if ($(child).attr('class') != '')
+                        tagSelector += '.' + $(child).attr('class').replace (/\s/g, '.')
+                    list.append (item)
+                    buildObjectList (tagSelector, item)
+                }
+
+                item = jQuery ('<li class="__TAG"><input type="text" /></li>');
+                addLink = jQuery ('<span class="__TAG_ADD">+</span>');
+                addLink.click (function () {
+                        value = $(this).prev ('input').val()
+
+                        if (value.indexOf ('#') > 0) {
+                            parts = value.split ('#')
+                            tag = parts.shift()
+                            parts = parts.shift().split('.')
+                            id = parts.shift()
+                        } else {
+                            id = ''
+                            parts = value.split ('.')
+                            tag = parts.shift()
+                        }
+
+                        cls = parts.join (' ')
+                        obj = jQuery ('<' + tag + '></' + tag + '>').attr('id', id).attr('class', cls)
+                        $($(this).parent().parent().data('selector')).append (obj)
+                        $(this).prev ('input').val('')
+
+                        rebuildObjectList ()
+                    })
+
+                item.append (addLink)
+                list.append (item)
+            }
+
+            function rebuildObjectList () {
+                $('#__OBJECT_LIST').empty()
+                $('.__HILITE').removeClass ('.__HILITE')
+                buildObjectList("#__CANVAS", $('#__OBJECT_LIST'));
+            }
+
+            $(document).ready (function () {
+
+                $(window).resize(function() {
+                    proportionate();
+                });
+
+                parseToObject ($('#__RULES_TEXTAREA').val());
+                proportionate();
+
+                $('#__RULES_SUBMIT').click(function () {
+                    parseToObject ($('#__RULES_TEXTAREA').val());
+                    proportionate();
+                });
+
+                $('#__RULES_LABEL').click(function () {
+                    $('#__RULES').toggleClass ('__EXPANDED')
+                });
+
+                $('#__OBJECTS_LABEL').click(function () {
+                    $('#__OBJECTS').toggleClass ('__EXPANDED')
+                });
+        
+                rebuildObjectList ()        
+            })
+        </script>
+        <style>
+            body, html {
+                margin: 0;
+                padding: 0;
+                height: 100%;
+            }
+
+            #__CANVAS {
+                widht: 100%;
+                height: 100%;
+            }
+
+            #__CONTROLS {
+                position: fixed;
+                right: 0px;
+                top: 0px;
+                height: 100%;
+            }
+
+            #__CONTROLS > div {
+                float: left;
+                height: 100%;
+                width: 30px;
+                overflow: none;
+                border-left: 1px #efefef solid;
+                background-color: rgba(255,255,255,0.5);
+            }
+
+            #__CONTROLS div div {
+                visibility: hidden;
+            }
+
+            #__CONTROLS div.__EXPANDED {
+                width: auto;
+            }
+
+            #__CONTROLS div.__EXPANDED div {
+                visibility: visible;
+            }
+
+            .__CONTROL_LABEL, .__TAG, .__TAG input {
+                font-family: sans-serif;
+                font-size: 14px;
+                font-weight: bold;
+            }
+
+            .__TAG input {
+                border: none;
+                border-bottom: 1px #000 solid;
+                color: #000;
+                width: 90%;
+            }
+
+            .__TAG_DELETE, .__TAG_ADD {
+                cursor: pointer;
+                float: right;
+            }
+
+            .__TAG_DELETE:hover {
+                color: #800;
+            }
+
+            .__TAG_ADD:hover {
+                color: #0f1;
+            }
+
+            .__CONTROL_LABEL {
+                display: inline-block;
+                font-family: sans-serif;
+                font-size: 20px;
+                font-weight: bold;
+                text-transform: uppercase;                
+                height: 200px;
+                margin: 5px 0px -195px 7px;
+                cursor: pointer;
+            }
+
+            #__OBJECT_LIST {
+                width: 400px;
+            }
+
+            #__OBJECT_LIST ul {
+                width: 80%;
+                margin: 0px 10px 10px 0px;
+                list-style-type: none;
+            }
+
+            #__OBJECT_LIST ul li {
+                width: 100%;
+                padding: 5px 0 0 0;
+            }
+
+            #__RULES_TEXTAREA, #__RULES_SUBMIT {
+                margin: 0px 10px 10px 30px;
+                background-color: rgba(255,255,255,0.5);
+            }
+
+            #__RULES_TEXTAREA {            
+                width: 400px;
+                height: 80%;
+            }
+
+            .__HILITE {
+                -moz-box-shadow: 0px 0px 15px #444;
+                -webkit-box-shadow: 0px 0px 15px #444;
+                box-shadow: 0px 0px 5px #444;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="__CANVAS">
+            <div class="letter">A</div>
+            <div class="letter">B</div>
+            <div class="letter">C</div>
+            <div class="letter">D</div>
+        </div>
+        <div id="__CONTROLS" class="__HIDE">
+            <div id="__OBJECTS">
+                <span id="__OBJECTS_LABEL" class="__CONTROL_LABEL">&there4;</span>
+                <div>
+                    <div id="__OBJECT_LIST"></div>
+                </div>
+            </div>
+            <div id="__RULES">
+                <span id="__RULES_LABEL" class="__CONTROL_LABEL">=</span>
+                <div>
+                    <textarea id="__RULES_TEXTAREA">
+
+div.letter {
+width: 20;
+height: 20;
+rotate: 15;
+margin-top: 20;
+margin-left: 20;
+}</textarea><br /><input id="__RULES_SUBMIT" type="submit" value="update" />
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
