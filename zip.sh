@@ -9,7 +9,7 @@ else
         cd public/epub_content/$1
         rm -f $1.epub
         zip -X -Z store $1.epub mimetype
-        zip -r $1.epub META-INF/ EPUB/
+        zip -r $1.epub META-INF/ EPUB/ -x "*.*~" "*.*.kate-swp"
     else
         echo "Folder doesn’t exist"
         exit 64
