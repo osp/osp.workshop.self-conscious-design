@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"
+xmlns:epub="http://www.idpf.org/2007/ops">
+    <head>
+        <meta charset="utf-8">
+        </meta>
+        <title>self-conscious.epub</title>
+        <link rel="stylesheet" type="text/css" href="style.css" />
+    </head>
+    <body>
+        <section id="intro">Hello, my dear friends. My name is {{ navigator.epubReadingSystem.name }}.</section>
+        <script type="text/javascript">
+        <![CDATA[
+            var adaptTextToReader = function() {
+                var intro = document.getElementById("intro");
+                intro.innerHTML = intro.innerHTML.replace("{{ navigator.epubReadingSystem.name }}", navigator.epubReadingSystem.name);
+            };
+
+            // if the Reading System knows about itself:
+            if (navigator && navigator.hasOwnProperty('epubReadingSystem')) {
+                // launch scripts:
+                adaptTextToReader();
+            }
+        ]]>
+        </script>
+    </body>
+</html>
