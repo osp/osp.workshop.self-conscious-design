@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="bookid" version="2.0">
+	<metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+		<meta name="generator" content="Adobe InDesign" />
+		<meta name="cover" content="cover-image" />
+		<dc:title>Unlike Us Reader</dc:title>
+		<dc:language>en-GB</dc:language>
+		<dc:identifier opf:scheme="ISBN">978-90-818575-5-0</dc:identifier>
+		<dc:identifier id="bookid">urn:uuid:4320C523-847F-4191-A725-96D0AC3158A6</dc:identifier>
+		<dc:creator opf:role="edt" opf:file-as="Lovink, Geert">Geert Lovink</dc:creator>
+		<dc:creator opf:role="edt" opf:file-as="Rasch, Miriam">Miriam Rasch</dc:creator>
+		<dc:creator opf:role="aut" opf:file-as="Barocas, Solon">Solon Barocas</dc:creator>
+		<dc:creator opf:role="aut" opf:file-as="Bassett, Caroline">Caroline Bassett</dc:creator>
+		<dc:creator opf:role="aut" opf:file-as="Bazzichelli, Tatiana">Tatiana Bazzichelli</dc:creator>
+		<dc:creator opf:role="aut" opf:file-as="Beer, David">David Beer</dc:creator>
+		<dc:creator opf:role="aut" opf:file-as="Berry, David M.">David M. Berry</dc:creator>
+		<dc:creator opf:role="aut" opf:file-as="Bunz, Mercedes">Mercedes Bunz</dc:creator>
+		<dc:creator opf:role="aut" opf:file-as="Cabello, Flrencio">Florencio Cabello</dc:creator>
+		<dc:creator opf:role="aut" opf:file-as="Cirio, Paolo">Paolo Cirio</dc:creator>
+		<dc:creator opf:role="aut" opf:file-as="Donovan, Joan">Joan Donovan</dc:creator>
+		<dc:creator opf:role="aut" opf:file-as="Doulas, Louis">Louis Doulas</dc:creator>
+		<dc:creator opf:role="aut" opf:file-as="Evans, Leighton">Leighton Evans</dc:creator>
+		<dc:creator opf:role="aut" opf:file-as="Franco, Marta G.">Marta G. Franco</dc:creator>
+		<dc:creator opf:role="aut" opf:file-as="Gehl, Robert W.">Robert W. Gehl</dc:creator>
+		<dc:creator opf:role="aut" opf:file-as="Gürses, Seda">Seda Gürses</dc:creator>
+		<dc:creator opf:role="aut" opf:file-as="Haché, Alexandra">Alexandra Haché</dc:creator>
+		<dc:creator opf:role="aut" opf:file-as="Halpin, Harry">Harry Halpin</dc:creator>
+		<dc:creator opf:role="aut" opf:file-as="Hardey, Mariann">Mariann Hardey</dc:creator>
+		<dc:creator opf:role="aut" opf:file-as="Hatzopoulos, Pavlos">Pavlos Hatzopoulos</dc:creator>
+		<dc:creator opf:role="aut" opf:file-as="Hui, Yuk">Yuk Hui</dc:creator>
+		<dc:creator opf:role="aut" opf:file-as="Ippolita">Ippolita</dc:creator>
+		<dc:creator opf:role="aut" opf:file-as="Jurgenson, Nathan">Nathan Jurgenson</dc:creator>
+		<dc:creator opf:role="aut" opf:file-as="Kambouri, Nelli">Nelli Kambouri</dc:creator>
+		<dc:creator opf:role="aut" opf:file-as="Kennedy, Jenny">Jenny Kennedy</dc:creator>
+		<dc:creator opf:role="aut" opf:file-as="Langlois, Ganaele">Ganaele Langlois</dc:creator>
+		<dc:creator opf:role="aut" opf:file-as="Lodi, Simona">Simona Lodi</dc:creator>
+		<dc:creator opf:role="aut" opf:file-as="Lovink, Geert">Geert Lovink</dc:creator>
+		<dc:creator opf:role="aut" opf:file-as="Ludovico, Alessandro">Alessandro Ludovico</dc:creator>
+		<dc:creator opf:role="aut" opf:file-as="Mancinelli, Tiziana">Tiziana Mancinelli</dc:creator>
+		<dc:creator opf:role="aut" opf:file-as="McNicol, Andrew">Andrew McNicol</dc:creator>
+		<dc:creator opf:role="aut" opf:file-as="Miconi, Andrea">Andrea Miconi</dc:creator>
+		<dc:creator opf:role="aut" opf:file-as="Narayanan, Arvind">Arvind Narayanan</dc:creator>
+		<dc:creator opf:role="aut" opf:file-as="Wyatt, Niehaus">Wyatt Niehaus</dc:creator>
+		<dc:creator opf:role="aut" opf:file-as="Patelis, Korinna">Korinna Patelis</dc:creator>
+		<dc:creator opf:role="aut" opf:file-as="Rey, PJ">PJ Rey</dc:creator>
+		<dc:creator opf:role="aut" opf:file-as="Sevignani, Sebastian">Sebastian Sevignani</dc:creator>
+		<dc:creator opf:role="aut" opf:file-as="Stiegler, Bernard">Bernard Stiegler</dc:creator>
+		<dc:creator opf:role="aut" opf:file-as="Stumpel, Marc">Marc Stumpel</dc:creator>
+		<dc:creator opf:role="aut" opf:file-as="Terranova, Tiziana">Tiziana Terranova</dc:creator>
+		<dc:creator opf:role="aut" opf:file-as="Toubiana, Vincent">Vincent Toubiana</dc:creator>
+		<dc:creator opf:role="aut" opf:file-as="Troemel, Brad">Brad Troemel</dc:creator>
+		<dc:creator opf:role="aut" opf:file-as="van der Velden, Lonneke">Lonneke van der Velden</dc:creator>
+		<dc:creator opf:role="aut" opf:file-as="Warnke, Martin">Martin Warnke</dc:creator>
+		<dc:creator opf:role="aut" opf:file-as="Wittkower, D.E.">D.E. Wittkower</dc:creator>
+		<dc:publisher>Institute of Network Cultures</dc:publisher>
+		<dc:subject>social, media, monopolies, alternatives, internet, web, online, digital, Facebook, twitter, Mark Zuckerberg, unlike us, critique, theory, art, practice, economy, political, philosophy, social sciences, essays, network, privacy, database, web 2.0, individuation, collective, Lorea, Foursquare, design, program, code, graph, business, intervention, resistance, occupy, protest, Diaspora, hackers, hacking, federation, Distribution, centralization, decentralization, architecture</dc:subject>
+		<dc:description>The Unlike Us Reader offers a critical examination of social media, bringing together theoretical essays, personal discussions, and artistic manifestos. How can we understand the social media we use everyday, or consciously choose not to use? We know very well that monopolies control social media, but what are the alternatives? While Facebook continues to increase its user population and combines loose privacy restrictions with control over data, many researchers, programmers, and activists turn towards designing a decentralized future. Through understanding the big networks from within, be it by philosophy or art, new perspectives emerge.</dc:description>
+		<dc:date opf:event="publication">2013-02</dc:date>	
+		<dc:rights>This publication is licensed under Creative Commons Attribution, NonCommercial, ShareAlike 3.0 Unported (CC BY-NC-SA 3.0).</dc:rights>
+	</metadata>
+	<manifest>
+		<item id="cover" href="CoverImage.xhtml" media-type="application/xhtml+xml" />
+		<item id="unlike-us-reader" href="unlike-us-reader.xhtml" media-type="application/xhtml+xml" />
+		<item id="unlike-us-reader-1" href="unlike-us-reader-1.xhtml" media-type="application/xhtml+xml" />
+		<item id="unlike-us-reader-2" href="unlike-us-reader-2.xhtml" media-type="application/xhtml+xml" />
+		<item id="unlike-us-reader-3" href="unlike-us-reader-3.xhtml" media-type="application/xhtml+xml" />
+		<item id="unlike-us-reader-4" href="unlike-us-reader-4.xhtml" media-type="application/xhtml+xml" />
+		<item id="unlike-us-reader-5" href="unlike-us-reader-5.xhtml" media-type="application/xhtml+xml" />
+		<item id="unlike-us-reader-6" href="unlike-us-reader-6.xhtml" media-type="application/xhtml+xml" />
+		<item id="unlike-us-reader-7" href="unlike-us-reader-7.xhtml" media-type="application/xhtml+xml" />
+		<item id="unlike-us-reader-8" href="unlike-us-reader-8.xhtml" media-type="application/xhtml+xml" />
+		<item id="unlike-us-reader-9" href="unlike-us-reader-9.xhtml" media-type="application/xhtml+xml" />
+		<item id="unlike-us-reader-10" href="unlike-us-reader-10.xhtml" media-type="application/xhtml+xml" />
+		<item id="unlike-us-reader-11" href="unlike-us-reader-11.xhtml" media-type="application/xhtml+xml" />
+		<item id="unlike-us-reader-12" href="unlike-us-reader-12.xhtml" media-type="application/xhtml+xml" />
+		<item id="unlike-us-reader-13" href="unlike-us-reader-13.xhtml" media-type="application/xhtml+xml" />
+		<item id="unlike-us-reader-14" href="unlike-us-reader-14.xhtml" media-type="application/xhtml+xml" />
+		<item id="unlike-us-reader-15" href="unlike-us-reader-15.xhtml" media-type="application/xhtml+xml" />
+		<item id="unlike-us-reader-16" href="unlike-us-reader-16.xhtml" media-type="application/xhtml+xml" />
+		<item id="unlike-us-reader-17" href="unlike-us-reader-17.xhtml" media-type="application/xhtml+xml" />
+		<item id="unlike-us-reader-18" href="unlike-us-reader-18.xhtml" media-type="application/xhtml+xml" />
+		<item id="unlike-us-reader-19" href="unlike-us-reader-19.xhtml" media-type="application/xhtml+xml" />
+		<item id="unlike-us-reader-20" href="unlike-us-reader-20.xhtml" media-type="application/xhtml+xml" />
+		<item id="unlike-us-reader-21" href="unlike-us-reader-21.xhtml" media-type="application/xhtml+xml" />
+		<item id="unlike-us-reader-22" href="unlike-us-reader-22.xhtml" media-type="application/xhtml+xml" />
+		<item id="unlike-us-reader-23" href="unlike-us-reader-23.xhtml" media-type="application/xhtml+xml" />
+		<item id="unlike-us-reader-24" href="unlike-us-reader-24.xhtml" media-type="application/xhtml+xml" />
+		<item id="unlike-us-reader-25" href="unlike-us-reader-25.xhtml" media-type="application/xhtml+xml" />
+		<item id="unlike-us-reader-26" href="unlike-us-reader-26.xhtml" media-type="application/xhtml+xml" />
+		<item id="unlike-us-reader-27" href="unlike-us-reader-27.xhtml" media-type="application/xhtml+xml" />
+		<item id="unlike-us-reader-28" href="unlike-us-reader-28.xhtml" media-type="application/xhtml+xml" />
+		<item id="unlike-us-reader-29" href="unlike-us-reader-29.xhtml" media-type="application/xhtml+xml" />
+		<item id="unlike-us-reader-30" href="unlike-us-reader-30.xhtml" media-type="application/xhtml+xml" />
+		<item id="unlike-us-reader-31" href="unlike-us-reader-31.xhtml" media-type="application/xhtml+xml" />
+		<item id="unlike-us-reader-32" href="unlike-us-reader-32.xhtml" media-type="application/xhtml+xml" />
+		<item id="unlike-us-reader-33" href="unlike-us-reader-33.xhtml" media-type="application/xhtml+xml" />
+		<item id="unlike-us-reader-34" href="unlike-us-reader-34.xhtml" media-type="application/xhtml+xml" />
+		<item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml" />
+		<item id="unlike-us-reader.css" href="css/unlike-us-reader.css" media-type="text/css" />
+		<item id="HelveticaNeueLTStd-Bd.otf" href="font/HelveticaNeueLTStd-Bd.otf" media-type="application/vnd.ms-opentype" />
+		<item id="HelveticaNeueLTStd-BdCn.otf" href="font/HelveticaNeueLTStd-BdCn.otf" media-type="application/vnd.ms-opentype" />
+		<item id="HelveticaNeueLTStd-It.otf" href="font/HelveticaNeueLTStd-It.otf" media-type="application/vnd.ms-opentype" />
+		<item id="HelveticaNeueLTStd-Roman.otf" href="font/HelveticaNeueLTStd-Roman.otf" media-type="application/vnd.ms-opentype" />
+		<item id="x293659.jpg" href="image/293659.jpg" media-type="image/jpeg" />
+		<item id="x302847.jpg" href="image/302847.jpg" media-type="image/jpeg" />
+		<item id="x307357.jpg" href="image/307357.jpg" media-type="image/jpeg" />
+		<item id="x350292.png" href="image/350292.png" media-type="image/png" />
+		<item id="x360915.jpg" href="image/360915.jpg" media-type="image/jpeg" />
+		<item id="cc-attribution_fmt.jpeg" href="image/cc-attribution_fmt.jpeg" media-type="image/jpeg" />
+		<item id="cc-share-alike_fmt.jpeg" href="image/cc-share-alike_fmt.jpeg" media-type="image/jpeg" />
+		<item id="cover-image" href="image/cover.jpg" media-type="image/jpeg" />
+		<item id="lodi_cd_letter_worm_fmt.jpeg" href="image/lodi_cd_letter_worm_fmt.jpeg" media-type="image/jpeg" />
+		<item id="Lodi_Photo01_fmt.jpeg" href="image/Lodi_Photo01_fmt.jpeg" media-type="image/jpeg" />
+		<item id="Lodi_Photo04_fmt.jpeg" href="image/Lodi_Photo04_fmt.jpeg" media-type="image/jpeg" />
+		<item id="Lodi_Photo05_fmt.jpeg" href="image/Lodi_Photo05_fmt.jpeg" media-type="image/jpeg" />
+		<item id="Lodi_Photo07_fmt.jpeg" href="image/Lodi_Photo07_fmt.jpeg" media-type="image/jpeg" />
+		<item id="Lodi_Photo09_fmt.jpeg" href="image/Lodi_Photo09_fmt.jpeg" media-type="image/jpeg" />
+		<item id="Lodi_Photo11_fmt.jpeg" href="image/Lodi_Photo11_fmt.jpeg" media-type="image/jpeg" />
+		<item id="Lodi_Photo12_fmt.jpeg" href="image/Lodi_Photo12_fmt.jpeg" media-type="image/jpeg" />
+		<item id="Lodi_Photo13_fmt.jpeg" href="image/Lodi_Photo13_fmt.jpeg" media-type="image/jpeg" />
+		<item id="Lonneke_image1_fmt.jpeg" href="image/Lonneke_image1_fmt.jpeg" media-type="image/jpeg" />
+		<item id="Lonneke_image2_fmt.jpeg" href="image/Lonneke_image2_fmt.jpeg" media-type="image/jpeg" />
+		<item id="Lonneke_image3_fmt.jpeg" href="image/Lonneke_image3_fmt.jpeg" media-type="image/jpeg" />
+		<item id="Lonneke_image4_fmt.jpeg" href="image/Lonneke_image4_fmt.jpeg" media-type="image/jpeg" />
+		<item id="Pleaselike-ab_fmt.jpeg" href="image/Pleaselike-ab_fmt.jpeg" media-type="image/jpeg" />
+		<item id="Stumpel_fig_1_fmt.jpeg" href="image/Stumpel_fig_1_fmt.jpeg" media-type="image/jpeg" />
+		<item id="Stumpel_fig_2_fmt.jpeg" href="image/Stumpel_fig_2_fmt.jpeg" media-type="image/jpeg" />
+		<item id="Stumpel_fig_3_fmt.jpeg" href="image/Stumpel_fig_3_fmt.jpeg" media-type="image/jpeg" />
+		<item id="Stumpel_fig_4_fmt.jpeg" href="image/Stumpel_fig_4_fmt.jpeg" media-type="image/jpeg" />
+		<item id="UU3_poster_A2_fmt.jpeg" href="image/UU3_poster_A2_fmt.jpeg" media-type="image/jpeg" />
+		<item id="Warnke_fig_1_fmt.jpeg" href="image/Warnke_fig_1_fmt.jpeg" media-type="image/jpeg" />
+		<item id="Warnke_fig_2_fmt.jpeg" href="image/Warnke_fig_2_fmt.jpeg" media-type="image/jpeg" />
+		<item id="Warnke_fig_3_fmt.jpeg" href="image/Warnke_fig_3_fmt.jpeg" media-type="image/jpeg" />
+		<item id="Warnke_fig_4_fmt.jpeg" href="image/Warnke_fig_4_fmt.jpeg" media-type="image/jpeg" />
+		<item id="Warnke_fig_5_fmt.jpeg" href="image/Warnke_fig_5_fmt.jpeg" media-type="image/jpeg" />
+		<item id="Warnke_fig_6_fmt.jpeg" href="image/Warnke_fig_6_fmt.jpeg" media-type="image/jpeg" />
+		<item id="Warnke_fig_7_fmt.jpeg" href="image/Warnke_fig_7_fmt.jpeg" media-type="image/jpeg" />
+		<item id="Warnke_fig_8_fmt.jpeg" href="image/Warnke_fig_8_fmt.jpeg" media-type="image/jpeg" />
+		<item id="Wittkower_image1_fmt.jpeg" href="image/Wittkower_image1_fmt.jpeg" media-type="image/jpeg" />
+		<item id="Wittkower_image2_fmt.jpeg" href="image/Wittkower_image2_fmt.jpeg" media-type="image/jpeg" />
+	</manifest>
+	<spine toc="ncx">
+		<itemref idref="cover" linear="no" />
+		<itemref idref="unlike-us-reader" />
+		<itemref idref="unlike-us-reader-1" />
+		<itemref idref="unlike-us-reader-2" />
+		<itemref idref="unlike-us-reader-3" />
+		<itemref idref="unlike-us-reader-4" />
+		<itemref idref="unlike-us-reader-5" />
+		<itemref idref="unlike-us-reader-6" />
+		<itemref idref="unlike-us-reader-7" />
+		<itemref idref="unlike-us-reader-8" />
+		<itemref idref="unlike-us-reader-9" />
+		<itemref idref="unlike-us-reader-10" />
+		<itemref idref="unlike-us-reader-11" />
+		<itemref idref="unlike-us-reader-12" />
+		<itemref idref="unlike-us-reader-13" />
+		<itemref idref="unlike-us-reader-14" />
+		<itemref idref="unlike-us-reader-15" />
+		<itemref idref="unlike-us-reader-16" />
+		<itemref idref="unlike-us-reader-17" />
+		<itemref idref="unlike-us-reader-18" />
+		<itemref idref="unlike-us-reader-19" />
+		<itemref idref="unlike-us-reader-20" />
+		<itemref idref="unlike-us-reader-21" />
+		<itemref idref="unlike-us-reader-22" />
+		<itemref idref="unlike-us-reader-23" />
+		<itemref idref="unlike-us-reader-24" />
+		<itemref idref="unlike-us-reader-25" />
+		<itemref idref="unlike-us-reader-26" />
+		<itemref idref="unlike-us-reader-27" />
+		<itemref idref="unlike-us-reader-28" />
+		<itemref idref="unlike-us-reader-29" />
+		<itemref idref="unlike-us-reader-30" />
+		<itemref idref="unlike-us-reader-31" />
+		<itemref idref="unlike-us-reader-32" />
+		<itemref idref="unlike-us-reader-33" />
+		<itemref idref="unlike-us-reader-34" />
+	</spine>
+	<guide>
+		<reference type="cover" title="Cover" href="CoverImage.xhtml" />
+        <reference type="toc" title="Contents" href="unlike-us-reader.xhtml" />
+        <reference type="colophon" title="Colophon" href="unlike-us-reader-1.xhtml" />
+        <reference type="text" title="Introduction" href="unlike-us-reader.xhtml" />
+	</guide>
+</package>

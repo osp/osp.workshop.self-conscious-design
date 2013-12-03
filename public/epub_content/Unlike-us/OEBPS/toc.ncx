@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE ncx PUBLIC "-//NISO//DTD ncx 2005-1//EN" "http://www.daisy.org/z3986/2005/ncx-2005-1.dtd">
+<ncx xmlns="http://www.daisy.org/z3986/2005/ncx/" version="2005-1">
+	<head>
+		<meta name="dtb:uid" content="978-90-818575-2-9" />
+		<meta name="dtb:depth" content="1" />
+		<meta name="dtb:totalPageCount" content="0" />
+		<meta name="dtb:maxPageNumber" content="0" />
+	</head>
+	<docTitle>
+		<text>Unlike Us Reader</text>
+	</docTitle>
+	<docAuthor>
+		<text>Geert Lovink</text>
+	</docAuthor>
+	<docAuthor>
+		<text>Miriam Rasch</text>
+	</docAuthor>
+
+	<navMap>
+		<navPoint id="navpoint" playOrder="0">
+			<navLabel>
+				<text>Colophon</text>
+			</navLabel>
+			<content src="unlike-us-reader.xhtml" />
+		</navPoint>
+		<navPoint id="navpoint-0" playOrder="1">
+			<navLabel>
+				<text>Contents</text>
+			</navLabel>
+			<content src="unlike-us-reader-1.xhtml" />
+		</navPoint>
+		<navPoint id="navpoint-1" playOrder="2">
+			<navLabel>
+				<text>A World Beyond Facebook: Introduction to the Unlike Us Reader - Geert Lovink</text>
+			</navLabel>
+			<content src="unlike-us-reader-2.xhtml#toc_marker-1" />
+		</navPoint>
+		<navPoint id="navpoint-2" playOrder="3">
+			<navLabel>
+				<text>Theory of Social Media</text>
+			</navLabel>
+			<content src="unlike-us-reader-3.xhtml#toc_marker-2" />
+				<navPoint id="navpoint2" playOrder="3">
+					<navLabel>
+						<text>The Most Precious Good in the Era of Social Technologies – Bernard Stiegler</text>
+					</navLabel>
+					<content src="unlike-us-reader-3.xhtml#toc_marker-2" />
+				</navPoint>
+				<navPoint id="navpoint3" playOrder="4">
+					<navLabel>
+						<text>Against Remediation – David M. Berry</text>
+					</navLabel>
+					<content src="unlike-us-reader-4.xhtml#toc_marker-3" />
+				</navPoint>
+				<navPoint id="navpoint4" playOrder="5">
+					<navLabel>
+						<text>Social Media, or Towards a Political Economy of Psychic Life – Ganaele Langlois</text>
+					</navLabel>
+					<content src="unlike-us-reader-5.xhtml#toc_marker-4" />
+				</navPoint>
+				<navPoint id="navpoint5" playOrder="6">
+					<navLabel>
+						<text>The Fan Dance: How Privacy Thrives in an Age of Hyper-Publicity – Nathan Jurgenson and PJ Rey</text>
+					</navLabel>
+					<content src="unlike-us-reader-6.xhtml#toc_marker-5" />
+				</navPoint>
+				<navPoint id="navpoint6" playOrder="7">
+					<navLabel>
+						<text>Databases as Citadels in the Web 2.0 – Martin Warnke</text>
+					</navLabel>
+					<content src="unlike-us-reader-7.xhtml#toc_marker-6" />
+				</navPoint>
+				<navPoint id="navpoint7" playOrder="8">
+					<navLabel>
+						<text>Under the Skin of Networks: How Concentration Affects Social Practices in Web 2.0 Environments – Andrea Miconi</text>
+					</navLabel>
+					<content src="unlike-us-reader-8.xhtml#toc_marker-7" />
+				</navPoint>
+				<navPoint id="navpoint8" playOrder="9">
+					<navLabel>
+						<text>Collective Individuation: The Future of the Social Web – Yuk Hui and Harry Halpin</text>
+					</navLabel>
+					<content src="unlike-us-reader-9.xhtml#toc_marker-8" />
+				</navPoint>
+		</navPoint>
+				
+		<navPoint id="navpoint-3" playOrder="10">
+			<navLabel>
+				<text>Critical Platform Analysis</text>
+			</navLabel>
+			<content src="unlike-us-reader-10.xhtml#toc_marker-9" />
+				<navPoint id="navpoint9" playOrder="10">
+					<navLabel>
+						<text>Political Economy and Monopoly Abstractions: What Social Media Demand – Korinna Patelis</text>
+					</navLabel>
+					<content src="unlike-us-reader-10.xhtml#toc_marker-9" />
+				</navPoint>
+				<navPoint id="navpoint10" playOrder="11">
+					<navLabel>
+						<text>Rhetorics of Sharing: Data, Imagination, and Desire – Jenny Kennedy</text>
+					</navLabel>
+					<content src="unlike-us-reader-11.xhtml#toc_marker-10" />
+				</navPoint>
+				<navPoint id="navpoint11" playOrder="12">
+					<navLabel>
+						<text>As You Like It: Critique in the Era of an Affirmative Discourse – Mercedes Bunz</text>
+					</navLabel>
+					<content src="unlike-us-reader-12.xhtml#toc_marker-11" />
+				</navPoint>
+				<navPoint id="navpoint12" playOrder="13">
+					<navLabel>
+						<text>Silence, Delirium, Lies? – Caroline Bassett</text>
+					</navLabel>
+					<content src="unlike-us-reader-13.xhtml#toc_marker-12" />
+				</navPoint>
+				<navPoint id="navpoint13" playOrder="14">
+					<navLabel>
+						<text>The Facebook Aquarium: Freedom in a Profile – Ippolita and Tiziana Mancinelli</text>
+					</navLabel>
+					<content src="unlike-us-reader-14.xhtml#toc_marker-13" />
+				</navPoint>
+		</navPoint>
+		
+		<navPoint id="navpoint-4" playOrder="15">
+			<navLabel>
+				<text>Platform Case Studies</text>
+			</navLabel>
+			<content src="unlike-us-reader-15.xhtml#toc_marker-14" />
+				<navPoint id="navpoint14" playOrder="15">
+					<navLabel>
+						<text>Talking About Escape – Mariann Hardey and David Beer</text>
+					</navLabel>
+					<content src="unlike-us-reader-15.xhtml#toc_marker-14" />
+				</navPoint>
+				<navPoint id="navpoint15" playOrder="16">
+					<navLabel>
+						<text>Boredom on Facebook – D.E. Wittkower</text>
+					</navLabel>
+					<content src="unlike-us-reader-16.xhtml#toc_marker-15" />
+				</navPoint>
+				<navPoint id="navpoint16" playOrder="17">
+					<navLabel>
+						<text>How to Build a Map for Nothing: Immaterial Labor and Location-Based Social Networking – Leighton Evans</text>
+					</navLabel>
+					<content src="unlike-us-reader-17.xhtml#toc_marker-16" />
+				</navPoint>
+				<navPoint id="navpoint17" playOrder="18">
+					<navLabel>
+						<text>None of Your Business?: Analyzing the Legitimacy and Effects of Gendering Social Spaces Through System Design – Andrew McNicol</text>
+					</navLabel>
+					<content src="unlike-us-reader-18.xhtml#toc_marker-17" />
+				</navPoint>
+				<navPoint id="navpoint18" playOrder="19">
+					<navLabel>
+						<text>‘Why I Left Facebook’: Stubbornly Refusing to not Exist Even After Opting Out of Mark Zuckerberg’s Social Graph – Robert W. Gehl</text>
+					</navLabel>
+					<content src="unlike-us-reader-19.xhtml#toc_marker-18" />
+				</navPoint>
+		</navPoint>
+		
+		<navPoint id="navpoint-5" playOrder="20">
+			<navLabel>
+				<text>Artistic Interventions</text>
+			</navLabel>
+			<content src="unlike-us-reader-20.xhtml#toc_marker-19" />		
+				<navPoint id="navpoint19" playOrder="20">
+					<navLabel>
+						<text>Illegal Art and Other Stories About Social Media – Simona Lodi</text>
+					</navLabel>
+					<content src="unlike-us-reader-20.xhtml#toc_marker-19" />
+				</navPoint>
+				<navPoint id="navpoint20" playOrder="21">
+					<navLabel>
+						<text>Face to Facebook, Smiling in the Eternal Party – Alessandro Ludovico and Paolo Cirio</text>
+					</navLabel>
+					<content src="unlike-us-reader-21.xhtml#toc_marker-20" />
+				</navPoint>
+				<navPoint id="navpoint21" playOrder="22">
+					<navLabel>
+						<text>On Pleaselike.com and Facebook Bliss – Louis Doulas and Wyatt Niehaus</text>
+					</navLabel>
+					<content src="unlike-us-reader-22.xhtml#toc_marker-21" />
+				</navPoint>
+				<navPoint id="navpoint22" playOrder="23">
+					<navLabel>
+						<text>Art After Social Media as a Rejection and Reflection of Free Market Conventions – Brad Troemel</text>
+					</navLabel>
+					<content src="unlike-us-reader-23.xhtml#toc_marker-22" />
+				</navPoint>
+				<navPoint id="navpoint23" playOrder="24">
+					<navLabel>
+						<text>Disruptive Business as Artistic Intervention – Tatiana Bazzichelli</text>
+					</navLabel>
+					<content src="unlike-us-reader-24.xhtml#toc_marker-23" />
+				</navPoint>
+		</navPoint>
+		
+		<navPoint id="navpoint-6" playOrder="25">
+			<navLabel>
+				<text>Activism and Social Media Uses</text>
+			</navLabel>
+			<content src="unlike-us-reader-25.xhtml#toc_marker-24" />				
+				<navPoint id="navpoint24" playOrder="25">
+					<navLabel>
+						<text>Facebook Resistance Augmented Freedom – Marc Stumpel</text>
+					</navLabel>
+					<content src="unlike-us-reader-25.xhtml#toc_marker-24" />
+				</navPoint>
+				<navPoint id="navpoint25" playOrder="26">
+					<navLabel>
+						<text>The Tactics of Occupation: Becoming Cockroach – Pavlos Hatzopoulos and Nelli Kambouri</text>
+					</navLabel>
+					<content src="unlike-us-reader-26.xhtml#toc_marker-25" />
+				</navPoint>
+				<navPoint id="navpoint26" playOrder="27">
+					<navLabel>
+						<text>Occupy Social Networks: the Paradoxes of Corporate Social Media for Networked Social Movements – Tiziana Terranova and Joan Donovan</text>
+					</navLabel>
+					<content src="unlike-us-reader-27.xhtml#toc_marker-26" />
+				</navPoint>
+		</navPoint>
+				
+		<navPoint id="navpoint-7" playOrder="28">
+			<navLabel>
+				<text>Alternatives</text>
+			</navLabel>
+			<content src="unlike-us-reader-28.xhtml#toc_marker-27" />					
+				<navPoint id="navpoint27" playOrder="28">
+					<navLabel>
+						<text>Meeting the Alternatives: Notes About Making Profiles and Joining Hackers – Lonneke van der Velden</text>
+					</navLabel>
+					<content src="unlike-us-reader-28.xhtml#toc_marker-27" />
+				</navPoint>
+				<navPoint id="navpoint28" playOrder="29">
+					<navLabel>
+						<text>Facebook vs. Diaspora: a Critical Study – Sebastian Sevignani</text>
+					</navLabel>
+					<content src="unlike-us-reader-29.xhtml#toc_marker-28" />
+				</navPoint>
+				<navPoint id="navpoint29" playOrder="30">
+					<navLabel>
+						<text>Towards a Free Federated Social Web: Lorea Takes the Networks! – Florencio Cabello, Marta G. Franco and Alexandra Haché</text>
+					</navLabel>
+					<content src="unlike-us-reader-30.xhtml#toc_marker-29" />
+				</navPoint>
+				<navPoint id="navpoint30" playOrder="31">
+					<navLabel>
+						<text>Unlikely Outcomes? A Distributed Discussion on the Prospects and Promise of Decentralized Personal Data Architectures – olon Barocas, Seda Gürses, Arvind Narayanan and Vincent Toubiana</text>
+					</navLabel>
+					<content src="unlike-us-reader-31.xhtml#toc_marker-30" />
+				</navPoint>
+		</navPoint>
+				
+		<navPoint id="navpoint-8" playOrder="32">
+			<navLabel>
+				<text>Appendices</text>
+			</navLabel>
+			<content src="unlike-us-reader-32.xhtml#toc_marker-31" />			
+				<navPoint id="navpoint31" playOrder="32">
+					<navLabel>
+						<text>Appendix - Unlike Us Research Agenda July 15th, 2011</text>
+					</navLabel>
+					<content src="unlike-us-reader-32.xhtml#toc_marker-31" />
+				</navPoint>
+				<navPoint id="navpoint32" playOrder="33">
+					<navLabel>
+						<text>Appendix - Unlike Us Conferences</text>
+					</navLabel>
+					<content src="unlike-us-reader-33.xhtml#toc_marker-32" />
+				</navPoint>
+				<navPoint id="navpoint33" playOrder="34">
+					<navLabel>
+						<text>Appendix - Author Biographies</text>
+					</navLabel>
+					<content src="unlike-us-reader-34.xhtml#toc_marker-33" />
+				</navPoint>
+		</navPoint>
+	</navMap>
+</ncx>
