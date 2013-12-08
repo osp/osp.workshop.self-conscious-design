@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"
+xmlns:epub="http://www.idpf.org/2007/ops">
+    <head>
+        <meta charset="utf-8">
+        </meta>
+        <title>self-conscious.epub</title>
+        <link rel="stylesheet" type="text/css" href="style.css" />
+    </head>
+    <body>
+	<section id="Test">
+		<h1>
+			Self-conscious epub test.
+		</h1>
+		<p id="document">
+			Document object: <span id="documentStatus">Unavailable</span>
+		</p>
+		<p id="navigator">
+			Navigator object: <span id="navigatorStatus">Unavailable</span>
+		</p>
+		<p id="readingSystem">
+			Reading-system object: <span id="readingSystemStatus">Unavailable</span>
+		</p>
+		<p id="readingSystem">
+			Reading-system name: <span id="readingSystemName">Unknown</span>
+		</p>
+	</section>
+        <script type="text/javascript">
+        <![CDATA[
+            var adaptTextToReader = function() {
+                var intro = document.getElementById("intro");
+                intro.innerHTML = intro.innerHTML.replace("{{ navigator.epubReadingSystem.name }}", navigator.epubReadingSystem.name);
+            };
+
+            // if the Reading System knows about itself:
+            if (document) {
+		document.getElementById("documentStatus").innerHTML = "Available";
+            }
+            
+            if (navigator) {
+		document.getElementById("navigatorStatus").innerHTML = "Available";
+            }
+            
+            if (navigator && navigator.hasOwnProperty('epubReadingSystem')) {
+                // launch scripts:
+                document.getElementById("readingSystemStatus").innerHTML = "Available";
+            }
+            
+            if (navigator && navigator.hasOwnProperty('epubReadingSystem')) {
+                // launch scripts:
+                document.getElementById("readingSystemName").innerHTML = navigator.epubReadingSystem.name;
+            }
+        ]]>
+        </script>
+    </body>
+</html>
