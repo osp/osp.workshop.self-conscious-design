@@ -1,0 +1,15 @@
+p .tweet {
+	position: absolute;
+	text-align: center;
+	font-size: 200%;
+	color: transparent;
+	line-height: 2;
+	font-style: italic;
+	transition: 2s;
+}
+
+body:hover .tweet {
+	color: red;
+	transition: 2s;
+	transition-delay:2s;
+}
