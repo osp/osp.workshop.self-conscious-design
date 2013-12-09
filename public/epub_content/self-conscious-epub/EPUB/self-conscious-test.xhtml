@@ -19,14 +19,31 @@ xmlns:epub="http://www.idpf.org/2007/ops">
 			Navigator object: <span id="navigatorStatus">Unavailable</span>
 		</p>
 		<p id="readingSystem">
-			Reading-system object: <span id="readingSystemStatus">Unavailable</span>
+			Reading-system object: <span id="readingSystemStatus">Unavailable</span><br />
+			<span id="readingSystemProperties"></span>
 		</p>
-		<p id="readingSystem">
+		<p id="readingSystemNameWrapper">
 			Reading-system name: <span id="readingSystemName">Unknown</span>
 		</p>
 	</section>
         <script type="text/javascript">
         <![CDATA[
+            var listProperties = function (object) {
+		var proplist = ''
+		
+		for (prop in object) {
+			if (typeof (object[prop]) == 'object') {
+				proplist += '<li>' + prop + ': ' + object[prop]  + ':' + listProperties (object[prop]) + '</li>\n';
+			} else if (typeof (object[prop]) == 'function') {
+				proplist += '<li>' + prop + ': function() </li>\n';
+			} else {
+				proplist += '<li>' + prop + ': ' + object[prop]  + '</li>\n';
+			}
+		}
+		
+		return '<ul>' + proplist + '</ul>\n';
+            }
+        
             var adaptTextToReader = function() {
                 var intro = document.getElementById("intro");
                 intro.innerHTML = intro.innerHTML.replace("{{ navigator.epubReadingSystem.name }}", navigator.epubReadingSystem.name);
@@ -44,6 +61,8 @@ xmlns:epub="http://www.idpf.org/2007/ops">
             if (navigator && navigator.hasOwnProperty('epubReadingSystem')) {
                 // launch scripts:
                 document.getElementById("readingSystemStatus").innerHTML = "Available";
+                
+                document.getElementById("readingSystemProperties").innerHTML = listProperties (navigator.epubReadingSystem);
             }
             
             if (navigator && navigator.hasOwnProperty('epubReadingSystem')) {
