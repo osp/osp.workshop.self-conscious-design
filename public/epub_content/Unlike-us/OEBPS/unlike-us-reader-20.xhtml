@@ -4,8 +4,31 @@
 	<head>
 		<title>unlike-us-reader-20</title>
 		<link href="css/unlike-us-reader.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript">
+		<![CDATA[
+
+			function replaceNodeText (node, text, replacetext)  {
+				if (node.hasChildNodes () == true) {
+					for (var i=0; i < node.childNodes.length; i++) {
+						if (node.childNodes[i].nodeType == document.TEXT_NODE) {
+							node.childNodes[i].data = node.childNodes[i].data.replace (text, replacetext)
+						} else {
+							replaceNodeText (node.childNodes[i], text, replacetext)
+						}
+					}
+				}
+			}
+
+			function replaceLegal () {
+				replaceNodeText (document.body, /illegal/i, "i.l.l.e.g.a.l")
+				replaceNodeText (document.body, "legal", "<span style="color:red">illegal</span>")
+				replaceNodeText (document.body, "i.l.l.e.g.a.l", "<span style="color:blue">legal</span>")
+			}
+		]]>
+	</script>
+
 	</head>
-	<body id="unlike-us-reader" xml:lang="en-GB">
+	<body id="unlike-us-reader" xml:lang="en-GB" onload="replaceLegal();">
 		<div>
 			<h1 id="toc_marker-19" class="article-title"><a id="Illegal-Art--and-Other-Stories--About-Social-Media" />Illegal Art and Other Stories About Social Media</h1>
 			<p class="slash">/</p>
