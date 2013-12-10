@@ -43,10 +43,11 @@ freqs = nltk.FreqDist (tokens)
 words = freqs.keys ()
 
 source = open (path, 'r').read ()
+replacewordmax = 10
+i = 0
 
 """selection of the 10 most frequent words"""
-for word in words[:10]:
-    print word
+for word in words:
     """
     Then we use grep to add span tags with a specific class around the words we want to highlight. 
     This regular expression operation look for the words (part of the list of 10 we just build) 
@@ -54,7 +55,13 @@ for word in words[:10]:
     and followed by a dot, a coma, a dash or the end of a line,
     and add the span tag around it.
     """
-    source = re.sub (u'((?<=\s|\'|\.|(?<!class="frequent")>)|^)({0})(?=\s|\.|,|-|$)'.format (word), '<span class="frequent">\\2</span>', source, flags=re.I)
+    print word
+    if re.match ('^[a-z]+', word):
+        source = re.sub (u'((?<=\s|\'|\.|(?<!class="frequent")>)|^)({0})(?=\s|\.|,|-|$)'.format (word), '<span class="frequent">\\2</span>', source, flags=re.I)
+        i += 1
+        
+        if i >= 10:
+            break
     
 newFile = open (savepath, 'w   ')
 newFile.write (source)

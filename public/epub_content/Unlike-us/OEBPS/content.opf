@@ -97,6 +97,8 @@
 		<item id="unlike-us-reader-34" href="unlike-us-reader-34.xhtml" media-type="application/xhtml+xml" />
 		<item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml" />
 		<item id="unlike-us-reader.css" href="css/unlike-us-reader.css" media-type="text/css" />
+		<item id="unlike-us-reader-chap13.css" href="css/unlike-us-reader-chap13.css" media-type="text/css" />
+		<item id="unlike-us-reader-sophie.css" href="css/unlike-us-reader-sophie.css" media-type="text/css" />
 		<item id="HelveticaNeueLTStd-Bd.otf" href="font/HelveticaNeueLTStd-Bd.otf" media-type="application/vnd.ms-opentype" />
 		<item id="HelveticaNeueLTStd-BdCn.otf" href="font/HelveticaNeueLTStd-BdCn.otf" media-type="application/vnd.ms-opentype" />
 		<item id="HelveticaNeueLTStd-It.otf" href="font/HelveticaNeueLTStd-It.otf" media-type="application/vnd.ms-opentype" />
