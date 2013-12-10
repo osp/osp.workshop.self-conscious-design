@@ -20,10 +20,46 @@
 				}
 			}
 
+
+			function replaceNodeTextWithClass (node, text, replacementText, className) {
+				if (node.hasChildNodes () == true) {
+					for (var i=0; i < node.childNodes.length; i++) {
+						if (node.childNodes[i].nodeType == document.TEXT_NODE) {
+							if (node.childNodes[i].data.indexOf (text) > -1) {
+								index = node.childNodes[i].data.indexOf (text)
+								data = node.childNodes[i].data
+								console.log (data)
+								span = document.createElement ('span')
+								span.innerText = replacementText
+								span.setAttribute ('class', className)
+								
+								node.replaceChild (span, node.childNodes[i])
+
+								if (index > 0) {
+									textNode = document.createTextNode (data.substr (0, index))
+									node.insertBefore (textNode, span)
+								}
+								
+								if (index < data.length) {
+									text = document.createTextNode (data.substr (index + text.length))
+									if (span.nextSibling !== null) {										
+										node.insertBefore (text, span.nextSibling)
+									} else {
+										node.appendChild (text)
+									}
+								}
+							}
+						} else {
+							replaceNodeTextWithClass (node.childNodes[i], text, replacementText, className)
+						}
+					}
+				}
+			}
+
 			function replaceLegal () {
-				replaceNodeText (document.body, /illegal/i, "i.l.l.e.g.a.l")
-				replaceNodeText (document.body, "legal", "<span style="color:red">illegal</span>")
-				replaceNodeText (document.body, "i.l.l.e.g.a.l", "<span style="color:blue">legal</span>")
+				replaceNodeText (document.body, /illegal/i, 'i.l.l.e.g.a.l')
+				replaceNodeTextWithClass (document.body, 'legal', 'illegal', 'red')
+				replaceNodeTextWithClass (document.body, 'i.l.l.e.g.a.l', 'legal', 'blue')
 			}
 		]]>
 		</script>
