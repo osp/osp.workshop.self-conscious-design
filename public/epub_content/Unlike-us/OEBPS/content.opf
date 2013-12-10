@@ -99,6 +99,8 @@
 		<item id="unlike-us-reader.css" href="css/unlike-us-reader.css" media-type="text/css" />
 		<item id="unlike-us-reader-chap13.css" href="css/unlike-us-reader-chap13.css" media-type="text/css" />
 		<item id="unlike-us-reader-sophie.css" href="css/unlike-us-reader-sophie.css" media-type="text/css" />
+		<item id="jqueryjs" href="js/jquery.js" media="text/javascript">
+		<item id="paperjs" href="js/paper-full.min.js" media="text/javascript">
 		<item id="HelveticaNeueLTStd-Bd.otf" href="font/HelveticaNeueLTStd-Bd.otf" media-type="application/vnd.ms-opentype" />
 		<item id="HelveticaNeueLTStd-BdCn.otf" href="font/HelveticaNeueLTStd-BdCn.otf" media-type="application/vnd.ms-opentype" />
 		<item id="HelveticaNeueLTStd-It.otf" href="font/HelveticaNeueLTStd-It.otf" media-type="application/vnd.ms-opentype" />
