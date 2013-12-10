@@ -302,12 +302,33 @@ div.ludovico img {
 	height: 100%;
 }
 
-.red{
+.shareWord {
+    color: #cb0407;
+}
+
+.red {
     color: red;
 }
 
-.blue{
+.blue {
     color: blue;
 }
 
+
+.JolyRotate{
+width:50%;
+height:100%;
+font-size:100%;
+background:white;
+transition:width 2s, height 2s, transform 2s;
+-webkit-transition:width 2s, height 2s, -webkit-transform 2s; /* Safari */
+}
+
+.JolyRotate:hover{
+width:200px;
+height:200px;
+font-size:10%;
+transform:rotate(180deg);
+-webkit-transform:rotate(180deg); /* Safari */
+}
 

@@ -1,0 +1,306 @@
+@font-face {
+	font-family:"HelveticaNeueLT Std";
+	font-style:normal;
+	font-weight:normal;
+	src : url("../font/HelveticaNeueLTStd-Roman.otf");
+}
+@font-face {
+	font-family:"HelveticaNeueLT Std";
+	font-style:normal;
+	font-weight:bold;
+	src : url("../font/HelveticaNeueLTStd-Bd.otf");
+}
+@font-face {
+	font-family:"HelveticaNeueLT Std";
+	font-style:italic;
+	font-weight:normal;
+	src : url("../font/HelveticaNeueLTStd-It.otf");
+}
+@font-face {
+	font-family:"HelveticaNeueLT Std";
+	font-style:oblique;
+	font-weight:normal;
+	src : url("../font/HelveticaNeueLTStd-It.otf");
+}
+@font-face {
+	font-family:"HelveticaNeueLT Std Cn";
+	font-style:normal;
+	font-weight:bold;
+	font-stretch:condensed;
+	src : url("../font/HelveticaNeueLTStd-BdCn.otf");
+}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, p, pre, code, blockquote {
+	padding:0;
+	margin:0;
+	border-width:0;
+}
+td, th {
+	border-style:solid;
+	border-width:1px;
+}
+table {
+	border-collapse:collapse;
+}
+li {
+	display:block;
+}
+body {
+	-epub-hyphens:auto;
+	-webkit-hyphens:auto;
+	font-family:"HelveticaNeueLT Std";
+	font-size:1em;
+	line-height:1.3em;
+
+}
+@page {
+	padding:0;
+	margin: 0 1em 0 1em;
+}
+.break-after {
+	page-break-after: always;
+}
+/* headings */
+h1.article-title {
+	-epub-hyphens:none;
+	-epub-ruby-position:over;
+	-webkit-hyphens:none;
+	font-family:"HelveticaNeueLT Std Cn", sans-serif;
+    	color: #000000;
+	font-size:2em;
+	font-weight:bold;
+	line-height:1.3em;
+	text-align:center;
+	text-transform:uppercase;
+	padding-top: 1.3em;
+}
+h2.author-name, h2.appendix_title, p.slash {
+	-epub-hyphens:none;
+	-epub-ruby-position:over;
+	-webkit-hyphens:none;
+	font-family:"HelveticaNeueLT Std Cn", sans-serif;
+	font-size:2em;
+	font-weight:bold;
+	line-height:1.3em;
+	margin-bottom:3em;
+	text-align:center;
+	text-transform:uppercase;
+}
+p.slash {
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+h3.text_subtitle, h3.text_subtitle_space-after, h6.references_title, h4.text_subtitle_sub, h5.event-name {
+	-epub-ruby-position:over;
+	font-weight:bold;
+	text-align:left;
+	font-size:1em;
+	line-height:1.3em;
+}
+h4.text_subtitle_sub {
+	font-style:italic;
+	font-weight:normal;
+}
+h3.text_subtitle_space-after {
+	padding-bottom:1.3em;
+}
+/* text */
+p {
+	-epub-ruby-position:over;
+	padding-bottom:1.3em;
+	widows: 2;
+	orphans: 2;
+	color: #FFFFFF;
+}
+p.text-last {
+	page-break-after:always;
+}
+p.text-no-space-after {
+	padding-bottom:0;
+}
+p.text-no-space-after-align-left {
+	padding-bottom:0;
+	text-align:left;
+}
+p.text-double-space-after {
+	padding-bottom:2.6em;
+}
+p.text-align-left {
+	text-align:left;
+}
+p.separation-dash {
+	-epub-ruby-position:over;
+	text-align:center;
+}
+/* superscript */
+sup {
+	font-size: 0.7em;
+	vertical-align: super;
+    line-height: 0;
+}
+/* blockquote */
+p.quote, p.quote_no-space-after, p.quote_less-space-after, p.quote_indented_no-space-after, p.quote_indented {
+	-epub-ruby-position:over;
+	padding-bottom:1.3em;
+	padding-left:1.3em;
+}
+p.quote_no-space-after {
+	padding-bottom:0;
+}
+p.quote_less-space-after {
+	padding-bottom:0.8em;
+}
+p.quote_indented_no-space-after {
+	padding-bottom:0;
+	padding-left:2.6em;
+}
+p.quote_indented {
+	padding-left:2.6em;
+}
+/* footnotes captions & references */
+p.xfootnote, p.footnote, p.references, p.references-last {
+	-epub-hyphens:none;
+	-epub-ruby-position:over;
+	-webkit-hyphens:none;
+	font-size:0.8em;
+	line-height:1.3em;
+	padding-bottom:0;
+	padding-left:1.3em;
+	text-indent:-1.3em;
+}
+p.references-last {
+	padding-bottom:3.9em;
+}
+p.caption {
+	-epub-ruby-position:over;
+	font-size:0.8em;
+	line-height:1.3em;
+}
+/* lists and tables */
+span.bullet {
+	display:inline-block;
+	text-indent:0;
+	white-space:pre-wrap;
+}
+li.unordered-list-indented {
+	padding-left:1.3em;
+	text-indent:-1.3em;
+}
+li.unordered-list-indented-last {
+	padding-bottom:1.3em;
+	padding-left:1.3em;
+	text-indent:-1.3em;
+}
+li.unordered-list-last, li.numbered-list-last {
+	padding-bottom:1.3em;
+}
+table {
+	width: 100%;
+}
+/* toc */
+h3.toc_section {
+	-epub-hyphens:none;
+	-epub-ruby-position:over;
+	-webkit-hyphens:none;
+	font-family:"HelveticaNeueLT Std Cn", sans-serif;
+	font-size:1.3em;
+	font-weight:bold;
+	line-height:1.3em;
+	padding-bottom:0.3em;
+}
+p.toc-title, p.toc-author, p.toc-title-last, p.toc-title-no-space-after {
+	-epub-hyphens:none;
+	-epub-ruby-position:over;
+	-webkit-hyphens:none;
+	font-size:0.8em;
+	line-height:1.3em;
+	padding-bottom:1.3em;
+}
+p.toc-author {
+	font-weight:bold;
+	padding-bottom: 0;
+}
+p.toc-title-last {
+	padding-bottom:2.6em;
+}
+p.toc-title-no-space-after {
+	padding-bottom:0;
+}
+/* table */
+table {
+	border: 1px solid black;
+}
+p.table-element, p.table-column-title {
+	-epub-hyphens:none;
+	-epub-ruby-position:over;
+	-webkit-hyphens:none;
+	font-size:0.8em;
+	line-height:1.3em;
+	text-align:right;
+	padding-right:1.3em;
+	padding-top: 0.8em;
+}
+p.table-column-title {
+	text-align:left;
+	font-weight:bold;
+	padding-left: 1.3em;
+}
+/* link */
+a {
+	text-decoration:none;
+	color: #ff3300;
+}
+/* images */
+div.img {
+	text-align: center;
+	page-break-inside: avoid;
+	width: 100%;
+}
+img {
+	max-width: 100%;
+	width: auto;
+	height: auto;
+}
+
+div.front img {
+	padding-top: 1.3em;
+	max-width: 40%;
+	page-break-after:always;
+}
+
+div.poster {
+	page-break-before:always;
+	page-break-after:always;
+}
+div.poster img {
+	height: 100%;
+}
+
+div.warnke-3 {
+	page-break-before:always;
+}
+div.warnke-3 img {
+	height: 80%;
+}
+
+div.hardey {
+	page-break-before:always;
+}
+div.hardey img {
+	height: 80%;
+}
+
+div.lodi-1 {
+	page-break-before:always;
+	page-break-after:always;
+}
+div.lodi-1 img {
+	height: 100%;
+}
+
+div.ludovico {
+	page-break-before:always;
+	page-break-after:always;
+}
+div.ludovico img {
+	height: 100%;
+}

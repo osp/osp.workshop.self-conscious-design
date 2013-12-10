@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="bookid" version="2.0">
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="bookid" version="3.0">
 	<metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
 		<meta name="generator" content="Adobe InDesign" />
 		<meta name="cover" content="cover-image" />
@@ -97,6 +97,10 @@
 		<item id="unlike-us-reader-34" href="unlike-us-reader-34.xhtml" media-type="application/xhtml+xml" />
 		<item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml" />
 		<item id="unlike-us-reader.css" href="css/unlike-us-reader.css" media-type="text/css" />
+		<item id="unlike-us-reader-chap13.css" href="css/unlike-us-reader-chap13.css" media-type="text/css" />
+		<item id="unlike-us-reader-sophie.css" href="css/unlike-us-reader-sophie.css" media-type="text/css" />
+		<item id="jqueryjs" href="js/jquery.js" media="text/javascript">
+		<item id="paperjs" href="js/paper-full.min.js" media="text/javascript">
 		<item id="HelveticaNeueLTStd-Bd.otf" href="font/HelveticaNeueLTStd-Bd.otf" media-type="application/vnd.ms-opentype" />
 		<item id="HelveticaNeueLTStd-BdCn.otf" href="font/HelveticaNeueLTStd-BdCn.otf" media-type="application/vnd.ms-opentype" />
 		<item id="HelveticaNeueLTStd-It.otf" href="font/HelveticaNeueLTStd-It.otf" media-type="application/vnd.ms-opentype" />
