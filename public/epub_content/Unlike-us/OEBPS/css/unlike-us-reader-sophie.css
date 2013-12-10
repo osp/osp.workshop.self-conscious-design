@@ -9,7 +9,18 @@ p .tweet {
 }
 
 body:hover .tweet {
-	color: red;
+	color: blue;
 	transition: 2s;
 	transition-delay:2s;
+}
+
+
+.fantoma {   
+    color: green;
+    transition: 5s;   
+}
+
+.fantoma:hover  {   
+    color: transparent;
+    transition: 5s;   
 }
