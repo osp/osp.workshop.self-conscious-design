@@ -4,8 +4,31 @@
 	<head>
 		<title>unlike-us-reader-20</title>
 		<link href="css/unlike-us-reader.css" rel="stylesheet" type="text/css" />
+		<link href="css/unlike-us-reader-sophie.css" rel="stylesheet" type="text/css" />
+		<script type="text/javascript">
+		<![CDATA[
+
+			function replaceNodeText (node, text, replacetext)  {
+				if (node.hasChildNodes () == true) {
+					for (var i=0; i < node.childNodes.length; i++) {
+						if (node.childNodes[i].nodeType == document.TEXT_NODE) {
+							node.childNodes[i].data = node.childNodes[i].data.replace (text, replacetext)
+						} else {
+							replaceNodeText (node.childNodes[i], text, replacetext)
+						}
+					}
+				}
+			}
+
+			function replaceLegal () {
+				replaceNodeText (document.body, /illegal/i, "i.l.l.e.g.a.l")
+				replaceNodeText (document.body, "legal", "<span style="color:red">illegal</span>")
+				replaceNodeText (document.body, "i.l.l.e.g.a.l", "<span style="color:blue">legal</span>")
+			}
+		]]>
+		</script>
 	</head>
-	<body id="unlike-us-reader" xml:lang="en-GB">
+	<body id="unlike-us-reader" xml:lang="en-GB" onload="replaceLegal();">
 		<div>
 			<h1 id="toc_marker-19" class="article-title"><a id="Illegal-Art--and-Other-Stories--About-Social-Media" />Illegal Art and Other Stories About Social Media</h1>
 			<p class="slash">/</p>
@@ -16,7 +39,10 @@
 		</div>
 		<div>
 			<p>This is the cease and desist letter that I received from WORM in Rotterdam in 2010. That year, I included their work <em>Suicide Machine</em> in an exhibition on ‘Cease and Desist Art’, focused precisely on the legal troubles that can arise in art, which I organised and presented in Rome at the Live Performers Meeting.<sup><a id="footnote-305923-1-backlink" class="footnote-link" href="#footnote-305923-1">1</a></sup> Obviously I did not ask the artists’ permission to include them in the exhibition, as I considered it part of the curatorial concept. </p>
-			<p>It was all, of course, a hoax. The letter, the legal firm’s website, and all the necessary paraphernalia to lend credibility to the affair was created by the WORM collective with the complicity of Florian Cramer. It was a joke on the provocative joke contained in the concept of the exhibition. All the stories I tell in this article, however, are bona fide and true. My purpose, in fact, is to shine a spotlight on artists whose work is a response to social media and the Web 2.0, and by doing so explore the relationship between politics and aesthetics, and provide a critical analysis of the artistic possibilities that centralized social networks seek to exclude. The aim is to understand socio-cultural transformations in the fields of art and technology in social space and what new forms of engagement and participation have developed, providing an opportunity to reflect on new concepts of democracy that are emerging in our global media age. More specifically, this work focuses on three main movements, representing three different types of response by artists whose work challenges the Web 2.0: Illegal Art, Ironic Artivism, and Spatial Art.</p>
+
+			
+
+			<p>It was all, of course, a hoax. The letter, the legal firm’s website, and all the necessary paraphernalia to lend credibility to the affair was created by the WORM collective with the complicity of Florian Cramer. It was a joke on the provocative joke contained in the concept of the exhibition. All the stories I tell in this article, however, are bona fide and true. My purpose, in fact, is to shine a spotlight on arti<span class="tweet">I would kill for some ice-cream right now.</span>sts whose work is a response to social media and the Web 2.0, and by doing so explore the relationship between politics and aesthetics, and provide a critical analysis of the artistic possibilities that centralized social networks seek to exclude. The aim is to understand socio-cultural transformations in the fields of art and technology in social space and what new forms of engagement and participation have developed, providing an opportunity to reflect on new concepts of democracy that are emerging in our global media age. More specifically, this work focuses on three main movements, representing three different types of response by artists whose work challenges the Web 2.0: Illegal Art, Ironic Artivism, and Spatial Art.</p>
 			<h3 class="text_subtitle">Illegal Art</h3>
 			<p>What I call Illegal Art<sup><a id="footnote-305923-2-backlink" class="footnote-link" href="#footnote-305923-2">2</a></sup> is otherwise known as radical art. Artists working in this field have produced artworks that target Facebook, Twitter, and other centralized social networks – not anonymously, but putting themselves on the front line. For some years now, it has become popular among digital artists to focus on illegal art practices; in particular, it has become common practice among new media artists to attack companies that sell people’s privacy. A new form of art has emerged that can effectively be called ‘Illegal Art’, based on the capacity to provoke companies targeted by pirate artists, plagiarists, hackers, and troublemakers into sending out copious cease and desist letters.<sup><a id="footnote-305923-3-backlink" class="footnote-link" href="#footnote-305923-3">3</a></sup> Here we will take a close look at actions that have targeted companies like Facebook, Amazon and Google.</p>
 			<div class="lodi-2 img">

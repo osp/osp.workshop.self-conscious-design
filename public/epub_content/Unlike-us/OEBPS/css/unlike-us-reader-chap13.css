@@ -50,6 +50,7 @@ body {
 	font-family:"HelveticaNeueLT Std";
 	font-size:1em;
 	line-height:1.3em;
+
 }
 @page {
 	padding:0;
@@ -64,6 +65,7 @@ h1.article-title {
 	-epub-ruby-position:over;
 	-webkit-hyphens:none;
 	font-family:"HelveticaNeueLT Std Cn", sans-serif;
+    	color: #000000;
 	font-size:2em;
 	font-weight:bold;
 	line-height:1.3em;
@@ -107,6 +109,7 @@ p {
 	padding-bottom:1.3em;
 	widows: 2;
 	orphans: 2;
+	color: #FFFFFF;
 }
 p.text-last {
 	page-break-after:always;
@@ -300,16 +303,4 @@ div.ludovico {
 }
 div.ludovico img {
 	height: 100%;
-}
-
-.shareWord {
-    color: #cb0407;
-}
-
-.red {
-    color: red;
-}
-
-.blue {
-    color: blue;
 }

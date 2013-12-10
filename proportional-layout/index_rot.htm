@@ -1,6 +1,6 @@
 <html>
     <head>
-	<meta charset="utf-8">
+    <meta charset="utf-8">
         <script type="text/javascript" src="jquery.min.js"></script>
         <script>
             var ratios = {}
@@ -9,6 +9,7 @@
                 for (selector in ratios) {
                     for (property in ratios[selector]) {
                         var obj = $(selector)
+                        console.log (property)
                         var value = eval (ratios[selector][property])
                         setProperty (selector, property, value);
                     }
@@ -302,6 +303,7 @@
     </head>
     <body>
         <div id="__CANVAS">
+            <div id="box"></div>
             <div class="letter">A</div>
             <div class="letter">B</div>
             <div class="letter">C</div>
@@ -318,14 +320,18 @@
                 <span id="__RULES_LABEL" class="__CONTROL_LABEL">=</span>
                 <div>
                     <textarea id="__RULES_TEXTAREA">
-
 div.letter {
 width: 20;
 height: 20;
 rotate: 15;
 margin-top: 20;
 margin-left: 20;
-}</textarea><br /><input id="__RULES_SUBMIT" type="submit" value="update" />
+}
+
+div#box {
+
+}
+</textarea><br /><input id="__RULES_SUBMIT" type="submit" value="update" />
                 </div>
             </div>
         </div>

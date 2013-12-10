@@ -193,5 +193,44 @@
 				</div>
 			</div>
 		</div>
+		
+<script type="text/javascript">
+<![CDATA[
+if (document) {
+	// texte sans les tags
+	textdata = document.body.innerText;
+	
+	// pattern : mot 'share' + le mot qui le suit, recherche globale, ne fait pas de différence entre majuscule et manuscule
+	var patt = /(?:share\s)(\w+)/gi;
+	
+	// boucle, recherche de toutes les occurences du mot 'share'
+	while (null != (result = patt.exec (textdata))) {
+		
+		// on affecte à la variable 'keyWord2' le terme qui suit le mot 'share' (ex. information, ...), provenant du résultat
+		var keyWord2 = result[1];
+
+		// pattern 2 : terme qui suit le mot 'share' suivit des 100 prochains caractères
+		var patt2 = new RegExp ('(?:' + keyWord2 + ')(.{0,100})', 'gi');
+		
+		// recherche de toutes les occurences des mots suivants le mot 'share'
+		var result2 = patt2.exec (textdata)
+
+		// transforme le résultat en String
+		var resultText = result2.toString();
+
+		// texte avec les tags
+		var textWithTags = document.body.innerHTML;
+
+		// remplace le terme suivant le mot 'share' par les 100 nouveaux caractères
+		//var res = textWithTags.replace(keyWord2,'<span class="shareWord">'+resultText+'</span>');
+		var keywordPatt = new RegExp ('share ' + keyWord2, "gi");
+		var res = textWithTags.replace(keywordPatt,'share <span class="shareWord">'+resultText+'</span>');
+
+		document.body.innerHTML = res;
+	}
+
+}
+		]]>
+		</script>
 	</body>
 </html>
