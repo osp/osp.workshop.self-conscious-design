@@ -1,0 +1,79 @@
+<html lang="en"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Media query test. Source: http://extraordinarycommons.com/MediaQueryTest.html</title>
+<style>
+span {
+  text-decoration: line-through;
+}
+@media (device-width: 1024px) {
+  #dw1024 { text-decoration: none; }
+}
+@media (device-width: 600px) {
+  #dw600 { text-decoration: none; }
+}
+@media (device-height: 1024px) {
+  #dh1024 { text-decoration: none; }
+}
+@media (device-height: 600px) {
+  #dh600 { text-decoration: none; }
+}
+@media (device-aspect-ratio: 1024/600) {
+  #dar1024x600 { text-decoration: none; }
+}
+@media (device-aspect-ratio: 600/1024) {
+  #dar600x1024 { text-decoration: none; }
+}
+@media (orientation: portrait) {
+  #portrait { text-decoration: none; }
+}
+@media (orientation: landscape) {
+  #landscape { text-decoration: none; }
+}
+@media (width: 526px) {
+  #w526 { text-decoration: none; }
+}
+@media (width: 950px) {
+  #w950 { text-decoration: none; }
+}
+@media (height: 990px) {
+  #h990 { text-decoration: none; }
+}
+@media (height: 566px) {
+  #h566 { text-decoration: none; }
+}
+@media (aspect-ratio: 526/990) {
+  #ar526x990 { text-decoration: none; }
+}
+@media (aspect-ratio: 950/566) {
+  #ar950x566 { text-decoration: none; }
+}
+@media (color: 10) {
+  #c10 { text-decoration: none; }
+}
+@media (min-color-index: 0) {
+  #color-index { text-decoration: none; }
+}
+@media (monochrome: 0) {
+  #m0 { text-decoration: none; }
+}
+@media (min-resolution: 1dpi) {
+  #resolution { text-decoration: none; }
+}
+@media (grid: 0) {
+  #g0 { text-decoration: none; }
+}
+</style>
+</head><body>
+  <div>Device width: <span id="dw1024">1024px</span> <span id="dw600">600px</span></div>
+  <div>Device height: <span id="dh600">600px</span> <span id="dh1024">1024px</span></div>
+  <div>Device aspect ratio: <span id="dar1024x600">1024/600</span> <span id="dar600x1024">600/1024</span></div>
+  <div>Orientation: <span id="portrait">portrait</span> <span id="landscape">landscape</span></div>
+  <div>Width: <span id="w526">526px</span> <span id="w950">950px</span></div>
+  <div>Height: <span id="h990">990px</span> <span id="h566">566px</span></div>
+  <div>Aspect ratio: <span id="ar526x990">526/990</span> <span id="ar950x566">950/566</span></div>
+  <div>Color: <span id="c10">10</span></div>
+  <div>Color index: <span id="color-index">supported</span></div>
+  <div>Monochrome: <span id="m0">0</span></div>
+  <div>Resolution: <span id="resolution">supported</span></div>
+  <div>Grid: <span id="g0">0</span></div>
+</body></html>
