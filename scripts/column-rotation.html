@@ -1,0 +1,67 @@
+<html>
+	<head>
+		<title>Media Query test page</title>
+		<style type="text/css">
+			
+			p { color: black;}
+			
+			
+			@media all and (orientation: portrait) {
+				/*section {
+					-moz-column-count:2;
+					-webkit-column-count:2;
+					column-count:2;
+				}*/
+			}
+			
+			@media all and (orientation: portrait) {
+				p {
+					color: transparent;
+					/*transform: rotateX(45deg);
+					-webkit-transform: rotateX(45deg);
+					perspective: 150px;
+					-webkit-perspective: 150px;*/
+					transition: 5s;
+				}
+			}
+			
+			@media all and (orientation: landscape) {
+				/*section {
+					-moz-column-count:3; /* Firefox */
+					/*-webkit-column-count:3; /* Safari and Chrome */
+					/*column-count:3;
+				}*/
+			}
+			
+			@media all and (orientation: landscape) {	
+				p {
+					color: green;
+					transition: 5s;
+				}
+			}
+			
+			
+			@media all and (min-resolution: 150dpi) {
+				p { font-size: 150%; font-family: sans-serif; }
+			}
+			
+			@media all and (max-resolution: 150dpi) {
+				p { font-size: 100%; }
+			}
+			
+		</style>
+	</head>
+	<body>
+		<section>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eros lacus, tempus eu sagittis eleifend, faucibus pulvinar est. Vestibulum urna ligula, convallis ut mi iaculis, faucibus tristique eros. Praesent fringilla tortor vel interdum vehicula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer at scelerisque leo. Integer pharetra mauris et feugiat fringilla. Nullam tristique, orci et rutrum lacinia, sapien quam pretium nunc, eu sodales metus quam nec mauris. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer porttitor, lorem tincidunt congue vulputate, leo metus interdum urna, molestie volutpat metus enim ac leo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas sit amet eros quis mi fermentum scelerisque in vel metus. Pellentesque suscipit tortor nunc, in elementum orci commodo nec.</p>
+
+			<p>Mauris sed tincidunt leo. Donec semper orci eget aliquam malesuada. Curabitur nec enim eget nibh tincidunt semper quis eu augue. Nullam tempor, metus in accumsan pretium, dolor sapien auctor felis, id volutpat nulla turpis vitae orci. Nam dignissim lacinia vehicula. Integer tempus congue laoreet. Maecenas ut nisi lacus. Sed neque urna, lacinia at mattis id, vulputate nec dui. Integer ac ultrices nulla. Nunc non erat auctor, consectetur lectus id, egestas augue. Pellentesque arcu neque, condimentum in ante sit amet, faucibus posuere turpis. Vestibulum ante diam, pellentesque nec nisl ut, laoreet consectetur mi. In hac habitasse platea dictumst. Donec congue tortor turpis, quis consequat lacus mollis facilisis. Praesent mollis ante dignissim turpis venenatis, quis mattis ligula congue. Cras est lorem, congue nec porttitor ut, aliquet vitae enim.</p>
+
+			<p>Aenean nisi nunc, faucibus in hendrerit ac, dictum sit amet est. Aenean mollis, justo ac hendrerit posuere, sapien sapien pharetra enim, non consequat purus nisi eu dui. Fusce interdum consectetur risus nec commodo. Donec volutpat ultricies metus, a volutpat mauris pulvinar ut. Sed sed adipiscing velit, ut imperdiet nisl. Fusce euismod erat vitae purus elementum sagittis. Donec euismod, lorem at varius iaculis, tellus urna bibendum velit, id ornare risus justo quis orci. In hac habitasse platea dictumst. Aenean scelerisque pulvinar interdum. Suspendisse quis consequat risus, in sodales augue. Nullam convallis sagittis fringilla. Sed pulvinar felis sit amet lacinia luctus. Quisque non lorem tempor libero pulvinar facilisis.</p>
+
+			<p>Nam lacinia ultrices nibh, sed pellentesque felis mollis ac. Etiam dolor dui, euismod ut viverra a, euismod ut neque. Fusce risus urna, mattis ut dolor in, interdum commodo orci. Suspendisse in gravida diam. Cras fermentum nisl augue, a convallis est feugiat sed. Suspendisse aliquet, erat id vestibulum eleifend, erat nunc vulputate sem, ac adipiscing lacus magna vitae lacus. Donec imperdiet porta eros, id hendrerit odio bibendum eget. Sed dictum, justo a imperdiet vestibulum, nunc diam ultrices orci, ut sodales massa ipsum ut risus. Sed fermentum sapien sit amet diam convallis, ac molestie ante euismod. Morbi eget ante imperdiet, malesuada purus quis, convallis ligula.</p>
+
+			<p>Fusce posuere enim at dolor cursus ultrices. Nunc nec consectetur mauris, sed faucibus leo. Proin fringilla feugiat lectus non volutpat. Ut iaculis metus eu vulputate dapibus. Vivamus egestas purus vel porta suscipit. Aenean in quam ut lorem pellentesque vestibulum. Nam volutpat sapien risus, vel ullamcorper erat aliquet sit amet. Pellentesque sit amet enim justo. Pellentesque elementum condimentum pharetra. Etiam ut tincidunt tellus.</p>
+		</section>
+	</body>
+</html>
