@@ -3,59 +3,147 @@
 	<metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
 		<meta name="generator" content="Adobe InDesign" />
 		<meta name="cover" content="cover-image" />
-		<dc:title>Unlike Us Reader</dc:title>
+		<dc:title>Unlike Us Reader Remixed</dc:title>
+		<meta property="dcterms:modified">2014-01-03T12:47:00Z</meta>
 		<dc:language>en-GB</dc:language>
-		<dc:identifier opf:scheme="ISBN">978-90-818575-5-0</dc:identifier>
-		<dc:identifier id="bookid">urn:uuid:4320C523-847F-4191-A725-96D0AC3158A6</dc:identifier>
-		<dc:creator opf:role="edt" opf:file-as="Lovink, Geert">Geert Lovink</dc:creator>
-		<dc:creator opf:role="edt" opf:file-as="Rasch, Miriam">Miriam Rasch</dc:creator>
-		<dc:creator opf:role="aut" opf:file-as="Barocas, Solon">Solon Barocas</dc:creator>
-		<dc:creator opf:role="aut" opf:file-as="Bassett, Caroline">Caroline Bassett</dc:creator>
-		<dc:creator opf:role="aut" opf:file-as="Bazzichelli, Tatiana">Tatiana Bazzichelli</dc:creator>
-		<dc:creator opf:role="aut" opf:file-as="Beer, David">David Beer</dc:creator>
-		<dc:creator opf:role="aut" opf:file-as="Berry, David M.">David M. Berry</dc:creator>
-		<dc:creator opf:role="aut" opf:file-as="Bunz, Mercedes">Mercedes Bunz</dc:creator>
-		<dc:creator opf:role="aut" opf:file-as="Cabello, Flrencio">Florencio Cabello</dc:creator>
-		<dc:creator opf:role="aut" opf:file-as="Cirio, Paolo">Paolo Cirio</dc:creator>
-		<dc:creator opf:role="aut" opf:file-as="Donovan, Joan">Joan Donovan</dc:creator>
-		<dc:creator opf:role="aut" opf:file-as="Doulas, Louis">Louis Doulas</dc:creator>
-		<dc:creator opf:role="aut" opf:file-as="Evans, Leighton">Leighton Evans</dc:creator>
-		<dc:creator opf:role="aut" opf:file-as="Franco, Marta G.">Marta G. Franco</dc:creator>
-		<dc:creator opf:role="aut" opf:file-as="Gehl, Robert W.">Robert W. Gehl</dc:creator>
-		<dc:creator opf:role="aut" opf:file-as="Gürses, Seda">Seda Gürses</dc:creator>
-		<dc:creator opf:role="aut" opf:file-as="Haché, Alexandra">Alexandra Haché</dc:creator>
-		<dc:creator opf:role="aut" opf:file-as="Halpin, Harry">Harry Halpin</dc:creator>
-		<dc:creator opf:role="aut" opf:file-as="Hardey, Mariann">Mariann Hardey</dc:creator>
-		<dc:creator opf:role="aut" opf:file-as="Hatzopoulos, Pavlos">Pavlos Hatzopoulos</dc:creator>
-		<dc:creator opf:role="aut" opf:file-as="Hui, Yuk">Yuk Hui</dc:creator>
-		<dc:creator opf:role="aut" opf:file-as="Ippolita">Ippolita</dc:creator>
-		<dc:creator opf:role="aut" opf:file-as="Jurgenson, Nathan">Nathan Jurgenson</dc:creator>
-		<dc:creator opf:role="aut" opf:file-as="Kambouri, Nelli">Nelli Kambouri</dc:creator>
-		<dc:creator opf:role="aut" opf:file-as="Kennedy, Jenny">Jenny Kennedy</dc:creator>
-		<dc:creator opf:role="aut" opf:file-as="Langlois, Ganaele">Ganaele Langlois</dc:creator>
-		<dc:creator opf:role="aut" opf:file-as="Lodi, Simona">Simona Lodi</dc:creator>
-		<dc:creator opf:role="aut" opf:file-as="Lovink, Geert">Geert Lovink</dc:creator>
-		<dc:creator opf:role="aut" opf:file-as="Ludovico, Alessandro">Alessandro Ludovico</dc:creator>
-		<dc:creator opf:role="aut" opf:file-as="Mancinelli, Tiziana">Tiziana Mancinelli</dc:creator>
-		<dc:creator opf:role="aut" opf:file-as="McNicol, Andrew">Andrew McNicol</dc:creator>
-		<dc:creator opf:role="aut" opf:file-as="Miconi, Andrea">Andrea Miconi</dc:creator>
-		<dc:creator opf:role="aut" opf:file-as="Narayanan, Arvind">Arvind Narayanan</dc:creator>
-		<dc:creator opf:role="aut" opf:file-as="Wyatt, Niehaus">Wyatt Niehaus</dc:creator>
-		<dc:creator opf:role="aut" opf:file-as="Patelis, Korinna">Korinna Patelis</dc:creator>
-		<dc:creator opf:role="aut" opf:file-as="Rey, PJ">PJ Rey</dc:creator>
-		<dc:creator opf:role="aut" opf:file-as="Sevignani, Sebastian">Sebastian Sevignani</dc:creator>
-		<dc:creator opf:role="aut" opf:file-as="Stiegler, Bernard">Bernard Stiegler</dc:creator>
-		<dc:creator opf:role="aut" opf:file-as="Stumpel, Marc">Marc Stumpel</dc:creator>
-		<dc:creator opf:role="aut" opf:file-as="Terranova, Tiziana">Tiziana Terranova</dc:creator>
-		<dc:creator opf:role="aut" opf:file-as="Toubiana, Vincent">Vincent Toubiana</dc:creator>
-		<dc:creator opf:role="aut" opf:file-as="Troemel, Brad">Brad Troemel</dc:creator>
-		<dc:creator opf:role="aut" opf:file-as="van der Velden, Lonneke">Lonneke van der Velden</dc:creator>
-		<dc:creator opf:role="aut" opf:file-as="Warnke, Martin">Martin Warnke</dc:creator>
-		<dc:creator opf:role="aut" opf:file-as="Wittkower, D.E.">D.E. Wittkower</dc:creator>
+		<dc:identifier id="bookid">osp.workshop.self-conscious-layout.unlike-us_remix</dc:identifier>
+		<dc:creator id="lovink">Geert Lovink</dc:creator>
+		<meta refines="#lovink" property="role">edt</meta>
+		<meta refines="#lovink" property="file-as">Lovink, Geert</meta>
+		<dc:creator id="rasch">Miriam Rasch</dc:creator>
+		<meta refines="#rasch" property="role">edt</meta>
+		<meta refines="#rasch" property="file-as">Rasch, Miriam</meta>
+		<dc:creator id="barocas">Solon Barocas</dc:creator>
+		<meta refines="#barocas" property="role">aut</meta>
+		<meta refines="#barocas" property="file-as">Barocas, Solon</meta>
+		<dc:creator id="bassett">Caroline Bassett</dc:creator>
+		<meta refines="#bassett" property="role">aut</meta>
+		<meta refines="#bassett" property="file-as">Bassett, Caroline</meta>
+		<dc:creator id="bazzichelli">Tatiana Bazzichelli</dc:creator>
+		<meta refines="#bazzichelli" property="role">aut</meta>
+		<meta refines="#bazzichelli" property="file-as">Bazzichelli, Tatiana</meta>
+		<dc:creator id="beer">David Beer</dc:creator>
+		<meta refines="#beer" property="role">aut</meta>
+		<meta refines="#beer" property="file-as">Beer, David</meta>
+		<dc:creator id="berry">David M. Berry</dc:creator>
+		<meta refines="#berry" property="role">aut</meta>
+		<meta refines="#berry" property="file-as">Berry, David M.</meta>
+		<dc:creator id="bunz">Mercedes Bunz</dc:creator>
+		<meta refines="#bunz" property="role">aut</meta>
+		<meta refines="#bunz" property="file-as">Bunz, Mercedes</meta>
+		<dc:creator id="cabello">Florencio Cabello</dc:creator>
+		<meta refines="#cabello" property="role">aut</meta>
+		<meta refines="#cabello" property="file-as">Cabello, Flrencio</meta>
+		<dc:creator id="cirio">Paolo Cirio</dc:creator>
+		<meta refines="#cirio" property="role">aut</meta>
+		<meta refines="#cirio" property="file-as">Cirio, Paolo</meta>
+		<dc:creator id="donovan">Joan Donovan</dc:creator>
+		<meta refines="#donovan" property="role">aut</meta>
+		<meta refines="#donovan" property="file-as">Donovan, Joan</meta>
+		<dc:creator id="doulas">Louis Doulas</dc:creator>
+		<meta refines="#doulas" property="role">aut</meta>
+		<meta refines="#doulas" property="file-as">Doulas, Louis</meta>
+		<dc:creator id="evans">Leighton Evans</dc:creator>
+		<meta refines="#evans" property="role">aut</meta>
+		<meta refines="#evans" property="file-as">Evans, Leighton</meta>
+		<dc:creator id="franco">Marta G. Franco</dc:creator>
+		<meta refines="#franco" property="role">aut</meta>
+		<meta refines="#franco" property="file-as">Franco, Marta G.</meta>
+		<dc:creator id="gehl">Robert W. Gehl</dc:creator>
+		<meta refines="#gehl" property="role">aut</meta>
+		<meta refines="#gehl" property="file-as">Gehl, Robert W.</meta>
+		<dc:creator id="gürses">Seda Gürses</dc:creator>
+		<meta refines="#gürses" property="role">aut</meta>
+		<meta refines="#gürses" property="file-as">Gürses, Seda</meta>
+		<dc:creator id="haché">Alexandra Haché</dc:creator>
+		<meta refines="#haché" property="role">aut</meta>
+		<meta refines="#haché" property="file-as">Haché, Alexandra</meta>
+		<dc:creator id="halpin">Harry Halpin</dc:creator>
+		<meta refines="#halpin" property="role">aut</meta>
+		<meta refines="#halpin" property="file-as">Halpin, Harry</meta>
+		<dc:creator id="hardey">Mariann Hardey</dc:creator>
+		<meta refines="#hardey" property="role">aut</meta>
+		<meta refines="#hardey" property="file-as">Hardey, Mariann</meta>
+		<dc:creator id="hatzopoulos">Pavlos Hatzopoulos</dc:creator>
+		<meta refines="#hatzopoulos" property="role">aut</meta>
+		<meta refines="#hatzopoulos" property="file-as">Hatzopoulos, Pavlos</meta>
+		<dc:creator id="hui">Yuk Hui</dc:creator>
+		<meta refines="#hui" property="role">aut</meta>
+		<meta refines="#hui" property="file-as">Hui, Yuk</meta>
+		<dc:creator id="ippolita">Ippolita</dc:creator>
+		<meta refines="#ippolita" property="role">aut</meta>
+		<meta refines="#ippolita" property="file-as">Ippolita</meta>
+		<dc:creator id="jurgenson">Nathan Jurgenson</dc:creator>
+		<meta refines="#jurgenson" property="role">aut</meta>
+		<meta refines="#jurgenson" property="file-as">Jurgenson, Nathan</meta>
+		<dc:creator id="kambouri">Nelli Kambouri</dc:creator>
+		<meta refines="#kambouri" property="role">aut</meta>
+		<meta refines="#kambouri" property="file-as">Kambouri, Nelli</meta>
+		<dc:creator id="kennedy">Jenny Kennedy</dc:creator>
+		<meta refines="#kennedy" property="role">aut</meta>
+		<meta refines="#kennedy" property="file-as">Kennedy, Jenny</meta>
+		<dc:creator id="langlois">Ganaele Langlois</dc:creator>
+		<meta refines="#langlois" property="role">aut</meta>
+		<meta refines="#langlois" property="file-as">Langlois, Ganaele</meta>
+		<dc:creator id="lodi">Simona Lodi</dc:creator>
+		<meta refines="#lodi" property="role">aut</meta>
+		<meta refines="#lodi" property="file-as">Lodi, Simona</meta>
+		<meta refines="#lovink" property="role">aut</meta>
+		<dc:creator id="ludovico">Alessandro Ludovico</dc:creator>
+		<meta refines="#ludovico" property="role">aut</meta>
+		<meta refines="#ludovico" property="file-as">Ludovico, Alessandro</meta>
+		<dc:creator id="mancinelli">Tiziana Mancinelli</dc:creator>
+		<meta refines="#mancinelli" property="role">aut</meta>
+		<meta refines="#mancinelli" property="file-as">Mancinelli, Tiziana</meta>
+		<dc:creator id="mcnicol">Andrew McNicol</dc:creator>
+		<meta refines="#mcnicol" property="role">aut</meta>
+		<meta refines="#mcnicol" property="file-as">McNicol, Andrew</meta>
+		<dc:creator id="miconi">Andrea Miconi</dc:creator>
+		<meta refines="#miconi" property="role">aut</meta>
+		<meta refines="#miconi" property="file-as">Miconi, Andrea</meta>
+		<dc:creator id="narayanan">Arvind Narayanan</dc:creator>
+		<meta refines="#narayanan" property="role">aut</meta>
+		<meta refines="#narayanan" property="file-as">Narayanan, Arvind</meta>
+		<dc:creator id="wyatt">Wyatt Niehaus</dc:creator>
+		<meta refines="#wyatt" property="role">aut</meta>
+		<meta refines="#wyatt" property="file-as">Wyatt, Niehaus</meta>
+		<dc:creator id="patelis">Korinna Patelis</dc:creator>
+		<meta refines="#patelis" property="role">aut</meta>
+		<meta refines="#patelis" property="file-as">Patelis, Korinna</meta>
+		<dc:creator id="rey">PJ Rey</dc:creator>
+		<meta refines="#rey" property="role">aut</meta>
+		<meta refines="#rey" property="file-as">Rey, PJ</meta>
+		<dc:creator id="sevignani">Sebastian Sevignani</dc:creator>
+		<meta refines="#sevignani" property="role">aut</meta>
+		<meta refines="#sevignani" property="file-as">Sevignani, Sebastian</meta>
+		<dc:creator id="stiegler">Bernard Stiegler</dc:creator>
+		<meta refines="#stiegler" property="role">aut</meta>
+		<meta refines="#stiegler" property="file-as">Stiegler, Bernard</meta>
+		<dc:creator id="stumpel">Marc Stumpel</dc:creator>
+		<meta refines="#stumpel" property="role">aut</meta>
+		<meta refines="#stumpel" property="file-as">Stumpel, Marc</meta>
+		<dc:creator id="terranova">Tiziana Terranova</dc:creator>
+		<meta refines="#terranova" property="role">aut</meta>
+		<meta refines="#terranova" property="file-as">Terranova, Tiziana</meta>
+		<dc:creator id="toubiana">Vincent Toubiana</dc:creator>
+		<meta refines="#toubiana" property="role">aut</meta>
+		<meta refines="#toubiana" property="file-as">Toubiana, Vincent</meta>
+		<dc:creator id="troemel">Brad Troemel</dc:creator>
+		<meta refines="#troemel" property="role">aut</meta>
+		<meta refines="#troemel" property="file-as">Troemel, Brad</meta>
+		<dc:creator id="velden">Lonneke van der Velden</dc:creator>
+		<meta refines="#velden" property="role">aut</meta>
+		<meta refines="#velden" property="file-as">van der Velden, Lonneke</meta>
+		<dc:creator id="warnke">Martin Warnke</dc:creator>
+		<meta refines="#warnke" property="role">aut</meta>
+		<meta refines="#warnke" property="file-as">Warnke, Martin</meta>
+		<dc:creator id="wittkower">D.E. Wittkower</dc:creator>
+		<meta refines="#wittkower" property="role">aut</meta>
+		<meta refines="#wittkower" property="file-as">Wittkower, D.E.</meta>
 		<dc:publisher>Institute of Network Cultures</dc:publisher>
 		<dc:subject>social, media, monopolies, alternatives, internet, web, online, digital, Facebook, twitter, Mark Zuckerberg, unlike us, critique, theory, art, practice, economy, political, philosophy, social sciences, essays, network, privacy, database, web 2.0, individuation, collective, Lorea, Foursquare, design, program, code, graph, business, intervention, resistance, occupy, protest, Diaspora, hackers, hacking, federation, Distribution, centralization, decentralization, architecture</dc:subject>
 		<dc:description>The Unlike Us Reader offers a critical examination of social media, bringing together theoretical essays, personal discussions, and artistic manifestos. How can we understand the social media we use everyday, or consciously choose not to use? We know very well that monopolies control social media, but what are the alternatives? While Facebook continues to increase its user population and combines loose privacy restrictions with control over data, many researchers, programmers, and activists turn towards designing a decentralized future. Through understanding the big networks from within, be it by philosophy or art, new perspectives emerge.</dc:description>
-		<dc:date opf:event="publication">2013-02</dc:date>	
+		<dc:date>2013-02</dc:date>	
 		<dc:rights>This publication is licensed under Creative Commons Attribution, NonCommercial, ShareAlike 3.0 Unported (CC BY-NC-SA 3.0).</dc:rights>
 	</metadata>
 	<manifest>
@@ -71,8 +159,8 @@
 		<item id="unlike-us-reader-8" href="unlike-us-reader-8.xhtml" media-type="application/xhtml+xml" />
 		<item id="unlike-us-reader-9" href="unlike-us-reader-9.xhtml" media-type="application/xhtml+xml" />
 		<item id="unlike-us-reader-10" href="unlike-us-reader-10.xhtml" media-type="application/xhtml+xml" />
-		<item id="unlike-us-reader-11" href="unlike-us-reader-11.xhtml" media-type="application/xhtml+xml" />
-		<item id="unlike-us-reader-12" href="unlike-us-reader-12.xhtml" media-type="application/xhtml+xml" />
+		<item id="unlike-us-reader-11" href="unlike-us-reader-11.xhtml" media-type="application/xhtml+xml" properties="scripted" />
+		<item id="unlike-us-reader-12" href="unlike-us-reader-12.xhtml" media-type="application/xhtml+xml" properties="scripted" />
 		<item id="unlike-us-reader-13" href="unlike-us-reader-13.xhtml" media-type="application/xhtml+xml" />
 		<item id="unlike-us-reader-14" href="unlike-us-reader-14.xhtml" media-type="application/xhtml+xml" />
 		<item id="unlike-us-reader-15" href="unlike-us-reader-15.xhtml" media-type="application/xhtml+xml" />
@@ -80,7 +168,7 @@
 		<item id="unlike-us-reader-17" href="unlike-us-reader-17.xhtml" media-type="application/xhtml+xml" />
 		<item id="unlike-us-reader-18" href="unlike-us-reader-18.xhtml" media-type="application/xhtml+xml" />
 		<item id="unlike-us-reader-19" href="unlike-us-reader-19.xhtml" media-type="application/xhtml+xml" />
-		<item id="unlike-us-reader-20" href="unlike-us-reader-20.xhtml" media-type="application/xhtml+xml" />
+		<item id="unlike-us-reader-20" href="unlike-us-reader-20.xhtml" media-type="application/xhtml+xml" properties="scripted" />
 		<item id="unlike-us-reader-21" href="unlike-us-reader-21.xhtml" media-type="application/xhtml+xml" />
 		<item id="unlike-us-reader-22" href="unlike-us-reader-22.xhtml" media-type="application/xhtml+xml" />
 		<item id="unlike-us-reader-23" href="unlike-us-reader-23.xhtml" media-type="application/xhtml+xml" />
@@ -99,8 +187,8 @@
 		<item id="unlike-us-reader.css" href="css/unlike-us-reader.css" media-type="text/css" />
 		<item id="unlike-us-reader-chap13.css" href="css/unlike-us-reader-chap13.css" media-type="text/css" />
 		<item id="unlike-us-reader-sophie.css" href="css/unlike-us-reader-sophie.css" media-type="text/css" />
-		<item id="jqueryjs" href="js/jquery.js" media="text/javascript">
-		<item id="paperjs" href="js/paper-full.min.js" media="text/javascript">
+		<item id="jqueryjs" href="js/jquery.js" media-type="text/javascript" />
+		<item id="paperjs" href="js/paper-full.min.js" media-type="text/javascript" />
 		<item id="HelveticaNeueLTStd-Bd.otf" href="font/HelveticaNeueLTStd-Bd.otf" media-type="application/vnd.ms-opentype" />
 		<item id="HelveticaNeueLTStd-BdCn.otf" href="font/HelveticaNeueLTStd-BdCn.otf" media-type="application/vnd.ms-opentype" />
 		<item id="HelveticaNeueLTStd-It.otf" href="font/HelveticaNeueLTStd-It.otf" media-type="application/vnd.ms-opentype" />
@@ -183,8 +271,8 @@
 	</spine>
 	<guide>
 		<reference type="cover" title="Cover" href="CoverImage.xhtml" />
-        <reference type="toc" title="Contents" href="unlike-us-reader.xhtml" />
-        <reference type="colophon" title="Colophon" href="unlike-us-reader-1.xhtml" />
-        <reference type="text" title="Introduction" href="unlike-us-reader.xhtml" />
+		<reference type="toc" title="Contents" href="unlike-us-reader.xhtml" />
+		<reference type="colophon" title="Colophon" href="unlike-us-reader-1.xhtml" />
+		<reference type="text" title="Introduction" href="unlike-us-reader.xhtml" />
 	</guide>
 </package>
