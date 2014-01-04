@@ -8,94 +8,100 @@ xmlns:epub="http://www.idpf.org/2007/ops">
 		<script src="js/jquery.js" type="text/javascript"></script>
 		<script src="js/paper-full.min.js" type="text/javascript"></script>
 		<script type="text/javascript">
-		//<![CDATA[
-		// we use PaperScript directly from JavaScript http://paperjs.org/tutorials/getting-started/using-javascript-directly/ 
-		paper.install(window);
-		window.onload = function() {
-			var canvas = document.getElementById('canvas-1');
-			// Create an empty project and a view for the canvas:
-			paper.setup(canvas);
+			<![CDATA[
+				// we use PaperScript directly from JavaScript http://paperjs.org/tutorials/getting-started/using-javascript-directly/ 
+				paper.install(window);
+				window.onload = function() {
+					var canvas = document.getElementById('canvas-1');
+					// Create an empty project and a view for the canvas:
+					paper.setup(canvas);
 			
-			
-			var point = view.center;
-			var point = view.center;
+					var tool = new Tool ();
 
-				var colors = [];
-				var cycles = 4;
-				for (var i = 0, l = 60; i < l; i++) {
-					var brightness = 1 - (i / l) * 1.5;
-					var hue = i / l * cycles * 360;
-					var color = {
-						hue: hue,
-						saturation: 1,
-						brightness: brightness
-					};
-					colors.push(color);
-				}
+					var point = paper.view.center;
+					
 
-				var radius = Math.max(view.size.width, view.size.height) * 0.75;
-
-				var path = new Path.Rectangle({
-					rectangle: view.bounds,
-					fillColor: {
-						origin: point,
-						destination: point + [radius, 0],
-						gradient: {
-							stops: colors,
-							radial: true
+						var colors = [];
+						var cycles = 4;
+						for (var i = 0, l = 60; i < l; i++) {
+							var brightness = 1 - (i / l) * 1.5;
+							var hue = i / l * cycles * 360;
+							var color = {
+								hue: hue,
+								saturation: 1,
+								brightness: brightness
+							};
+							colors.push(color);
 						}
-					}
-				});
 
-				var color = path.fillColor;
-				var gradient = color.gradient;
-				var mouseDown = false;
-				var mousePoint = view.center;
+						var radius = Math.max(paper.view.size.width, paper.view.size.height) * 0.75;
 
-				view.onMouseDown = function(event) {
-					mouseDown = true;
-					mousePoint = event.point;
+						var path = new paper.Path.Rectangle({
+							rectangle: paper.view.bounds,
+							fillColor: {
+								origin: point,
+								destination: point + [radius, 0],
+								gradient: {
+									stops: colors,
+									radial: true
+								}
+							}
+						});
+
+						var color = path.fillColor;
+						var gradient = color.gradient;
+						var mouseDown = false;
+						var mousePoint = paper.view.center;
+
+						tool.onMouseDown = function(event) {
+							mouseDown = true;
+							mousePoint = event.point;
+						};
+
+						tool.onMouseDrag = function(event) {
+							mousePoint = event.point;
+						};
+
+						tool.onMouseUp = function(event) {
+							vector.length = 10;
+							mouseDown = false;
+						};
+
+						var grow = false;
+						var vector = new paper.Point(150, 0);
+
+						view.onFrame = function(event) {
+							for (var i = 0, l = gradient.stops.length; i < l; i++)
+								gradient.stops[i].color.hue -= 20;
+							if (grow && vector.length > 300) {
+								grow = false;
+							} else if (!grow && vector.length < 75) {
+								grow = true;
+							}
+
+							if (mouseDown) {
+								console.log (point)
+								var x = point.x + (mousePoint.x - point.x) / 10
+								var y = point.y + (mousePoint.y - point.y) / 10
+								point = new paper.Point (x, y)
+							} else {
+								vector.length += (grow ? 1 : -1);
+								vector.angle += 5;
+							}
+
+							color.highlight = mouseDown ? point : new paper.Point (point.x + vector.x, point.y + vector.y);
+						};
+
+						view.onResize = function(event) {
+							point = paper.view.center;
+							path.bounds = paper.view.bounds;
+							var color = path.fillColor;
+							color.origin = point;
+							var radius = Math.max(paper.view.size.width, paper.view.size.height) * 0.75;
+							color.destination = new papert.Point (point.x + radius, point.y);
+						};
 				};
-
-				view.onMouseDrag = function(event) {
-					mousePoint = event.point;
-				};
-
-				view.onMouseUp = function(event) {
-					vector.length = 10;
-					mouseDown = false;
-				};
-
-				var grow = false;
-				var vector = new Point(150, 0);
-
-				view.onFrame = function(event) {
-					for (var i = 0, l = gradient.stops.length; i < l; i++)
-						gradient.stops[i].color.hue -= 20;
-					if (grow && vector.length > 300) {
-						grow = false;
-					} else if (!grow && vector.length < 75) {
-						grow = true;
-					}
-					if (mouseDown) {
-						point = point + (mousePoint - point) / 10;
-					} else {
-						vector.length += (grow ? 1 : -1);
-						vector.angle += 5;
-					}
-					color.highlight = mouseDown ? point : point + vector;
-				};
-
-				view.onResize = function(event) {
-					point = view.center;
-					path.bounds = view.bounds;
-					var color = path.fillColor;
-					color.origin = point;
-					var radius = Math.max(view.size.width, view.size.height) * 0.75;
-					color.destination = point + [radius, 0];
-				};
-		};
-		//]]>
+			]]>
 		</script>
 	</head>
 	<body id="unlike-us-reader" xml:lang="en-GB">
