@@ -2,8 +2,11 @@
 
 import os
 import fnmatch
+import socket
 
-from flask import Flask, send_from_directory, jsonify
+from flask import Flask, send_from_directory, render_template, jsonify
+
+HOST_IP = [ip for ip in socket.gethostbyname_ex(socket.gethostname())[2] if not ip.startswith("127.")][0]
 
 PROJECT_PATH = os.path.abspath(os.path.dirname(__file__))
 EPUB_DIR = os.path.join(PROJECT_PATH, 'public', 'epub_content')
@@ -11,6 +14,17 @@ EPUB_DIR = os.path.join(PROJECT_PATH, 'public', 'epub_content')
 app = Flask(__name__, static_folder='public', static_url_path='')
 
 @app.route("/")
+def list_generated_epubs():
+    def find_generated_epubs():
+        for i in os.listdir(EPUB_DIR):
+            if os.path.isdir(os.path.join(EPUB_DIR, i)):
+                if os.path.exists(os.path.join(EPUB_DIR, i, "%s.epub" % i)):
+                    yield "http://%s:5000/epub_content/%s/%s.epub" % (HOST_IP, i, i)
+    
+    generated_epubs = list(find_generated_epubs())
+    return render_template('generated_epubs.html', generated_epubs=generated_epubs)
+
+@app.route("/index.html")
 def static_home():
     return send_from_directory(app.static_folder, 'index.html')
 
