@@ -13,9 +13,9 @@
     <manifest>
         <item id="content" href="content.xhtml" media-type="application/xhtml+xml" />
         <item id="nav" href="nav.xhtml" properties="nav" media-type="application/xhtml+xml" />
-        <item id="css" href="styles/ground-zero.css" media-type="text/css" />
+        <item id="css" href="styles/style.css" media-type="text/css" />
         <!-- ncx included for 2.0 reading system compatibility: -->
-        <item id="ncx" href="ground-zero.ncx" media-type="application/x-dtbncx+xml" />
+        <item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml" />
     </manifest>
     <spine toc="ncx">
         <itemref idref="content" />        
