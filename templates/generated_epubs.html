@@ -17,7 +17,7 @@
                 padding: 64px;
                 background-color: #E6E6E6;
                 font-family: Georgia, serif;
-                font-size: 24px;
+                font-size: 48px;
             }
             
             ul {
@@ -27,8 +27,8 @@
     </head>
     <body>
         <ul>
-            {% for generated_epub_link in generated_epubs %}
-                <li><a href="{{ generated_epub_link }}">{{ generated_epub_link }}</a></li>
+            {% for generated_epub in generated_epubs %}
+                <li><a href="{{ generated_epub.link }}">{{ generated_epub.name }}</a></li>
             {% endfor %}
         </ul>
     </body>

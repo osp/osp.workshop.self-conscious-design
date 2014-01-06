@@ -19,8 +19,8 @@ def list_generated_epubs():
         for i in os.listdir(EPUB_DIR):
             if os.path.isdir(os.path.join(EPUB_DIR, i)):
                 if os.path.exists(os.path.join(EPUB_DIR, i, "%s.epub" % i)):
-                    yield "http://%s:5000/epub_content/%s/%s.epub" % (HOST_IP, i, i)
-    
+                    yield {  'name': i, 'link' : "http://%s:5000/epub_content/%s/%s.epub" % (HOST_IP, i, i) }
+                    
     generated_epubs = list(find_generated_epubs())
     return render_template('generated_epubs.html', generated_epubs=generated_epubs)
 
