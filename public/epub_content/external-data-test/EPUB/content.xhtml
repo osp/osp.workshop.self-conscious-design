@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"
+	xmlns:epub="http://www.idpf.org/2007/ops">
+	<head>
+		<meta charset="utf-8"></meta>
+		<title>External Data Test</title>
+		<link rel="stylesheet" type="text/css" href="styles/style.css" class="day" title="day"/> 
+
+	</head>
+	<body>
+		<section epub:type="frontmatter" id="frontmatter">
+			<section epub:type="titlepage" id="titlepage">
+				<h1>External Data Test</h1>
+				<div class="aut">OSP HEAD</div>
+				<p epub:type="dedication">To the wonderful EPUB world</p>
+
+			</section>
+		</section>
+		<section epub:type="bodymatter" id="bodymatter">
+			<section id="ch1">
+				<h2>I. Welcome</h2>
+				<p id="dynamic">I will try and update this text with outside info. If this text does not change, it has not worked: I can not (or am not allowed to) connect to the internet.</p>
+			</section>
+		</section>
+		<script>
+			//<![CDATA[
+			var client = new XMLHttpRequest();
+			
+			client.onreadystatechange = function () {
+				if (this.readyState == 4 && this.status == 200) {
+					
+					document.getElementById("dynamic").innerHTML = 'It works! I managed to connect throught the internet, through what is called a CORS request. We connected to a server with a basic CORS example. This server gives us the twitter handle of the person who’se example we followed. It is: ' + this.responseText;
+				}
+			};
+			client.open('GET', 'http://remysharp.com/demo/cors.php');
+			client.send();
+			//]]>
+		</script>
+	</body>
+</html>
