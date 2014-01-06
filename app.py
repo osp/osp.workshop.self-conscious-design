@@ -3,10 +3,14 @@
 import os
 import fnmatch
 import socket
+import commands
 
 from flask import Flask, send_from_directory, render_template, jsonify
 
-HOST_IP = [ip for ip in socket.gethostbyname_ex(socket.gethostname())[2] if not ip.startswith("127.")][0]
+try:
+    HOST_IP = [ip for ip in socket.gethostbyname_ex(socket.gethostname())[2] if not ip.startswith("127.")][0]
+except:
+    HOST_IP = commands.getoutput("/sbin/ifconfig").split("\n")[1].split()[1][5:]
 
 PROJECT_PATH = os.path.abspath(os.path.dirname(__file__))
 EPUB_DIR = os.path.join(PROJECT_PATH, 'public', 'epub_content')
