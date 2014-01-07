@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
-  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" xmlns:epub="http://www.idpf.org/2007/ops">
 <head>
   <title>Bartleby</title>
-  <link class="day" href="../Styles/style.css" rel="stylesheet" title="day" type="text/css" />
+  <link class="day" href="styles/style.css" rel="stylesheet" title="day" type="text/css" />
   <style>
    .disappear {
      	color: transparent;
@@ -15,19 +13,24 @@
    .disappear .keep {
 	color: black;
    }
+
+   .pop-up {
+	position: absolute;
+   }
   </style>
   <!--<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">-->
-  <script src="js/jquery-1.9.1.js"></script>
+  <script src="js/jquery.js"></script>
   <script src="js/jquery-ui.js"></script>
   <script>
 	//<![CDATA[
   $(document).ready(function(){
+    $(".pop-up").click (function () {$(this).remove()});
     $("#preferNot").next("p").addClass ("disappear");
-    $("#dialog").dialog();
-    $('div.myImage').dialog({
+    //$("#dialog").dialog();
+    /*$('div.myImage').dialog({
 	width:300,
 	height:230
-    });
+    });*/
   });
 	//]]>
   </script>
@@ -56,7 +59,7 @@
 
       <p>I should have stated before that ground glass folding-doors divided my premises into two parts, one of which was occupied by my scriveners, the other by myself. According to my humor I threw open these doors, or closed them. I resolved to assign Bartleby a corner by the folding-doors, but on my side of them, so as to have this quiet man within easy call, in case any trifling thing was to be done. I placed his desk close up to a small side-window in that part of the room, a window which originally had afforded a lateral view of certain grimy back-yards and bricks, but which, owing to subsequent erections, commanded at present no view at all, though it gave some light. Within three feet of the panes was a wall, and the light came down from far above, between two lofty buildings, as from a very small opening in a dome. Still further to a satisfactory arrangement, I procured a high green folding screen, which might entirely isolate Bartleby from my sight, though not remove him from my voice. And thus, in a manner, privacy and society were conjoined.</p>
 
-      <p>At first Bartleby did an extraordinary quantity of writing. As if long famishing for something to copy, he seemed to gorge himself on my documents. There was no pause for digestion. He ran a day and night line, copying by sun-light and by candle-light. I should have been quite delighted with his application, had he been cheerfully industrious. But he wrote on silently, palely, mechanically.</p>
+      <p id="dialog" class="pop-up">At first Bartleby did an extraordinary quantity of writing. As if long famishing for something to copy, he seemed to gorge himself on my documents. There was no pause for digestion. He ran a day and night line, copying by sun-light and by candle-light. I should have been quite delighted with his application, had he been cheerfully industrious. But he wrote on silently, palely, mechanically.</p>
 
       <p>It is, of course, an indispensable part of a scrivener's business to verify the accuracy of his copy, word by word. Where there are two or more scriveners in an office, they assist each other in this examination, one reading from the copy, the other holding the original. It is a very dull, wearisome, and lethargic affair. I can readily imagine that to some sanguine temperaments it would be altogether intolerable. For example, I cannot credit that the mettlesome poet Byron would have contentedly sat down with Bartleby to examine a law document of, say five hundred pages, closely written in a crimpy hand.</p>
 
@@ -64,10 +67,10 @@
 
       	<div id="preferNot"></div><p>In this very attitude did I sit when I called to him, rapidly stating what it was I wanted him to do—namely, to examine a small paper with me. Imagine my surprise, nay, my consternation, when without moving from his privacy, Bartleby in a singularly mild, firm voice, replied, <span class="keep">"I would prefer not to."</span></p>
 
-      	<p id="dialog">I sat awhile in perfect silence, rallying my stunned faculties. Immediately it occurred to me that my ears had deceived me, or Bartleby had entirely misunderstood my meaning. I repeated my request in the clearest tone I could assume. But in quite as clear a one came the previous reply, "I would prefer not to."</p>
+      	<p>I sat awhile in perfect silence, rallying my stunned faculties. Immediately it occurred to me that my ears had deceived me, or Bartleby had entirely misunderstood my meaning. I repeated my request in the clearest tone I could assume. But in quite as clear a one came the previous reply, "I would prefer not to."</p>
 
-	<div class="myImage">
-   	    <img src="/home/erg-libre/Downloads/wall-street-rally-chaplin.jpg" alt="myimage" />
+	<div class="myImage pop-up">
+   	    <img src="images/wall-street-rally-chaplin.jpg" alt="wall-street-rally-chaplin" />
 	</div>
 
       <p>"Prefer not to," echoed I, rising in high excitement, and crossing the room with a stride. "What do you mean? Are you moon-struck? I want you to help me compare this sheet here—take it," and I thrust it towards him.</p>
