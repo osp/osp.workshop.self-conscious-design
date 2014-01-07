@@ -12,15 +12,14 @@
 
    .disappear .keep {
 	color: black;
-   }
-   .pop-up, image-pop-up {
+   }	
+
+   p.pop-up {
     position: absolute;
    }
-   .image-pop-up {
-    width: 100%;
-	position: absolute;
-	text-align: center;
-	page-break-before: always;
+   
+   img.pop-up {
+    margin-top: -150px;
    }
   </style>
   <!--<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">-->
@@ -28,11 +27,38 @@
   <script src="js/jquery-ui.js"></script>
   <script>
 	//<![CDATA[
-  $(document).ready(function(){
-    $(".pop-up, .image-pop-up").click (function () {$(this).remove()});
+  $(document).ready(function() {
+
+	// Find all the images with a pop-up class and give them a negative top-margin equal to their height
+	$("img.pop-up").each (function () {
+	 imHeight = getImageHeight (this);
+     if (imHeight > 0) {
+	  $(this).css ('margin-top', -1 * imHeight);
+     }
+	});
+
+	// Work-around function because iBooks doesn't assign a height to the images
+	// But doesn't seem to alter the CSS either
+	function getImageHeight (obj) {
+     if ($(obj).height() > 0) {
+      return parseInt ($(obj).height());
+     } else {
+      im = new Image();
+      im.src = obj.src;
+      return parseInt (im.height);
+     }
+	}
+
+	// Make all the pop-up elements disappear when they are clicked and prevent
+	// the default behaviour of iBooks
+    $(".pop-up").click (function (e) {
+	 $(this).remove();
+     e.preventDefault();
+    });
+
     $("#preferNot").next("p").addClass ("disappear");
     //$("#dialog").dialog();
-    /*$('div.myImage').dialog({
+   /*$('div.myImage').dialog({
 	width:300,
 	height:230
     });*/
@@ -73,9 +99,8 @@
 
       	<p>I sat awhile in perfect silence, rallying my stunned faculties. Immediately it occurred to me that my ears had deceived me, or Bartleby had entirely misunderstood my meaning. I repeated my request in the clearest tone I could assume. But in quite as clear a one came the previous reply, "I would prefer not to."</p>
 
-	<div class="myImage image-pop-up">
-   	    <img src="images/wall-street-rally-chaplin.jpg" alt="wall-street-rally-chaplin" />
-	</div>
+   	    <img class="pop-up" src="images/wall-street-rally-chaplin.jpg" alt="wall-street-rally-chaplin" />
+
 
       <p>"Prefer not to," echoed I, rising in high excitement, and crossing the room with a stride. "What do you mean? Are you moon-struck? I want you to help me compare this sheet here—take it," and I thrust it towards him.</p>
 
