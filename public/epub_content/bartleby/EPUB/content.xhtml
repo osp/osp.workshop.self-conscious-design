@@ -13,9 +13,14 @@
    .disappear .keep {
 	color: black;
    }
-
-   .pop-up {
+   .pop-up, image-pop-up {
+    position: absolute;
+   }
+   .image-pop-up {
+    width: 100%;
 	position: absolute;
+	text-align: center;
+	page-break-before: always;
    }
   </style>
   <!--<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">-->
@@ -24,7 +29,7 @@
   <script>
 	//<![CDATA[
   $(document).ready(function(){
-    $(".pop-up").click (function () {$(this).remove()});
+    $(".pop-up, .image-pop-up").click (function () {$(this).remove()});
     $("#preferNot").next("p").addClass ("disappear");
     //$("#dialog").dialog();
     /*$('div.myImage').dialog({
@@ -52,7 +57,6 @@
       <h2>Bartleby, the Scrivener.</h2>
 
       <h3>A Story of Wall-Street</h3>
-
       <p>Now my original business—that of a conveyancer and title hunter, and drawer-up of recondite documents of all sorts—was considerably increased by receiving the master's office. There was now great work for scriveners. Not only must I push the clerks already with me, but I must have additional help. In answer to my advertisement, a motionless young man one morning, stood upon my office threshold, the door being open, for it was summer. I can see that figure now—pallidly neat, pitiably respectable, incurably forlorn! It was Bartleby.</p>
 
       <p>After a few words touching his qualifications, I engaged him, glad to have among my corps of copyists a man of so singularly sedate an aspect, which I thought might operate beneficially upon the flighty temper of Turkey, and the fiery one of Nippers.</p>
@@ -69,7 +73,7 @@
 
       	<p>I sat awhile in perfect silence, rallying my stunned faculties. Immediately it occurred to me that my ears had deceived me, or Bartleby had entirely misunderstood my meaning. I repeated my request in the clearest tone I could assume. But in quite as clear a one came the previous reply, "I would prefer not to."</p>
 
-	<div class="myImage pop-up">
+	<div class="myImage image-pop-up">
    	    <img src="images/wall-street-rally-chaplin.jpg" alt="wall-street-rally-chaplin" />
 	</div>
 
