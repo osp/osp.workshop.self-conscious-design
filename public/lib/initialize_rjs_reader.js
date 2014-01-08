@@ -108,10 +108,8 @@ require(['jquery', 'underscore', 'bootstrap', 'Readium'],
 
         RJSDemoApp.currLayoutIsSynthetic = true;
 
-        // "epub_content/moby_dick/OPS/package.opf"
-
-        // Load Moby Dick by default
-        RJSDemoApp.loadAndRenderEpub("epub_content/page-blanche/EPUB/package.opf");
+        // If you want to load Specific epub by default:
+        // RJSDemoApp.loadAndRenderEpub("epub_content/page-blanche/EPUB/package.opf");
 
         // Generate the library
         $.getJSON('epub_content/epub_library.json', function (data) {
