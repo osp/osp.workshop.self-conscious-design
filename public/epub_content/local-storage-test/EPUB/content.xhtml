@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"
+	xmlns:epub="http://www.idpf.org/2007/ops">
+	<head>
+		<meta charset="utf-8"></meta>
+		<title>Local Storage Test</title>
+		<link rel="stylesheet" type="text/css" href="styles/style.css" class="day" title="day"/> 
+
+	</head>
+	<body>
+		<section epub:type="frontmatter" id="frontmatter">
+			<section epub:type="titlepage" id="titlepage">
+				<h1>Local Storage Test</h1>
+				<div class="aut">OSP HEAD</div>
+			</section>
+		</section>
+		<section epub:type="bodymatter" id="bodymatter">
+			<section id="ch1">
+				<h2>You have been here</h2>
+				<div id="visitsnumber"></div>
+				<p>times.</p>
+			</section>
+		</section>
+        <script type="text/javascript">
+        //<![CDATA[
+
+            // if the Reading System knows about itself:
+            if (typeof localStorage !== 'undefined') {
+
+                var n = 0;
+
+                // launch scripts:
+                if (localStorage.getItem('timesVisited')) {
+                    n = parseInt(localStorage.getItem('timesVisited'));
+                    n = n + 1;
+                } else {
+                    n = 1;
+                }
+                localStorage.setItem('timesVisited', n);
+                
+                var numberDiv = document.getElementById('visitsnumber');
+                numberDiv.innerHTML = n;
+
+            }
+        //]]>
+        </script>
+	</body>
+</html>
