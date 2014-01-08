@@ -131,7 +131,7 @@
 
 		function displayLostFriend(){
 			// get a name from the array
-			var index = Math.round(Math.random(0, FB_response_object.data.length));
+			var index = Math.round(Math.random(0, friends.length-1));
 			var name = friends[index];
 
 			// set HTML with its name
