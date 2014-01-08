@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title></title>
+
+  <link href="../Style/style.css" rel="stylesheet" type="text/css"/>
+  
+  <script type="text/javascript">
+
+  adjectives=new Array ('The living', 'The logical', 'The secondary', 'The absolute', 'The fashion');
+  subjects=new Array ('logic', 'process', 'time', 'solution', 'problem');
+  verbs=new Array ('shall apply to', 'shall remain in', 'shall allow', 'shall escape from', 'shall assign');
+  adjectivesTwo=new Array ('living', 'logical', 'secondary', 'absolute', 'fashion');
+  nouns=new Array ('logic', 'process', 'time', 'solution', 'problem');
+
+  wordOrder=new Array (
+    {'wordList': adjectives, 'elementId': 'adjective'},
+    {'wordList': subjects, 'elementId': 'subject'},
+    {'wordList': verbs, 'elementId': 'verb'},
+    {'wordList': adjectivesTwo, 'elementId': 'adjectiveTwo'},
+    {'wordList': nouns, 'elementId': 'noun'}
+  );
+
+  document.addEventListener ('DOMContentLoaded', function () {
+    blessWord ();
+  }, false);
+
+  var elem = null
+
+  var blessWord = function () {
+    if (wordOrder.length > 0) {
+      var wordObj = wordOrder.shift ();
+      wordOrder.push (wordObj);
+
+      if (elem != null)
+        elem.removeEventListener ('click', blessWord, false);
+      elem = document.getElementById (wordObj.elementId);
+      console.log (elem);
+      elem.innerText = wordObj.wordList[Math.floor(Math.random()*wordObj.wordList.length)]
+
+      elem.addEventListener ('click', blessWord, false);
+
+    }
+  }
+  </script>
+</head>
+
+<body>
+  <div class="poem">
+    <p id="adjective"></p>
+    <p id="subject"></p>
+    <p id="verb"></p>
+    <p id="adjectiveTwo"></p>
+    <p id="noun"></p>
+  </div>
+</body>
+</html>

@@ -1,0 +1,6 @@
+@charset "utf-8";
+
+h1{font-family:"GillSans";}
+h1.center{text-align:center;}
+
+img.center, audio.center{display:block; margin-left:auto; margin-right:auto;}
