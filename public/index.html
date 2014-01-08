@@ -27,6 +27,8 @@
 
 		var id; // intervaled function’s id
 		var numberOfFriends;
+		var FB_response_object;
+		var friends = new Array();
 
 	<!-- ------------------------------------ FACEBOOK ------------------------------------------ !>
 		window.fbAsyncInit = function() {
@@ -47,8 +49,6 @@
 					// The response object is returned with a status field that lets the app know the current
 					// login status of the person. In this case, we're handling the situation where they
 					// have logged in to the app.
-					//testAPI();
-					console.log('test');
 					init();
 				} else if (response.status === 'not_authorized') {
 					// In this case, the person is logged into Facebook, but not into the app, so we call
@@ -79,26 +79,35 @@
 			ref.parentNode.insertBefore(js, ref);
 		}(document));
 
+<!-- ------------------------------------ END FACEBOOK ------------------------------------------ !>
 
+
+
+		// facebook query
 		function init(){
-			getNumberOfFriends();
+			FB.api('/me/friends', {fields: 'name,id,location,birthday'}, function(response) {
+				FB_response_object = response;
+				setFriendsArray();
+				setFriendMeterCounterHTML();
+				showFriendMeterDiv();
+			});
 		}
 
-		function toggleFriendMeter(){
+		function setFriendsArray(){
+			for (var i=0; i<FB_response_object.data.length; i++){
+				friends[i] = FB_response_object.data[i].name;
+			}
+		}
+
+		function setFriendMeterCounterHTML(){
+			document.getElementById("friendMeter-counter-text").innerHTML = friends.length;
+		}
+
+		function showFriendMeterDiv(){
 			// Contenu caché, le montrer
 			document.getElementById("friendMeter").style.visibility = "visible";
 			document.getElementById("friendMeter").style.height = "auto";			// Optionnel rétablir la hauteur
-		}
-
-		// TODO facebook query
-		function getNumberOfFriends(){
-			FB.api('/me/friends', function(response) {
-				id = setInterval(shrinkBar, 30);
-				console.log(response.data.length);
-				numberOfFriends = response.data.length;
-				document.getElementById("friendMeter-counter-font").innerHTML = numberOfFriends;
-				toggleFriendMeter();
-			});
+			id = setInterval(shrinkBar, 10);
 		}
 
 		function shrinkBar(){
@@ -107,9 +116,12 @@
 				elem.style.width = "98%";
 			}
 			elem.style.width = parseInt(elem.style.width)-1+"%";
+
+			// FRIEND LOST !
 			if (parseInt(elem.style.width) <= 0){
-				removeFriend();
-				if (numberOfFriends >= 1){
+				displayLostFriend();
+				setFriendMeterCounterHTML();
+				if (friends.length > 0){
 					elem.style.width = "98%";
 				} else {
 					clearInterval(id);
@@ -117,9 +129,37 @@
 			}
 		}
 
-		function removeFriend(){
-			numberOfFriends = numberOfFriends-1;
-			document.getElementById("friendMeter-counter-font").innerHTML = numberOfFriends;
+		function displayLostFriend(){
+			// get a name from the array
+			var index = Math.round(Math.random(0, FB_response_object.data.length));
+			var name = friends[index];
+
+			// set HTML with its name
+			document.getElementById("friendMeter-friendData-text").innerHTML = name;
+
+			// display lost friend DIV
+			toggleFriendName();
+
+			// remove friend in the array
+			friends.splice(index, 1);
+
+			// hide lost friend DIV
+			setTimeout(toggleFriendName, 200);
+		}
+
+		function toggleFriendName(){
+			if (document.getElementById("friendMeter-friendData").style.opacity == 1){
+				document.getElementById("friendMeter-friendData").style.opacity = 0;
+			} else {
+				document.getElementById("friendMeter-friendData").style.opacity = 1;
+			}
+		}
+
+		function debug_displayFriends(){
+			console.log("Friends :");
+			for (var i=0; i<friends.length; i++){
+				console.log(friends[i]);
+			}
 		}
 
 	</script>
@@ -188,7 +228,10 @@
 		<div id="friendMeter">
 			<div id="friendMeter-bar"></div>
 			<div id="friendMeter-counter">
-				<div id= "friendMeter-counter-font">3</div>
+				<div id= "friendMeter-counter-text">3</div>
+			</div>
+			<div id="friendMeter-friendData">
+				<div id= "friendMeter-friendData-text"></div>
 			</div>
         </div>
     </body>
