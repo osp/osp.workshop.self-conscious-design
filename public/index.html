@@ -138,16 +138,16 @@
 			document.getElementById("friendMeter-friendData-text").innerHTML = name;
 
 			// display lost friend DIV
-			toggleFriendName();
+			toggleFriendNameDIV();
 
 			// remove friend in the array
-			friends.splice(index, 1);
+			console.log(friends.splice(index, 1)+" removed !");
 
 			// hide lost friend DIV
-			setTimeout(toggleFriendName, 200);
+			setTimeout(toggleFriendNameDIV, 200);
 		}
 
-		function toggleFriendName(){
+		function toggleFriendNameDIV(){
 			if (document.getElementById("friendMeter-friendData").style.opacity == 1){
 				document.getElementById("friendMeter-friendData").style.opacity = 0;
 			} else {
