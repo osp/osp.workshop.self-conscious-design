@@ -31,6 +31,7 @@
   document.addEventListener ('DOMContentLoaded', function () {
     setTextSize ();
     blessWord ();
+    window.addEventListener('click', blessWord, false)
   }, false);
 
   $(window).resize(function() {
@@ -56,14 +57,22 @@
       var wordObj = wordOrder.shift ();
       wordOrder.push (wordObj);
 
-      if (elem != null)
-        elem.removeEventListener ('click', blessWord, false);
+      //if (elem != null)
+        //elem.removeEventListener ('click', blessWord, false);
       
       elem = document.getElementById (wordObj.elementId);
       console.log (elem);
-      elem.innerText = wordObj.wordList[Math.floor(Math.random()*wordObj.wordList.length)]
 
-      elem.addEventListener ('click', blessWord, false);
+      // never the same word twice in a row
+      var currentWord = elem.innerText;
+      var newWord = wordObj.wordList[Math.floor(Math.random()*wordObj.wordList.length)]
+      while (newWord === currentWord) {
+        newWord = wordObj.wordList[Math.floor(Math.random()*wordObj.wordList.length)];
+      }
+      elem.innerText = newWord;
+
+
+      //elem.addEventListener ('click', blessWord, false);
 
     }
   }
