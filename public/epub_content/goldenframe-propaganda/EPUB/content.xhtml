@@ -41,29 +41,8 @@
                 }
             }
 
-            function onMouseMove(event) {
-                var xDelta, yDelta;
-                if (navigator.webkitPointer && navigator.webkitPointer.isLocked) {
-                    xDelta = event.webkitMovementX;
-                    yDelta = event.webkitMovementY;
-                } else {
-                    if (lastMouse == null) lastMouse = {x:event.clientX, y:event.clientY};
-                    xDelta = event.clientX - lastMouse.x;
-                    yDelta = event.clientY - lastMouse.y;
-                }
-                lastMouse.x = event.clientX;
-                lastMouse.y = event.clientY;
-                
-                if(xDelta > 0){
-                	moveSequence(true);
-                }
-                else if(xDelta < 0){
-                	moveSequence(false);
-                }
-            }
 
-
-	function onDeviceOrientationChange(event) {
+	    function onDeviceOrientationChange(event) {
                 lastOrientation.gamma = event.gamma;
                 lastOrientation.beta = event.beta;
             }
@@ -88,18 +67,38 @@
                 	moveSequence(false);
                 }
             }
-        
+
+            function onMouseMove(event) {
+                var xDelta, yDelta;
+                if (navigator.webkitPointer && navigator.webkitPointer.isLocked) {
+                    xDelta = event.webkitMovementX;
+                    yDelta = event.webkitMovementY;
+                } else {
+                    if (lastMouse == null) lastMouse = {x:event.clientX, y:event.clientY};
+                    xDelta = event.clientX - lastMouse.x;
+                    yDelta = event.clientY - lastMouse.y;
+                }
+                lastMouse.x = event.clientX;
+                lastMouse.y = event.clientY;
+                
+                if(xDelta > 0){
+                	moveSequence(true);
+                }
+                else if(xDelta < 0){
+                	moveSequence(false);
+                }
+            }
+
 			
-			
-			function moveSequence(moveRight){
-				if(moveRight && posX > width*-10){
-					posX -= width;
+	    function moveSequence(moveRight){
+		 if(moveRight && posX > width*-10){
+			posX -= width;
 				}
-				else if(!moveRight && posX < 0){
-					posX += width;
+		 else if(!moveRight && posX < 0){
+			posX += width;
 				}
-				console.log(posX);
-				id('metaimg').style.backgroundPosition = posX + 'px 0px';
+		console.log(posX);
+		id('metaimg').style.backgroundPosition = posX + 'px 0px';
 			}
 			
     
