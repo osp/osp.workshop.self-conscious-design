@@ -61,6 +61,34 @@
                 	moveSequence(false);
                 }
             }
+
+
+	function onDeviceOrientationChange(event) {
+                lastOrientation.gamma = event.gamma;
+                lastOrientation.beta = event.beta;
+            }
+
+            function onRenderUpdate(event) {
+                var xDelta;
+                switch (window.orientation) {
+                    case 90:
+                        xDelta = lastOrientation.beta;
+                        break;
+                    case -90:
+                        xDelta = lastOrientation.beta * -1;
+                        break;
+                    default:
+                        xDelta = lastOrientation.gamma;
+                }
+                
+               	  if(xDelta > 0){
+                	moveSequence(true);
+                }
+                else if(xDelta < 0){
+                	moveSequence(false);
+                }
+            }
+        
 			
 			
 			function moveSequence(moveRight){
