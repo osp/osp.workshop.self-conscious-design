@@ -48,16 +48,27 @@
             }
 
             function onRenderUpdate(event) {
-                var xDelta;
+                var xDelta, yDelta;
                 switch (window.orientation) {
+                    case 0:
+			xDelta = lastOrientation.gamma;
+                        yDelta = lastOrientation.beta;
+                        break;
+                    case 180:
+                        xDelta = lastOrientation.gamma * -1;
+                        yDelta = lastOrientation.beta * -1;
+                        break;
                     case 90:
                         xDelta = lastOrientation.beta;
+                        yDelta = lastOrientation.gamma * -1;
                         break;
                     case -90:
                         xDelta = lastOrientation.beta * -1;
+                        yDelta = lastOrientation.gamma;
                         break;
                     default:
                         xDelta = lastOrientation.gamma;
+                        yDelta = lastOrientation.beta;
                 }
                 
                	  if(xDelta > 0){
