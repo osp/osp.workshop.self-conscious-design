@@ -18,6 +18,7 @@
     <item id="text1" href="Text/text1.xhtml" media-type="application/xhtml+xml" properties="scripted"/>
 
     <item id="cover-image" href="Image/cover.jpg" media-type="image/jpeg" properties="cover-image"/>
+    <item id="background-image" href="Image/LinesPaper.jpg" media-type="image/jpeg"/>
 
     <item id="style_css" href="Style/style.css" media-type="text/css"/>
     <item id="js_jquery-2.0.3.min" href="JS/jquery-2.0.3.min.js" media-type="text/javascript"/>

@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" xmlns:epub="http://www.idpf.org/2007/ops">
 <head>
   <title></title>
-
+  <meta name="viewport" content="width=512, height=748" />
   <link href="../Style/style.css" rel="stylesheet" type="text/css"/>
   <script src="../JS/jquery-2.0.3.min.js" type="text/javascript"></script>
   
@@ -29,7 +29,7 @@
   document.addEventListener ('DOMContentLoaded', function () {
     setTextSize ();
     blessWord ();
-    window.addEventListener('click', blessWord, false)
+    img.addEventListener('click', blessWord, false)
   }, false);
 
   $(window).resize(function() {
@@ -72,8 +72,8 @@
 
     //change color and size
   function changeColorSize(wordObj){
-    var minSize=20;
-    var maxSize=200;
+    var minSize=100;
+    var maxSize=300;
     //var colorise=true;
     //var colorArray=['red', 'black', 'green', 'blue'];
     var fontArray=['Futura-CondensedExtraBold', 'TimesNewRomanPSMT', 'AmericanTypewriter', 'Palatino-Roman'];
@@ -94,13 +94,14 @@
   </script>
 </head>
 
-<body>
-  <div class="poem">
-    <h1 id="adjective" class="center"></h1>
-    <h1 id="subject" class="center"></h1>
-    <h1 id="verb" class="center"></h1>
-    <h1 id="adjective_two" class="center"></h1>
-    <h1 id="noun" class="center"></h1>
+<body class="poem">
+  <div style="position:relative;">
+    <img id="fullsize" src="../Image/LinesPaper.jpg" />
+      <span id="adjective" style="position:absolute; top:100px; left:50px"></span>
+      <span id="subject" style="position:absolute; top:200px; left:50px"></span>
+      <span id="verb" style="position:absolute; top:300px; left:50px"></span>
+      <span id="adjective_two" style="position:absolute; top:400px; left:50px"></span>
+      <span id="noun" style="position:absolute; top:500px; left:50px"></span>
   </div>
 </body>
 </html>
