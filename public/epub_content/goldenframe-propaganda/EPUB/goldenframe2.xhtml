@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"
+	xmlns:epub="http://www.idpf.org/2007/ops">
+	<head>
+		
+		
+
+		<meta charset="utf-8"></meta>
+		<title>Goldenframe Propaganda</title>
+		<link rel="stylesheet" type="text/css" href="styles/style.css" class="day" title="day"/> 
+		<style> #seq img { background-image:url('sequences/2sequence.jpg');} </style>
+		
+ 		<script type="text/javascript">
+			//<![CDATA[[
+
+            var winW, winH;
+            var lastMouse, lastOrientation;
+	    	var width, posX;
+
+			function setSize() {
+            	width = id('metaimg').offsetWidth
+            	posX = -5 * width; 			
+			}
+			
+            function init() {
+            	setSize();
+                lastOrientation = {};
+                window.addEventListener('resize', setSize, false);
+                document.body.addEventListener('mousemove', onMouseMove, false);
+                window.addEventListener('deviceorientation', deviceOrientationTest, false);
+                lastMouse = null;
+                //doLayout(document);
+            }
+			
+            // Does the gyroscope or accelerometer actually work?
+            function deviceOrientationTest(event) {
+                window.removeEventListener('deviceorientation', deviceOrientationTest);
+                if (event.beta != null && event.gamma != null) {
+                    window.addEventListener('deviceorientation', onDeviceOrientationChange, false);
+                    //animationId = setInterval(onRenderUpdate, 10); 
+                }
+            }
+
+
+	    function onDeviceOrientationChange(event) {
+                lastOrientation.gamma = event.gamma;
+                lastOrientation.beta = event.beta;
+            }
+
+            function onRenderUpdate(event) {
+                var xDelta, yDelta;
+                switch (window.orientation) {
+                    case 0:
+			xDelta = lastOrientation.gamma;
+                        yDelta = lastOrientation.beta;
+                        break;
+                    case 180:
+                        xDelta = lastOrientation.gamma * -1;
+                        yDelta = lastOrientation.beta * -1;
+                        break;
+                    case 90:
+                        xDelta = lastOrientation.beta;
+                        yDelta = lastOrientation.gamma * -1;
+                        break;
+                    case -90:
+                        xDelta = lastOrientation.beta * -1;
+                        yDelta = lastOrientation.gamma;
+                        break;
+                    default:
+                        xDelta = lastOrientation.gamma;
+                        yDelta = lastOrientation.beta;
+                }
+                
+               	  if(xDelta > 0){
+                	moveSequence(true);
+                }
+                else if(xDelta < 0){
+                	moveSequence(false);
+                }
+            }
+
+            function onMouseMove(event) {
+                var xDelta, yDelta;
+                if (navigator.webkitPointer && navigator.webkitPointer.isLocked) {
+                    xDelta = event.webkitMovementX;
+                    yDelta = event.webkitMovementY;
+                } else {
+                    if (lastMouse == null) lastMouse = {x:event.clientX, y:event.clientY};
+                    xDelta = event.clientX - lastMouse.x;
+                    yDelta = event.clientY - lastMouse.y;
+                }
+                lastMouse.x = event.clientX;
+                lastMouse.y = event.clientY;
+                
+                if(xDelta > 0){
+                	moveSequence(true);
+                }
+                else if(xDelta < 0){
+                	moveSequence(false);
+                }
+            }
+			
+			
+			function moveSequence(moveRight){
+				if(moveRight && posX > width*-10){
+					posX -= width;
+				}
+				else if(!moveRight && posX < 0){
+					posX += width;
+				}
+				console.log(posX);
+				id('metaimg').style.backgroundPosition = posX + 'px 0px';
+			}
+			
+    
+            function id(name) { return document.getElementById(name); };
+
+            window.onload = init;
+	
+	//]]>
+        </script>
+	</head>
+	<body>
+		<div id="seq"><img id="metaimg" src="placeholder.png" /></div>
+	</body>
+</html>

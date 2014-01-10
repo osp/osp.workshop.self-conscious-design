@@ -1,0 +1,26 @@
+@charset "UTF-8";
+@namespace "http://www.w3.org/1999/xhtml";
+@namespace epub "http://www.idpf.org/2007/ops";
+*{margin:0; padding:0;}
+body {
+    color: black;    
+    font-family: times, 'times new roman', serif;    
+    background-color: rgb(255,255,255);
+}
+h2 {
+    margin-top: 0em;
+    margin-bottom: 0em;
+}
+#seq{
+position: relative;
+top: 0;
+bottom: 0;
+
+}
+#seq img {
+height: 100%;
+width: auto;
+background-position: 50% 0;
+background-size: 1100%;
+}
+
