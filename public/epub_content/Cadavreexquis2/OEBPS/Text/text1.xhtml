@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
-  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" xmlns:epub="http://www.idpf.org/2007/ops">
 <head>
   <title></title>
 
@@ -21,11 +19,11 @@
   var factor = 40;
 
   var wordOrder=new Array (
-    {'wordList': adjectives, 'elementId': '1'},
-    {'wordList': subjects, 'elementId': '2'},
-    {'wordList': verbs, 'elementId': '3'},
-    {'wordList': adjectivesTwo, 'elementId': '4'},
-    {'wordList': nouns, 'elementId': '5'}
+    {'wordList': adjectives, 'elementId': 'adjective'},
+    {'wordList': subjects, 'elementId': 'subject'},
+    {'wordList': verbs, 'elementId': 'verb'},
+    {'wordList': adjectivesTwo, 'elementId': 'adjective_two'},
+    {'wordList': nouns, 'elementId': 'noun'}
   );
 
   document.addEventListener ('DOMContentLoaded', function () {
@@ -48,17 +46,15 @@
   };
 
   var blessWord = function () {
-    changeColorSize();
-    motCourrant++;
-    if (motCourrant === 6) {
-      motCourrant = 1;
-    }
     if (wordOrder.length > 0) {
       var wordObj = wordOrder.shift ();
       wordOrder.push (wordObj);
 
-      //if (elem != null)
-        //elem.removeEventListener ('click', blessWord, false);
+      changeColorSize(wordObj);
+      motCourrant++;
+      if (motCourrant === 6) {
+        motCourrant = 1;
+      }
       
       elem = document.getElementById (wordObj.elementId);
       console.log (elem);
@@ -71,21 +67,18 @@
       }
       elem.innerText = newWord;
 
-
-      //elem.addEventListener ('click', blessWord, false);
-
     }
   }
 
     //change color and size
-  function changeColorSize(){
+  function changeColorSize(wordObj){
     var minSize=20;
     var maxSize=200;
     //var colorise=true;
     //var colorArray=['red', 'black', 'green', 'blue'];
     var fontArray=['Futura-CondensedExtraBold', 'TimesNewRomanPSMT', 'AmericanTypewriter', 'Palatino-Roman'];
 
-    $('#' + motCourrant).css({
+    $('#' + wordObj.elementId).css({
         //'color':colorArray[Math.floor(Math.random()*colorArray.length)],
         'font-family':fontArray[Math.floor(Math.random()*fontArray.length)],
         'font-size': (minSize + (Math.floor(Math.random()*(maxSize-minSize)))) + '%'
@@ -103,11 +96,11 @@
 
 <body>
   <div class="poem">
-    <h1 class="center"><p id="1" class="js"></p></h1>
-    <h1 class="center"><p id="2"></p></h1>
-    <h1 class="center"><p id="3"></p></h1>
-    <h1 class="center"><p id="4"></p></h1>
-    <h1 class="center"><p id="5"></p></h1>
+    <h1 id="adjective" class="center"></h1>
+    <h1 id="subject" class="center"></h1>
+    <h1 id="verb" class="center"></h1>
+    <h1 id="adjective_two" class="center"></h1>
+    <h1 id="noun" class="center"></h1>
   </div>
 </body>
 </html>
