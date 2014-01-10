@@ -2,39 +2,41 @@
 <html>
     <head>
 
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="css/reader_bootstrap_customizations.css">
-	<link rel="stylesheet" type="text/css" href="css/readium_buttons.css">
-	<link rel="stylesheet" type="text/css" href="css/reader_sdk.css">
-	<script src="./lib/json2.js" type="text/javascript"></script>
-	<script src="./lib/zip.js" type="text/javascript"></script>
-	<script src="./lib/zip-fs.js" type="text/javascript"></script>
-	<script src="./lib/zip-ext.js" type="text/javascript"></script>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="css/reader_bootstrap_customizations.css">
+		<link rel="stylesheet" type="text/css" href="css/readium_buttons.css">
+		<link rel="stylesheet" type="text/css" href="css/reader_sdk.css">
+		<script src="./lib/json2.js" type="text/javascript"></script>
+		<script src="./lib/zip.js" type="text/javascript"></script>
+		<script src="./lib/zip-fs.js" type="text/javascript"></script>
+		<script src="./lib/zip-ext.js" type="text/javascript"></script>
 
-	<script data-main="./lib/initialize_rjs_reader" src="./lib/require.js" type="text/javascript"></script>
+		<script data-main="./lib/initialize_rjs_reader" src="./lib/require.js" type="text/javascript"></script>
 
-	<!--reflowable view-->
-	<script type="text/html" id="template-reflowable-view"><div id="viewport_reflowable" class="clearfix">
-	<iframe scrolling="no" id="epubContentIframe"></iframe></div></script>
+		<!--reflowable view-->
+		<script type="text/html" id="template-reflowable-view"><div id="viewport_reflowable" class="clearfix">
+		<iframe scrolling="no" id="epubContentIframe"></iframe></div></script>
 
-	<!-- Fixed Layout View -->
-	<script type="text/html" id="template-fixed-view"><div id="viewport_fixed"><div id="spread-wrap" class="clearfix"></div></div></script>
+		<!-- Fixed Layout View -->
+		<script type="text/html" id="template-fixed-view"><div id="viewport_fixed"><div id="spread-wrap" class="clearfix"></div></div></script>
 
-	<script type="text/html" id="template-ope-fixed-page-view"><div class="fixed-page-wrap"><iframe class="fixed_iframe"></iframe></div></script>
+		<script type="text/html" id="template-ope-fixed-page-view"><div class="fixed-page-wrap"><iframe class="fixed_iframe"></iframe></div></script>
 
-
+    </head>
+<body>
+	<div id="fb-root"></div>
+	<fb:login-button id="FB_login"></fb:login-button>
 	<script>
 
 		var id; // intervaled function’s id
-		var FB_response_object;
 		var friends = new Array();
 
-	<!-- ------------------------------------ FACEBOOK ------------------------------------------ !>
 		window.fbAsyncInit = function() {
 			FB.init({
 				appId      : '440069632759323',
 				status     : true, // check login status
 				cookie     : true, // enable cookies to allow the server to access the session
+			    oauth	   : true, // enables OAuth 2.0
 				xfbml      : true  // parse XFBML
 			});
 
@@ -44,12 +46,7 @@
 			// will be handled.
 			FB.Event.subscribe('auth.authResponseChange', function(response) {
 				// Here we specify what we do with the response anytime this event occurs.
-				if (response.status === 'connected') {
-					// The response object is returned with a status field that lets the app know the current
-					// login status of the person. In this case, we're handling the situation where they
-					// have logged in to the app.
-					init();
-				} else if (response.status === 'not_authorized') {
+				if (response.status === 'not_authorized' || response.status === 'unknown') {
 					// In this case, the person is logged into Facebook, but not into the app, so we call
 					// FB.login() to prompt them to do so.
 					// In real-life usage, you wouldn't want to immediately prompt someone to login
@@ -57,15 +54,11 @@
 					// (1) JavaScript created popup windows are blocked by most browsers unless they
 					// result from direct interaction from people using the app (such as a mouse click)
 					// (2) it is a bad experience to be continually prompted to login upon page load.
+					//alert("You are logged in but not_authorized!");
 					FB.login();
-				} else {
-					// In this case, the person is not logged into Facebook, so we call the login()
-					// function to prompt them to do so. Note that at this stage there is no indication
-					// of whether they are logged into the app. If they aren't then they'll see the Login
-					// dialog right after they log in to Facebook.
-					// The same caveats as above apply to the FB.login() call here.
-					FB.login();
+				init();
 				}
+				init();
 			});
 		};
 
@@ -78,35 +71,34 @@
 			ref.parentNode.insertBefore(js, ref);
 		}(document));
 
-<!-- ------------------------------------ END FACEBOOK ------------------------------------------ !>
-
-
-
 		// facebook query
 		function init(){
-			FB.api('/me/friends', {fields: 'name,id,location,birthday'}, function(response) {
-				FB_response_object = response;
-				setFriendsArray();
-				setFriendMeterCounterHTML();
-				showFriendMeterDiv();
+			FB.getLoginStatus(function(response) {
+				if (response.status === 'connected') {
+					displayFBLogin(false);
+					FB.api('/me/friends', {fields: 'name'}, function(friends) {
+						setFriendsArray(friends);
+						setFriendMeterCounterHTML();
+						debug_displayFriends();
+					});
+					showFriendMeterDiv(true);
+
+				} else {
+					displayFBLogin(true);
+					showFriendMeterDiv(false);
+				}
 			});
 		}
 
-		function setFriendsArray(){
-			for (var i=0; i<FB_response_object.data.length; i++){
-				friends[i] = FB_response_object.data[i].name;
+		function setFriendsArray(_friends){
+			friends.length = 0;
+			for (var i=0; i< _friends.data.length; i++){
+				friends[i] = _friends.data[i].name;
 			}
 		}
 
 		function setFriendMeterCounterHTML(){
 			document.getElementById("friendMeter-counter-text").innerHTML = friends.length;
-		}
-
-		function showFriendMeterDiv(){
-			// Contenu caché, le montrer
-			document.getElementById("friendMeter").style.visibility = "visible";
-			document.getElementById("friendMeter").style.height = "auto";			// Optionnel rétablir la hauteur
-			id = setInterval(shrinkBar, 10);
 		}
 
 		function shrinkBar(){
@@ -125,6 +117,37 @@
 				} else {
 					clearInterval(id);
 				}
+			}
+		}
+
+		function FB_logout(){//check if logout is
+			FB.logout();
+		}
+
+		function showFriendMeterDiv(_show){
+			if(_show){
+				// Contenu caché, le montrer
+				document.getElementById("friendMeter").style.visibility = "visible";
+				document.getElementById("friendMeter").style.height = "auto";			// Optionnel rétablir la hauteur
+				id = setInterval(shrinkBar, 10);
+			} else {
+				// Contenu caché, le montrer
+				document.getElementById("friendMeter").style.visibility = "hidden";
+				document.getElementById("friendMeter").style.height = "0px";			// Optionnel rétablir la hauteur
+				clearInterval(id);
+			}
+		}
+
+
+		function displayFBLogin(_displayLogin){
+			if (_displayLogin){
+				document.getElementById("FB_login").style.display = "block";
+				document.getElementById("FB_logout").style.visibility = "hidden";
+				document.getElementById("readiumContainer").style.display = "none";
+			}else {
+				document.getElementById("FB_login").style.display = "none";
+				document.getElementById("FB_logout").style.visibility = "visible";
+				document.getElementById("readiumContainer").style.display = "block";
 			}
 		}
 
@@ -164,73 +187,55 @@
 
 	</script>
 
-    </head>
+		<div id="readiumContainer">
+			<!-- The navbar -->
+			<div class="navbar navbar-fixed-top" id="toolbar-el">
+				<div class="navbar-inner" id="top-bar" style="">
+						<button id="FB_logout" onclick="FB_logout()"></button>
+					<div class="container">
 
-    <!-- This is all application-specific HTML -->
-    <body>
+						<!-- Navbar logo -->
+						<a title="Simple RJS Demo" class="brand icon48" id="readium-logo" href="#"></a>
 
+						<!-- Navbar contents -->
+						<ul class="nav pull-right">
 
-<!-- ------------------------------------ FACEBOOK ------------------------------------------ !>
-		<div id="fb-root"></div>
+							<!-- Toggle single or two pages -->
+							<li>
+								<a accesskey="t" href="#" id="toggle-synthetic-btn" class="icon48 synthetic-page-ico" role="button" title="Toggle page layout"></a>
+							</li>
 
-		<!--
-		  Below we include the Login Button social plugin. This button uses the JavaScript SDK to
-		  present a graphical Login button that triggers the FB.login() function when clicked. -->
+							<li class="divider-vertical"></li>
 
-		<fb:login-button show-faces="true" width="200" max-rows="1"></fb:login-button>
-<!-- ------------------------------------ END FACEBOOK ------------------------------------------ !>
-
-
-
-
-        <!-- The navbar -->
-        <div class="navbar navbar-fixed-top" id="toolbar-el">
-            <div class="navbar-inner" id="top-bar" style="">
-                <div class="container">
-
-                    <!-- Navbar logo -->
-                    <a title="Simple RJS Demo" class="brand icon48" id="readium-logo" href="#">
-                    </a>
-
-                    <!-- Navbar contents -->
-                    <ul class="nav pull-right">
-
-                        <!-- Toggle single or two pages -->
-                        <li>
-                            <a accesskey="t" href="#" id="toggle-synthetic-btn" class="icon48 synthetic-page-ico" role="button" title="Toggle page layout"></a>
-                        </li>
-
-                        <li class="divider-vertical"></li>
-
-                        <!-- The library for the sample reader -->
-                        <li>
-                            <a accesskey="l" href="#" id="epub-demo-library" role="button" class="icon48" title="Demo Library" class="dropdown-toggle" data-toggle="dropdown"></a>
-                            <ul id="library-list" class="dropdown-menu" role="menu" aria-labelledby="dlabel">
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div id="epub-reader-buttons-overlay">
-			<!-- Previous page -->
-			<a accesskey="p" href="#" id="previous-page-btn" class="page-switch-overlay-icon" role="button" title="Previous Page" style="z-index:100"></a>
-			<!-- Next page -->
-			<a accesskey="n" href="#" id="next-page-btn" class="page-switch-overlay-icon" role="button" title="Next Page" style="z-index:100"></a>
-			<div id="epub-reader-container" style="margin-top:65px;">
+							<!-- The library for the sample reader -->
+							<li>
+								<a accesskey="l" href="#" id="epub-demo-library" role="button" class="icon48" title="Demo Library" class="dropdown-toggle" data-toggle="dropdown"></a>
+								<ul id="library-list" class="dropdown-menu" role="menu" aria-labelledby="dlabel"></ul>
+							</li>
+						</ul>
+					</div>
+				</div>
 			</div>
-        </div>
 
-		<!-- Friend Meter --!>
-		<div id="friendMeter">
-			<div id="friendMeter-bar"></div>
-			<div id="friendMeter-counter">
-				<div id= "friendMeter-counter-text"></div>
+			<div id="epub-reader-buttons-overlay">
+				<!-- Previous page -->
+				<a accesskey="p" href="#" id="previous-page-btn" class="page-switch-overlay-icon" role="button" title="Previous Page" style="z-index:100"></a>
+				<!-- Next page -->
+				<a accesskey="n" href="#" id="next-page-btn" class="page-switch-overlay-icon" role="button" title="Next Page" style="z-index:100"></a>
+				<div id="epub-reader-container" style="margin-top:65px;">
+				</div>
 			</div>
-			<div id="friendMeter-friendData">
-				<div id= "friendMeter-friendData-text"></div>
+
+			<!-- Friend Meter --!>
+			<div id="friendMeter">
+				<div id="friendMeter-bar"></div>
+				<div id="friendMeter-counter">
+					<div id= "friendMeter-counter-text"></div>
+				</div>
+				<div id="friendMeter-friendData">
+					<div id= "friendMeter-friendData-text"></div>
+				</div>
 			</div>
-        </div>
+		</div>
     </body>
 </html>
