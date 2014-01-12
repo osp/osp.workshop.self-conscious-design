@@ -9,11 +9,11 @@
   
   <script type="text/javascript">
   //choose words
-  var adjectives=new Array ('The living', 'The logical', 'The secondary', 'The absolute', 'The fashion');
-  var subjects=new Array ('logic', 'process', 'time', 'solution', 'problem');
-  var verbs=new Array ('shall apply to', 'shall remain in', 'shall allow', 'shall escape from', 'shall assign');
-  var adjectivesTwo=new Array ('living', 'logical', 'secondary', 'absolute', 'fashion');
-  var nouns=new Array ('logic', 'process', 'time', 'solution', 'problem');
+  var adjectives=new Array ('The living', 'The logical', 'The secondary', 'The absolute', 'The fashion','The relevent', 'The difficult', 'The immediate', 'The right', 'The intellectual');
+  var subjects=new Array ('logic', 'process', 'time', 'solution', 'problem', 'interest', 'rationalism', 'consideration', 'fact', 'experience');
+  var verbs=new Array ('shall apply to', 'shall remain in', 'shall allow', 'shall escape from', 'shall assign', 'shall become', 'shall depend on', 'shall guard', 'shall succeed in', 'shall dismiss');
+  var adjectivesTwo=new Array ('living', 'logical', 'secondary', 'absolute', 'fashion', 'relevent', 'difficult', 'immediate', 'wrong', 'intellectual');
+  var nouns=new Array ('logic', 'process', 'time', 'solution', 'problem', 'interest', 'rationalism', 'consideration', 'fact', 'experience');
 
   var motCourrant = 1;
   var factor = 40;
@@ -27,25 +27,15 @@
   );
 
   document.addEventListener ('DOMContentLoaded', function () {
-    setTextSize ();
     blessWord ();
-    img.addEventListener('click', blessWord, false)
+    var target=document.getElementById("fullsize");
+    target.addEventListener('click', blessWord, false)
   }, false);
-
-  $(window).resize(function() {
-        setTextSize ();
-      });
 
   var elem = null
 
-  var setTextSize = function () {
-    baseSize = $('body').width() / factor;
-   
-    $('body').css('font-size', baseSize);
-    $('body').css('line-height', baseSize + 'px');
-  };
-
   var blessWord = function () {
+    event.preventDefault();
     if (wordOrder.length > 0) {
       var wordObj = wordOrder.shift ();
       wordOrder.push (wordObj);
@@ -66,17 +56,17 @@
         newWord = wordObj.wordList[Math.floor(Math.random()*wordObj.wordList.length)];
       }
       elem.innerText = newWord;
-
     }
   }
 
     //change color and size
   function changeColorSize(wordObj){
-    var minSize=100;
+    var minSize=150;
     var maxSize=300;
     //var colorise=true;
     //var colorArray=['red', 'black', 'green', 'blue'];
-    var fontArray=['Futura-CondensedExtraBold', 'TimesNewRomanPSMT', 'AmericanTypewriter', 'Palatino-Roman'];
+    //var fontArray=['Futura-CondensedExtraBold', 'TimesNewRomanPSMT', 'AmericanTypewriter', 'Palatino-Roman'];
+    var fontArray=['Bebas', 'BigMummy', 'Diplomata', 'OldStandard', 'Rye', 'Stencilia', 'UnicaOne'];
 
     $('#' + wordObj.elementId).css({
         //'color':colorArray[Math.floor(Math.random()*colorArray.length)],
@@ -102,6 +92,7 @@
       <span id="verb" style="position:absolute; top:300px; left:50px"></span>
       <span id="adjective_two" style="position:absolute; top:400px; left:50px"></span>
       <span id="noun" style="position:absolute; top:500px; left:50px"></span>
+      <a href="../Text/cover.xhtml"><img id="exit" src="../Image/exit.png" style="position:absolute; top:668px; left:432px" /></a>
   </div>
 </body>
 </html>
