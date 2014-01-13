@@ -6,11 +6,12 @@
         <dc:creator>OSP HEAD Vytautas JANKAUSKAS</dc:creator>
         <dc:language>en-GB</dc:language>
         <dc:date>2014-01-09</dc:date>
-        <meta property="dcterms:modified">2014-01-09T13:30:00Z</meta>
+        <meta property="dcterms:modified">2014-01-13T10:00:00Z</meta>
         <!-- rights expressions for the work as a whole -->
         <dc:rights>This work is shared with the public using the Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0) license http://creativecommons.org/licenses/by-sa/3.0/ and the Free Art license, http://artlibre.org/licence/lal/en .</dc:rights>
     </metadata> 
     <manifest>
+	<item id="index" href="index.xhtml" media-type="application/xhtml+xml" />
 	<item id="content" href="content.xhtml" properties="scripted" media-type="application/xhtml+xml" />
 	<item id="nav" href="nav.xhtml" properties="nav" media-type="application/xhtml+xml" />
 	<item id="goldenframe2" href="goldenframe2.xhtml" properties="scripted" media-type="application/xhtml+xml" />
@@ -26,7 +27,8 @@
 	<item id="sequence5" href="sequences/5sequence.jpg" media-type="image/jpeg" />
     </manifest>
     <spine>
-        <itemref idref="content" />  
+	<itemref idref="index" />         
+	<itemref idref="content" />  
 	<itemref idref="goldenframe2" />   
 	<itemref idref="goldenframe3" />   
 	<itemref idref="goldenframe4" />
