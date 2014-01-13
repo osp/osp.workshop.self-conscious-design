@@ -1,0 +1,96 @@
+@charset "UTF-8";
+@namespace "http://www.w3.org/1999/xhtml";
+@namespace epub "http://www.idpf.org/2007/ops";
+*{margin:0; padding:0;}
+
+@font-face{font-family:Archivo-Narrow; src:url(../fonts/ArchivoNarrow-Regular.otf)format(truetype);}
+@font-face{font-family:Archivo; src:url(../fonts/ArchivoNarrow-Bold.otf)format(truetype);}
+
+body
+{
+    color: black;    
+    font-family: Archivo, serif;    
+    background-color: rgb(255,255,255);
+    height: 100%;
+    width: auto;
+}
+
+td, th {
+	border-style:solid;
+	border-width:1px;
+}
+table {
+	border-collapse:collapse;
+}
+li {
+	display:block;
+}
+body {
+	-epub-hyphens:auto;
+	-webkit-hyphens:auto;
+}
+@page {
+	margin : 0px 0px 0px 0px;
+}
+p.Basic-Paragraph {
+	-epub-ruby-position:over;
+	color:#000000;
+	font-family:"Archivo", serif;
+	font-size:1em;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	line-height:1.2;
+	margin-bottom:0px;
+	margin-left:0px;
+	margin-right:0px;
+	text-align:left;
+	text-decoration:none;
+	text-indent:0px;
+}
+p.para-style-override-1 {
+	text-align:center;
+	font-family:"Archivo-Narrow";
+}
+p.para-style-override-2 {
+	font-size:2em;
+	text-align:center;
+}
+p.para-style-override-3 {
+	font-size:1em;
+	text-align:center;
+}
+p.para-style-override-4 {
+	font-size:1.1em;
+	font-family:"Archivo-Narrow";
+}
+span.char-style-override-1 {
+	font-size:2.5em;
+}
+span.char-style-override-2 {
+	font-size:2em;
+}
+span.char-style-override-3 {
+	font-size:1.5em;
+}
+span.char-style-override-4 {
+	font-size:1.167em;
+}
+
+h2 {
+    margin-top: 0em;
+    margin-bottom: 0em;
+}
+#seq{
+position: relative;
+top: 0;
+bottom: 0;
+
+}
+#seq img {
+height: 100%;
+width: auto;
+background-position: 50% 0;
+background-size: 1100%;
+}
+

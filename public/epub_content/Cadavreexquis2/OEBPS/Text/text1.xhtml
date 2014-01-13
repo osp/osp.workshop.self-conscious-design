@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" xmlns:epub="http://www.idpf.org/2007/ops">
+<head>
+  <title></title>
+  <meta name="viewport" content="width=512, height=748" />
+  <link href="../Style/style.css" rel="stylesheet" type="text/css"/>
+  <script src="../JS/jquery-2.0.3.min.js" type="text/javascript"></script>
+  
+  <script type="text/javascript">
+  //choose words
+  var adjectives=new Array ('The living', 'The logical', 'The secondary', 'The absolute', 'The fashion','The relevent', 'The difficult', 'The immediate', 'The right', 'The intellectual');
+  var subjects=new Array ('logic', 'process', 'time', 'solution', 'problem', 'interest', 'rationalism', 'consideration', 'fact', 'experience');
+  var verbs=new Array ('shall apply to', 'shall remain in', 'shall allow', 'shall escape from', 'shall assign', 'shall become', 'shall depend on', 'shall guard', 'shall succeed in', 'shall dismiss');
+  var adjectivesTwo=new Array ('living', 'logical', 'secondary', 'absolute', 'fashion', 'relevent', 'difficult', 'immediate', 'wrong', 'intellectual');
+  var nouns=new Array ('logic', 'process', 'time', 'solution', 'problem', 'interest', 'rationalism', 'consideration', 'fact', 'experience');
+
+  var motCourrant = 1;
+  var factor = 40;
+
+  var wordOrder=new Array (
+    {'wordList': adjectives, 'elementId': 'adjective'},
+    {'wordList': subjects, 'elementId': 'subject'},
+    {'wordList': verbs, 'elementId': 'verb'},
+    {'wordList': adjectivesTwo, 'elementId': 'adjective_two'},
+    {'wordList': nouns, 'elementId': 'noun'}
+  );
+
+  document.addEventListener ('DOMContentLoaded', function () {
+    blessWord ();
+    var target=document.getElementById("fullsize");
+    target.addEventListener('click', blessWord, false)
+  }, false);
+
+  var elem = null
+
+  var blessWord = function () {
+    event.preventDefault();
+    if (wordOrder.length > 0) {
+      var wordObj = wordOrder.shift ();
+      wordOrder.push (wordObj);
+
+      changeColorSize(wordObj);
+      motCourrant++;
+      if (motCourrant === 6) {
+        motCourrant = 1;
+      }
+      
+      elem = document.getElementById (wordObj.elementId);
+      console.log (elem);
+
+      // never the same word twice in a row
+      var currentWord = elem.innerText;
+      var newWord = wordObj.wordList[Math.floor(Math.random()*wordObj.wordList.length)]
+      while (newWord === currentWord) {
+        newWord = wordObj.wordList[Math.floor(Math.random()*wordObj.wordList.length)];
+      }
+      elem.innerText = newWord;
+    }
+  }
+
+    //change color and size
+  function changeColorSize(wordObj){
+    var minSize=150;
+    var maxSize=300;
+    //var colorise=true;
+    //var colorArray=['red', 'black', 'green', 'blue'];
+    //var fontArray=['Futura-CondensedExtraBold', 'TimesNewRomanPSMT', 'AmericanTypewriter', 'Palatino-Roman'];
+    var fontArray=['Bebas', 'BigMummy', 'Diplomata', 'OldStandard', 'Rye', 'Stencilia', 'UnicaOne'];
+
+    $('#' + wordObj.elementId).css({
+        //'color':colorArray[Math.floor(Math.random()*colorArray.length)],
+        'font-family':fontArray[Math.floor(Math.random()*fontArray.length)],
+        'font-size': (minSize + (Math.floor(Math.random()*(maxSize-minSize)))) + '%'
+    });
+  }
+  function getRandomInt(min, max){
+    return Math.floor(Math.random()*(max-min+1))+min;
+  }
+  $(document).ready(function(){
+    changeColorSize();
+  });
+
+  </script>
+</head>
+
+<body class="poem">
+  <div style="position:relative;">
+    <img id="fullsize" src="../Image/LinesPaper.jpg" />
+      <span id="adjective" style="position:absolute; top:100px; left:50px"></span>
+      <span id="subject" style="position:absolute; top:200px; left:50px"></span>
+      <span id="verb" style="position:absolute; top:300px; left:50px"></span>
+      <span id="adjective_two" style="position:absolute; top:400px; left:50px"></span>
+      <span id="noun" style="position:absolute; top:500px; left:50px"></span>
+      <a href="../Text/cover.xhtml"><img id="exit" src="../Image/exit.png" style="position:absolute; top:668px; left:432px" /></a>
+  </div>
+</body>
+</html>
