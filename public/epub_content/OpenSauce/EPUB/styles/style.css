@@ -42,7 +42,7 @@ a.noteref {
 
 .cellule {
     position: relative;
-    float:left;
+    float:right;
 }
 
 .cellule img {
@@ -50,6 +50,6 @@ a.noteref {
     
 }
 
-#cell1bis {
+.bis {
     display: none;
 }
