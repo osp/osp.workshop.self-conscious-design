@@ -12,6 +12,7 @@
     </metadata> 
     <manifest>
 	<item id="index" href="index.xhtml" media-type="application/xhtml+xml" />
+	<item id="description" href="description.xhtml" media-type="application/xhtml+xml" />
 	<item id="content" href="content.xhtml" properties="scripted" media-type="application/xhtml+xml" />
 	<item id="nav" href="nav.xhtml" properties="nav" media-type="application/xhtml+xml" />
 	<item id="goldenframe2" href="goldenframe2.xhtml" properties="scripted" media-type="application/xhtml+xml" />
@@ -25,9 +26,12 @@
 	<item id="sequence3" href="sequences/3sequence.jpg" media-type="image/jpeg" />
 	<item id="sequence4" href="sequences/4sequence.jpg" media-type="image/jpeg" />
 	<item id="sequence5" href="sequences/5sequence.jpg" media-type="image/jpeg" />
+	<item id="ArchivoNarrow-Bold" href="fonts/ArchivoNarrow-Bold.otf" media-type="font/opentype" />
+	<item id="ArchivoNarrow-Regular" href="fonts/ArchivoNarrow-Regular.otf" media-type="font/opentype" />
     </manifest>
-    <spine>
-	<itemref idref="index" />         
+    <spine>    
+	<itemref idref="index" />   
+	<itemref idref="description" />        
 	<itemref idref="content" />  
 	<itemref idref="goldenframe2" />   
 	<itemref idref="goldenframe3" />   

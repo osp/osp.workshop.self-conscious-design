@@ -3,11 +3,13 @@
 @namespace epub "http://www.idpf.org/2007/ops";
 *{margin:0; padding:0;}
 
+@font-face{font-family:Archivo-Narrow; src:url(../fonts/ArchivoNarrow-Regular.otf)format(truetype);}
+@font-face{font-family:Archivo; src:url(../fonts/ArchivoNarrow-Bold.otf)format(truetype);}
 
 body
 {
     color: black;    
-    font-family: times, 'times new roman', serif;    
+    font-family: Archivo, serif;    
     background-color: rgb(255,255,255);
     height: 100%;
     width: auto;
@@ -33,7 +35,7 @@ body {
 p.Basic-Paragraph {
 	-epub-ruby-position:over;
 	color:#000000;
-	font-family:"Minion Pro", serif;
+	font-family:"Archivo", serif;
 	font-size:1em;
 	font-style:normal;
 	font-variant:normal;
@@ -48,17 +50,19 @@ p.Basic-Paragraph {
 }
 p.para-style-override-1 {
 	text-align:center;
+	font-family:"Archivo-Narrow";
 }
 p.para-style-override-2 {
 	font-size:2em;
 	text-align:center;
 }
 p.para-style-override-3 {
-	font-size:1.5em;
+	font-size:1em;
 	text-align:center;
 }
 p.para-style-override-4 {
-	font-size:1.5em;
+	font-size:1em;
+	font-family:"Archivo-Narrow";
 }
 span.char-style-override-1 {
 	font-size:2.5em;
