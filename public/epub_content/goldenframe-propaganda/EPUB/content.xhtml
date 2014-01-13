@@ -41,6 +41,44 @@
                 }
             }
 
+
+	    function onDeviceOrientationChange(event) {
+                lastOrientation.gamma = event.gamma;
+                lastOrientation.beta = event.beta;
+            }
+
+            function onRenderUpdate(event) {
+                var xDelta, yDelta;
+                switch (window.orientation) {
+                    case 0:
+			xDelta = lastOrientation.gamma;
+                        yDelta = lastOrientation.beta;
+                        break;
+                    case 180:
+                        xDelta = lastOrientation.gamma * -1;
+                        yDelta = lastOrientation.beta * -1;
+                        break;
+                    case 90:
+                        xDelta = lastOrientation.beta;
+                        yDelta = lastOrientation.gamma * -1;
+                        break;
+                    case -90:
+                        xDelta = lastOrientation.beta * -1;
+                        yDelta = lastOrientation.gamma;
+                        break;
+                    default:
+                        xDelta = lastOrientation.gamma;
+                        yDelta = lastOrientation.beta;
+                }
+                
+               	  if(xDelta > 0){
+                	moveSequence(true);
+                }
+                else if(xDelta < 0){
+                	moveSequence(false);
+                }
+            }
+
             function onMouseMove(event) {
                 var xDelta, yDelta;
                 if (navigator.webkitPointer && navigator.webkitPointer.isLocked) {
@@ -62,44 +100,16 @@
                 }
             }
 
-
-	function onDeviceOrientationChange(event) {
-                lastOrientation.gamma = event.gamma;
-                lastOrientation.beta = event.beta;
-            }
-
-            function onRenderUpdate(event) {
-                var xDelta;
-                switch (window.orientation) {
-                    case 90:
-                        xDelta = lastOrientation.beta;
-                        break;
-                    case -90:
-                        xDelta = lastOrientation.beta * -1;
-                        break;
-                    default:
-                        xDelta = lastOrientation.gamma;
-                }
-                
-               	  if(xDelta > 0){
-                	moveSequence(true);
-                }
-                else if(xDelta < 0){
-                	moveSequence(false);
-                }
-            }
-        
 			
-			
-			function moveSequence(moveRight){
-				if(moveRight && posX > width*-10){
-					posX -= width;
+	    function moveSequence(moveRight){
+		 if(moveRight && posX > width*-10){
+			posX -= width;
 				}
-				else if(!moveRight && posX < 0){
-					posX += width;
+		 else if(!moveRight && posX < 0){
+			posX += width;
 				}
-				console.log(posX);
-				id('metaimg').style.backgroundPosition = posX + 'px 0px';
+		console.log(posX);
+		id('metaimg').style.backgroundPosition = posX + 'px 0px';
 			}
 			
     
