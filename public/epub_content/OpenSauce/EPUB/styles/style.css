@@ -39,3 +39,17 @@ a.noteref {
 *[epub|type~='dedication'] {
     padding-left: 2em;
 }
+
+.cellule {
+    position: relative;
+    float:left;
+}
+
+.cellule img {
+    position: absolute;
+    
+}
+
+#cell1bis {
+    display: none;
+}
