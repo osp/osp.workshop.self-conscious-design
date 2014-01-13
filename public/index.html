@@ -1,69 +1,223 @@
 <!DOCTYPE html>
 <html>
     <head>
-        
-        <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-        <link rel="stylesheet" type="text/css" href="css/reader_bootstrap_customizations.css">
-        <link rel="stylesheet" type="text/css" href="css/readium_buttons.css">
-        <link rel="stylesheet" type="text/css" href="css/reader_sdk.css">
-        <script src="./lib/json2.js" type="text/javascript"></script>
-        <script src="./lib/zip.js" type="text/javascript"></script>
-        <script src="./lib/zip-fs.js" type="text/javascript"></script>
-        <script src="./lib/zip-ext.js" type="text/javascript"></script>
 
-        <script data-main="./lib/initialize_rjs_reader" src="./lib/require.js" type="text/javascript"></script>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="css/reader_bootstrap_customizations.css">
+		<link rel="stylesheet" type="text/css" href="css/readium_buttons.css">
+		<link rel="stylesheet" type="text/css" href="css/reader_sdk.css">
+		<script src="./lib/json2.js" type="text/javascript"></script>
+		<script src="./lib/zip.js" type="text/javascript"></script>
+		<script src="./lib/zip-fs.js" type="text/javascript"></script>
+		<script src="./lib/zip-ext.js" type="text/javascript"></script>
 
-                <!--reflowable view-->
-<script type="text/html" id="template-reflowable-view"><div id="viewport_reflowable" class="clearfix">
-<iframe scrolling="no" id="epubContentIframe"></iframe></div></script>
+		<script data-main="./lib/initialize_rjs_reader" src="./lib/require.js" type="text/javascript"></script>
 
-        <!-- Fixed Layout View -->
-<script type="text/html" id="template-fixed-view"><div id="viewport_fixed"><div id="spread-wrap" class="clearfix"></div></div></script>
+		<!--reflowable view-->
+		<script type="text/html" id="template-reflowable-view"><div id="viewport_reflowable" class="clearfix">
+		<iframe scrolling="no" id="epubContentIframe"></iframe></div></script>
 
-<script type="text/html" id="template-ope-fixed-page-view"><div class="fixed-page-wrap"><iframe class="fixed_iframe"></iframe></div></script>
+		<!-- Fixed Layout View -->
+		<script type="text/html" id="template-fixed-view"><div id="viewport_fixed"><div id="spread-wrap" class="clearfix"></div></div></script>
+
+		<script type="text/html" id="template-ope-fixed-page-view"><div class="fixed-page-wrap"><iframe class="fixed_iframe"></iframe></div></script>
 
     </head>
+<body>
+	<div id="fb-root"></div>
+	<fb:login-button id="FB_login"></fb:login-button>
+	<script>
 
-    <!-- This is all application-specific HTML -->
-    <body>
+		var shrinkBarId; // intervaled function’s id
+		var friends = new Array();
+		var friendMeterSpeed = 10; // the lower the faster
 
-        <!-- The navbar -->
-        <div class="navbar navbar-fixed-top" id="toolbar-el">
-            <div class="navbar-inner" id="top-bar" style="">
-                <div class="container">
+		window.fbAsyncInit = function() {
+			FB.init({
+				appId      : '440069632759323',
+				status     : true, // check login status
+				cookie     : true, // enable cookies to allow the server to access the session
+			    oauth	   : true, // enables OAuth 2.0
+				xfbml      : true  // parse XFBML
+			});
 
-                    <!-- Navbar logo -->
-                    <a title="Simple RJS Demo" class="brand icon48" id="readium-logo" href="#">
-                    </a>
+			// Here we subscribe to the auth.authResponseChange JavaScript event. This event is fired
+			// for any authentication related change, such as login, logout or session refresh. This means that
+			// whenever someone who was previously logged out tries to log in again, the correct case below
+			// will be handled.
+			FB.Event.subscribe('auth.authResponseChange', function(response) {
+				// if we’re not already connected
+				if (response.status === 'not_authorized' || response.status === 'unknown') {
+					FB.login();
+				}
+				clearInterval(shrinkBarId);
+				init();
+			});
+		};
 
-                    <!-- Navbar contents -->
-                    <ul class="nav pull-right">
-                        
-                        <!-- Toggle single or two pages -->
-                        <li>
-                            <a accesskey="t" href="#" id="toggle-synthetic-btn" class="icon48 synthetic-page-ico" role="button" title="Toggle page layout"></a>
-                        </li>
+		// Load the SDK asynchronously
+		(function(d){
+			var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+			if (d.getElementById(id)) {return;}
+			js = d.createElement('script'); js.id = id; js.async = true;
+			js.src = "//connect.facebook.net/en_US/all.js";
+			ref.parentNode.insertBefore(js, ref);
+		}(document));
 
-                        <li class="divider-vertical"></li>
+		// facebook query
+		function init(){
+			FB.getLoginStatus(function(response) {
+				if (response.status === 'connected') {
+					toggleFBLogin(false);
+					FB.api('/me/friends', {fields: 'name'}, function(friends) {
+						setFriendsArray(friends);
+						debug_displayFriends();
+						document.getElementById("friendMeter-bar").style.width = "98%";
+						setFriendMeterCounterHTML();
+						shrinkBarId = setInterval(shrinkBar, friendMeterSpeed);
+					});
 
-                        <!-- The library for the sample reader -->
-                        <li>
-                            <a accesskey="l" href="#" id="epub-demo-library" role="button" class="icon48" title="Demo Library" class="dropdown-toggle" data-toggle="dropdown"></a>
-                            <ul id="library-list" class="dropdown-menu" role="menu" aria-labelledby="dlabel">
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+				} else {
+					toggleFBLogin(true);
+				}
+			});
+		}
 
-        <div id="epub-reader-buttons-overlay">
-          <!-- Previous page -->
-          <a accesskey="p" href="#" id="previous-page-btn" class="page-switch-overlay-icon" role="button" title="Previous Page" style="z-index:100"></a>
-          <!-- Next page -->
-          <a accesskey="n" href="#" id="next-page-btn" class="page-switch-overlay-icon" role="button" title="Next Page" style="z-index:100"></a>
-          <div id="epub-reader-container" style="margin-top:65px;">
-          </div>
-        </div>
+		function toggleFBLogin(_displayLogin){
+			if (_displayLogin){
+				document.getElementById("FB_login").style.display = "block";
+				document.getElementById("FB_logout").style.visibility = "hidden";
+				document.getElementById("readiumContainer").style.display = "none";
+				document.getElementById("friendMeter").style.visibility = "hidden";
+				document.getElementById("friendMeter").style.height = "0px";
+			}else {
+				document.getElementById("FB_login").style.display = "none";
+				document.getElementById("FB_logout").style.visibility = "visible";
+				document.getElementById("readiumContainer").style.display = "block";
+				document.getElementById("friendMeter").style.visibility = "visible";
+				document.getElementById("friendMeter").style.height = "auto";
+			}
+		}
+
+		function shrinkBar(){
+			var elem = document.getElementById("friendMeter-bar");
+			if (elem.style.width == ""){
+				elem.style.width = "98%";
+			}
+			elem.style.width = parseInt(elem.style.width)-1+"%";
+
+			// FRIEND LOST !
+			if (parseInt(elem.style.width) <= 0){
+				displayLostFriend();
+				setFriendMeterCounterHTML();
+				if (friends.length > 0){
+					elem.style.width = "98%";
+				} else {
+					clearInterval(shrinkBarId);
+				}
+			}
+		}
+
+		function setFriendsArray(_friends){
+			friends.length = 0;
+			for (var i=0; i< _friends.data.length; i++){
+				friends[i] = _friends.data[i].name;
+			}
+		}
+
+		function setFriendMeterCounterHTML(){
+			document.getElementById("friendMeter-counter-text").innerHTML = friends.length;
+		}
+
+		function FB_logout(){
+			FB.logout();
+		}
+
+		function displayLostFriend(){
+			// get a name from the array
+			var index = Math.floor(Math.random(0, friends.length));
+			console.log("index to remove :"+index);
+			var name = friends[index];
+
+			// set HTML with its name
+			document.getElementById("friendMeter-friendData-text").innerHTML = name;
+
+			// display lost friend DIV
+			toggleFriendNameDIV();
+
+			// remove friend in the array
+			console.log(friends.splice(index, 1)+" removed !");
+
+			// hide lost friend DIV
+			setTimeout(toggleFriendNameDIV, 500);
+		}
+
+		function toggleFriendNameDIV(){
+			if (document.getElementById("friendMeter-friendData").style.opacity == 1){
+				document.getElementById("friendMeter-friendData").style.opacity = 0;
+			} else {
+				document.getElementById("friendMeter-friendData").style.opacity = 1;
+			}
+		}
+
+		function debug_displayFriends(){
+			console.log("Debug -- Friends :");
+			for (var i=0; i<friends.length; i++){
+				console.log(friends[i]);
+			}
+		}
+
+	</script>
+
+		<div id="readiumContainer">
+			<!-- The navbar -->
+			<div class="navbar navbar-fixed-top" id="toolbar-el">
+				<div class="navbar-inner" id="top-bar" style="">
+						<button id="FB_logout" onclick="FB_logout()"></button>
+					<div class="container">
+
+						<!-- Navbar logo -->
+						<a title="Simple RJS Demo" class="brand icon48" id="readium-logo" href="#"></a>
+
+						<!-- Navbar contents -->
+						<ul class="nav pull-right">
+
+							<!-- Toggle single or two pages -->
+							<li>
+								<a accesskey="t" href="#" id="toggle-synthetic-btn" class="icon48 synthetic-page-ico" role="button" title="Toggle page layout"></a>
+							</li>
+
+							<li class="divider-vertical"></li>
+
+							<!-- The library for the sample reader -->
+							<li>
+								<a accesskey="l" href="#" id="epub-demo-library" role="button" class="icon48" title="Demo Library" class="dropdown-toggle" data-toggle="dropdown"></a>
+								<ul id="library-list" class="dropdown-menu" role="menu" aria-labelledby="dlabel"></ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div id="epub-reader-buttons-overlay">
+				<!-- Previous page -->
+				<a accesskey="p" href="#" id="previous-page-btn" class="page-switch-overlay-icon" role="button" title="Previous Page" style="z-index:100"></a>
+				<!-- Next page -->
+				<a accesskey="n" href="#" id="next-page-btn" class="page-switch-overlay-icon" role="button" title="Next Page" style="z-index:100"></a>
+				<div id="epub-reader-container" style="margin-top:65px;">
+				</div>
+			</div>
+
+			<!-- Friend Meter --!>
+			<div id="friendMeter">
+				<div id="friendMeter-bar"></div>
+				<div id="friendMeter-counter">
+					<div id= "friendMeter-counter-text"></div>
+				</div>
+				<div id="friendMeter-friendData">
+					<div id= "friendMeter-friendData-text"></div>
+				</div>
+			</div>
+		</div>
     </body>
 </html>
