@@ -13,7 +13,7 @@
  		<script type="text/javascript">
 			//<![CDATA[[
 
-            var winW, winH;
+         var winW, winH;
             var lastMouse, lastOrientation;
 	    	var width, posX;
 
@@ -21,64 +21,104 @@
             	width = id('metaimg').offsetWidth
             	posX = -5 * width; 			
 			}
-			
-            function init() {
-            	setSize();
+            window.onload = init;
+
+
+
+	function setSize() {
+                width = id('metaimg').offsetWidth
+                frames = 11; // Define the amount of frames in the strip
+                angleRange = [-25, 25]
+                // We define the angles at wich we want to show the most left
+                // and the most right image
+                posX = -5 * width; // Start position of the strip
+                
+                frameStep = (angleRange[1] - angleRange[0]) / frames
+                // We want to know the 'angle' the device has to be tilted
+                // to move to the next frame in the strip. We do this by 
+                // dividing the total range by the amount of frames
+            }
+
+
+	function init() {
+                console.log ('init');
+                setSize();
                 lastOrientation = {};
                 window.addEventListener('resize', setSize, false);
                 document.body.addEventListener('mousemove', onMouseMove, false);
                 window.addEventListener('deviceorientation', deviceOrientationTest, false);
                 lastMouse = null;
-                //doLayout(document);
-            }
-			
-            // Does the gyroscope or accelerometer actually work?
+	    }
+	
+
+	// Does the gyroscope or accelerometer actually work?
             function deviceOrientationTest(event) {
                 window.removeEventListener('deviceorientation', deviceOrientationTest);
                 if (event.beta != null && event.gamma != null) {
                     window.addEventListener('deviceorientation', onDeviceOrientationChange, false);
-                    //animationId = setInterval(onRenderUpdate, 10); 
+                    
+                    
+                    // This function call was commented out but is really
+                    // important, since it regularly checks the angle of
+                    // the decive. In this case 60 times per second
+                    animationId = setInterval(onRenderUpdate, (1000 / 60)); 
                 }
             }
 
-
-	    function onDeviceOrientationChange(event) {
+	
+	 function onDeviceOrientationChange(event) {
+            	// Here we simply record the most recent position of
+            	// the device. This event is fired a LOT on the iPad
+            	// but also irregulary?
                 lastOrientation.gamma = event.gamma;
                 lastOrientation.beta = event.beta;
             }
 
-            function onRenderUpdate(event) {
-                var xDelta, yDelta;
+	function onRenderUpdate(event) {
+                var angle;
+                // We are actually only interested in the angle of the device
                 switch (window.orientation) {
                     case 0:
-			xDelta = lastOrientation.gamma;
-                        yDelta = lastOrientation.beta;
+                        angle = lastOrientation.gamma;
                         break;
                     case 180:
-                        xDelta = lastOrientation.gamma * -1;
-                        yDelta = lastOrientation.beta * -1;
+                        angle = lastOrientation.gamma * -1;
                         break;
                     case 90:
-                        xDelta = lastOrientation.beta;
-                        yDelta = lastOrientation.gamma * -1;
+                        angle = lastOrientation.beta;
                         break;
                     case -90:
-                        xDelta = lastOrientation.beta * -1;
-                        yDelta = lastOrientation.gamma;
+                        angle = lastOrientation.beta * -1;
                         break;
                     default:
-                        xDelta = lastOrientation.gamma;
-                        yDelta = lastOrientation.beta;
+                        angle = lastOrientation.gamma;
                 }
                 
-               	  if(xDelta > 0){
-                	moveSequence(true);
+	if (angle <= angleRange[0]) {
+                    currentFrame = 0;
+                    // If the angle of the device is smaller than the minimum angle
+                    // we've defined on line 23 we activate the first frame
+                } else if (angle >= angleRange[1]) {
+                    // If the angle of the device is bigger than the maximum angle
+                    // we've defined on line 23 we activate the last frame
+                    currentFrame = frames - 1
+                } else {
+                	// The angle of the device is within the ranges so we have to
+                	// calculate the active / current frame.
+                    currentFrame = Math.floor ((angle - angleRange[0]) / frameStep)
+                    // We calculate the active frame by dividing the angle by the unit
+                    // we've found in line 28. Actually we first subtract the left limit
+                    // of our range from the angle. Since we want to know the offset of
+                    // the angle with the left limit of our range.
                 }
-                else if(xDelta < 0){
-                	moveSequence(false);
-                }
+                
+                id('metaimg').style.backgroundPosition = (-1 * currentFrame * width) + 'px 0px';
+                // We move the background image into place. 
             }
 
+	// Actually it moves the strip either one step left or right, based on the movement of
+            // the mouse. So this implementation is quite dependent behaviour of the browser with
+            // the mousemove event.
             function onMouseMove(event) {
                 var xDelta, yDelta;
                 if (navigator.webkitPointer && navigator.webkitPointer.isLocked) {
@@ -99,20 +139,18 @@
                 	moveSequence(false);
                 }
             }
-			
-			
-			function moveSequence(moveRight){
-				if(moveRight && posX > width*-10){
-					posX -= width;
-				}
-				else if(!moveRight && posX < 0){
-					posX += width;
-				}
-				console.log(posX);
-				id('metaimg').style.backgroundPosition = posX + 'px 0px';
-			}
-			
-    
+
+            function moveSequence(moveRight){
+                if(moveRight && posX > width*-10){
+                    posX -= width;
+                }
+                else if(!moveRight && posX < 0){
+                    posX += width;
+                }
+
+                id('metaimg').style.backgroundPosition = posX + 'px 0px';
+            }
+
             function id(name) { return document.getElementById(name); };
 
             window.onload = init;
