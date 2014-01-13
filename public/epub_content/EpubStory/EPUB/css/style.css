@@ -13,7 +13,8 @@ body {
 	
 h1 {
 	text-align: center;
-		
+	color: #f3f3f3;	
+	
 	}
 
 a:link {color:#FF0000;}
@@ -26,6 +27,19 @@ h3 {
     margin-top: 3em;
 }
 
+p.paragraph1 {	background-color: blue;
+	text-align: right;
+	color:white; 
+	font-size: 1em; 
+	font-style: italic; 
+	line-height: 18px; 
+	margin: 0px 0px 14px; 
+	padding: 0px; 
+	font-family: "Times New Roman", Times, serif;
+}
+p{	color:red;
+
+}
 
 span.lnum {
     float: right;
