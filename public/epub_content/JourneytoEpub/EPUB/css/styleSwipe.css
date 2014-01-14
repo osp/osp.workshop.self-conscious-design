@@ -1,0 +1,185 @@
+@charset "UTF-8";
+@namespace "http://www.w3.org/1999/xhtml";
+@namespace epub "http://www.idpf.org/2007/ops";
+
+
+	/*----------------- fonts------------------*/
+	
+
+@font-face {
+    font-family: 'Museo';
+    font-style: normal;
+    font-weight: 300;
+    src: url('../Font/Museo300-Regular.otf');
+}
+@font-face {
+    font-family: 'Museo';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../Font/Museo500-Regular.otf');
+}
+	@font-face {
+    font-family: 'Museo';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../Font/Museo700-Regular.otf');
+}
+
+	/*------------------structure-----------------*/
+
+
+body {
+	font-family: "Museo";
+    	margin-left: 10em;
+    	margin-right: 10em;
+    	color: black;    
+	font-size:1em;
+    	background-color:#FFF;
+    	line-height: 2em;
+	}
+	
+
+div.entete {
+	background-color: #f3f3f3;
+	}
+
+div.link_footer {
+	background-color:#f3f3f3 ;
+	color:#463F32;
+	text-align:center;
+	}
+
+video {	width :100%;
+	margin-bottom:1em;	
+	}
+
+/* text decoration*/
+h1 {	font-size: 3em;
+	line-height:1em ;
+	text-align: center;
+	color: #cccccc;
+	text-transform:uppercase;
+	font-weight:700;	
+	
+	}
+
+
+h2 {   font-weight: 500;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+h3 {	color:#9E9E9E;
+	font-weight:300;
+    	margin-top: 1.5em;
+}
+	h4 {
+	text-align: left;
+	text-decoration:underline;
+	color:#CECECE; 
+	font-size: 1em; 
+	font-weight: 500; 
+	line-height: 1em; 
+
+	}
+/* paragraphe decoration*/
+
+	p.legend {	font-size:0.8em;
+			text-align:right;
+			font-weight:500;
+			color:#9E9E9E;
+		}
+
+	p{	color:black;
+
+		}
+	div.warning{	color:white;
+			
+			text-align: center;			
+			background-color:red;
+			margin:10px;
+		}
+
+/* ----decoration des listes----*/
+
+	ul {	color:black;
+		list-style-type:none}
+
+	ul.li {color: #f3f3f3;
+		}
+
+
+span.lnum {
+    float: right;
+    color: gray;
+    font-size : 90%;
+}
+
+a { text-decoration:none;
+	color:#AFAFAF;
+	}
+a.noteref {    
+    color: rgb(215,215,195);
+    text-decoration: none;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+	}
+
+a:link {
+	text-decoration:none;
+	}
+
+
+*[epub|type~='dedication'] {
+    padding-left: 2em;
+}
+	/*------------------structure-----------------*/
+
+
+
+/******************** Swipe.js Styles ***************************/
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, del, dfn, em, img, ins, kbd, q, samp, small, strong, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, table, tbody, tfoot, thead, tr, th, td, article, aside, footer, header, nav, section {
+  margin:0;
+  padding:0;
+  border:0;
+  outline:0;
+  font-size:100%;
+  vertical-align:baseline;
+}
+
+
+small {
+  margin:0 10px 30px;
+  display:block;
+  font-size:12px;
+}
+
+
+#console {
+  font-size: 12px;
+  font-family:Museo;
+  color: #999;
+  line-height: 18px;
+  margin-top: 20px;
+  max-height: 150px;
+  overflow: auto;
+}
+
+#mySwipe div b {
+  display:block;
+  font-weight:bold;
+  color:#14ADE5;
+  font-size:20px;
+  text-align:center;
+  margin:10px;
+  padding:0px;
+  box-shadow: 0 1px #EBEBEB;
+  background: transparent;
+  border: none;
+
+}
+
+
+
+/******************** end Swipe.js Styles ***************************/
