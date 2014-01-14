@@ -2,24 +2,43 @@
 @namespace "http://www.w3.org/1999/xhtml";
 @namespace epub "http://www.idpf.org/2007/ops";
 
+@font-face{font-family:Century; src:url(../fonts/CenturySchL-Roma.otf)format(opentype);}
+@font-face{font-family:CenturyBold; src:url(../fonts/CenturySchL-Bold.otf)format(opentype);}
+@font-face{font-family:LM; src:url(../fonts/lmmonolt10-regular.otf)format(opentype);}
+@font-face{font-family:LMR; src:url(../fonts/lmroman10-regular.otf)format(opentype);}
+@font-face{font-family:LMB; src:url(../fonts/lmmonolt10-bold.otf)format(opentype);}
+
 body {
     margin-left: 6em;
-    margin-right: 16em;
+    margin-right: 6em;
     color: black;    
-    font-family: times, 'times new roman', serif;    
-    background-color: rgb(255,255,245);
+    font-family: LM, serif;    
+    background-color: rgb(255,255,255);
     line-height: 1.5em;
 }
 
+h1 {
+    font-family: LMR, monospace;  
+    font-size: 2em;
+    font-weight:normal;
+}
+
 h2 {
-    margin-top: 5em;
-    margin-bottom: 2em;
+    font-family: LMR, monospace;  
+    font-size: 1.5em;
+    font-weight:normal;
+    margin-top: -30px;
 }
 
 h3 {
-    margin-top: 3em;
+    font-family: LMR, monospace;  
+    font-size: 1em;
+    font-weight:normal;
 }
 
+p, .par{
+    font-size: 14px;
+}
 
 span.lnum {
     float: right;
@@ -38,4 +57,21 @@ a.noteref {
 
 *[epub|type~='dedication'] {
     padding-left: 2em;
+}
+
+.top {
+    margin-top:2em;
+}
+
+.aut {
+    margin-bottom: 2em;
+}
+
+.keep {
+   font-weight: 900;
+   font-family: LMB, monospace;  
+}
+
+.explanation {
+   font-family: LM, monospace;  
 }
