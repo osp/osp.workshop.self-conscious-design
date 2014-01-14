@@ -112,7 +112,7 @@
 	top: 100%;
 	left: 48px;
 	margin-top: -30px;
-	width: 100px;
+	width: 800px;
 	height: 20px;
 	font-size: 18px;
 	font-weight: 400;
@@ -121,15 +121,13 @@
 }
 
 *#friendMeter-friendData {
-	background: transparent url('../images/friendMeter_friendData.png') center top no-repeat;
+	background: transparent url('../images/friendMeter_friendData.png') no-repeat;
 	width: 300px;
-	height: 200px;
-	padding: 0;
-	overflow: hidden;
-	display: block;
+	height: 70px;
 	position: absolute;
-	top: 85%;
-	left: 25px;
+	display: block;
+	bottom: 1%;
+	left: 28px;
 	z-index:100;
 	opacity:0;
 	transition: opacity 0.5s linear;
@@ -152,7 +150,6 @@
 	margin-left: -35px;
 	margin-top: -10px;
 	visibility: visible;
-	z-index: 100;
 }
 
 #FB_logout{
