@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ncx xmlns:ncx="http://www.daisy.org/z3986/2005/ncx/" xmlns="http://www.daisy.org/z3986/2005/ncx/"
+    version="2005-1" xml:lang="en">
+    <head>
+        <meta name="dtb:uid" content="osp.workshop.self-conscious-design.Cadavreexquis"/>
+    </head>
+    <docTitle>
+        <text>Cadavre Exquis</text>
+    </docTitle>
+    <docAuthor>
+        <text>Kumiko Kuwabara</text>
+    </docAuthor>
+    <navMap>
+        <!-- 2.01 NCX: playOrder is optional -->
+        <navPoint id="ch1">
+            <navLabel>
+                <text>Cadavre Exquis</text>
+            </navLabel>
+            <content src="Text/text1.xhtml"/>
+        </navPoint>
+        
+    </navMap>
+</ncx>
