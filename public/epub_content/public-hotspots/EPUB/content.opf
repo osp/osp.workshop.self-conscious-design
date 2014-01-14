@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package xmlns="http://www.idpf.org/2007/opf" version="3.0" unique-identifier="uid" xml:lang="en-US" prefix="cc: http://creativecommons.org/ns#">
+    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+        <dc:identifier id="uid">osp.workshop.self-conscious-design.public-hotspots</dc:identifier>
+        <dc:title>Public Hotspots</dc:title>
+        <dc:creator>OSP - HEAD - felicien </dc:creator>
+        <dc:language>en-GB</dc:language>
+        <dc:date>2014-01-13</dc:date>
+        <meta property="dcterms:modified">2014-01-13T13:22:00Z</meta>
+ 	<meta name="cover" content="cover_image"/>
+        <!-- rights expressions for the work as a whole -->
+        <dc:rights>This work is shared with the public using the Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0) license http://creativecommons.org/licenses/by-sa/3.0/ and the Free Art license, http://artlibre.org/licence/lal/en .</dc:rights>
+    </metadata> 
+    <manifest>
+	<!--<item id="index" href="index.xhtml" media-type="application/xhtml+xml" />-->
+	<item id="description" href="description.xhtml" media-type="application/xhtml+xml" />
+	<item id="content" href="content.xhtml" properties="scripted" media-type="application/xhtml+xml" />
+	<item id="nav" href="nav.xhtml" properties="nav" media-type="application/xhtml+xml" />
+	<item id="ip213" href="213.xhtml" properties="scripted" media-type="application/xhtml+xml" />
+	<item id="ip41" href="41.xhtml" properties="scripted" media-type="application/xhtml+xml" />
+	<item id="ip113" href="113.xhtml" properties="scripted" media-type="application/xhtml+xml" />
+	<item id="ip118" href="118.xhtml" properties="scripted" media-type="application/xhtml+xml" />
+	<item id="ip130" href="130.xhtml" properties="scripted" media-type="application/xhtml+xml" />
+	<item id="ip182" href="182.xhtml" properties="scripted" media-type="application/xhtml+xml" />
+	<item id="ip125" href="125.xhtml" properties="scripted" media-type="application/xhtml+xml" />
+    <item id="css" href="styles/public.css" media-type="text/css" />
+
+    <item id="cover_image" href="img/cover.png" media-type="image/png" properties="cover-image"/>
+
+    <item id="bullshit0" href="img/bg-header.png" media-type="image/png" />
+    <item id="bullshit1" href="img/l_youporn_black.png" media-type="image/png" />
+    <item id="bullshit2" href="img/10.jpg" media-type="image/jpeg" />
+    <item id="bullshit3" href="img/reportsSprite.png" media-type="image/png" />
+    <item id="bullshit4" href="img/sprites.png" media-type="image/png" />
+    <item id="bullshit5" href="img/iconNew.png" media-type="image/png" />
+    <item id="bullshit6" href="img/8.jpg" media-type="image/jpeg" />
+    <item id="bullshit7" href="img/1.jpg" media-type="image/jpeg" />
+    <item id="bullshit8" href="img/6.jpg" media-type="image/jpeg" />
+    <item id="bullshit9" href="img/14.jpg" media-type="image/jpeg" />
+    <item id="bullshit10" href="img/11.jpg" media-type="image/jpeg" />
+    <item id="bullshit12" href="img/13.jpg" media-type="image/jpeg" />
+    <item id="bullshit13" href="img/3.jpg" media-type="image/jpeg" />
+    <item id="bullshit14" href="img/12.jpg" media-type="image/jpeg" />
+    <item id="bullshit23" href="img/9.jpg" media-type="image/jpeg" />
+    <item id="bullshit28" href="img/88x31_RTA-5042-1996-1400-1577-RTA_d.gif" media-type="image/gif" />
+    <item id="bullshit29" href="img/ApprovedASACPmember.gif" media-type="image/gif" />
+    <item id="bullshit30" href="img/FFF_50.png" media-type="image/png" />
+    <item id="bullshit31" href="img/g+1.png" media-type="image/png" />
+    <item id="bullshit33" href="img/5.jpg" media-type="image/jpeg" />
+    <item id="bullshit35" href="img/tweetButton.png" media-type="image/png" />
+    <item id="bullshit36" href="img/pagination-gradient-x.png" media-type="image/png" />
+    <item id="bullshit37" href="img/2013_xmas-title.png" media-type="image/png" />
+    <item id="bullshit42" href="img/image2871091.jpg" media-type="image/jpeg" />
+    <item id="bullshit43" href="img/image2103301.gif" media-type="image/gif" />
+    <item id="bullshit44" href="img/3D4351_50.png" media-type="image/png" />
+    <item id="bullshit45" href="img/arrow-icon.png" media-type="image/png" />
+    <item id="bullshit46" href="img/new-logo.png" media-type="image/png" />
+    <item id="bullshit47" href="img/image2103311.gif" media-type="image/gif" />
+    <item id="bullshit48" href="img/photo2.png" media-type="image/png" />
+    <item id="bullshit49" href="img/photo3.jpg" media-type="image/jpeg" />
+    <item id="bullshit50" href="img/photo4.jpg" media-type="image/jpeg" />
+    <item id="bullshit51" href="img/bottel.png" media-type="image/png" />
+    <item id="bullshit52" href="img/bg.jpg" media-type="image/jpeg" />
+    <item id="bullshit53" href="img/logo.png" media-type="image/png" />
+    <item id="bullshit54" href="img/bg_bottom.jpg" media-type="image/jpeg" />
+    <item id="bullshit55" href="img/bg.png" media-type="image/png" />
+    <item id="bullshit56" href="img/black_transparent.png" media-type="image/png" />
+    <item id="bullshit57" href="img/product.png" media-type="image/png" />
+    <item id="bullshit58" href="img/top.png" media-type="image/png" />
+    <item id="bullshit59" href="img/middle.png" media-type="image/png" />
+    <item id="bullshit60" href="img/form_bg.jpg" media-type="image/jpeg" />
+    <item id="bullshit61" href="img/lock.jpg" media-type="image/jpeg" />
+    <item id="bullshit62" href="img/bottom.png" media-type="image/png" />
+    <item id="bullshit63" href="img/photo.jpg" media-type="image/jpeg" />
+    <item id="bullshit64" href="img/arrow_small.png" media-type="image/png" />
+    <item id="bullshit65" href="img/hline.jpg" media-type="image/jpeg" />
+    <item id="bullshit66" href="img/vline.jpg" media-type="image/jpeg" />
+    <item id="bullshit67" href="img/photo5.jpg" media-type="image/jpeg" />
+    <item id="bullshit68" href="img/arrow.png" media-type="image/png" />
+    <item id="bullshit69" href="img/special.png" media-type="image/png" />
+    <item id="bullshit70" href="img/coins.jpg" media-type="image/jpeg" />
+    <item id="bullshit71" href="img/grey.jpg" media-type="image/jpeg" />
+    <item id="bullshit72" href="img/pad.jpg" media-type="image/jpeg" />
+    <item id="bullshit73" href="img/order_foot.jpg" media-type="image/jpeg" />
+    <item id="bullshit74" href="img/Bdd4PlJIAAApYRI.jpg" media-type="image/jpg" />
+    <item id="bullshit75" href="img/1-14-75.png" media-type="image/png" />
+    <item id="bullshit76" href="img/plus3.gif" media-type="image/gif" />
+    <item id="bullshit77" href="img/6201881-9265666.jpg" media-type="image/jpeg" />
+    <item id="bullshit78" href="img/5489239-8187222.jpg" media-type="image/jpeg" />
+    <item id="bullshit79" href="img/5400661-8057066.jpg" media-type="image/jpeg" />
+    <item id="bullshit80" href="img/5400662-8057067.jpg" media-type="image/jpeg" />
+    <item id="bullshit81" href="img/mgal-2339341.jpg" media-type="image/jpeg" />
+    <item id="bullshit82" href="img/mgal-2339307.jpg" media-type="image/jpeg" />
+    <item id="bullshit83" href="img/minus.gif" media-type="image/gif" />
+    <item id="bullshit84" href="img/plus.gif" media-type="image/gif" />
+    <item id="bullshit85" href="img/mgal-2101565.jpg" media-type="image/jpeg" />
+    <item id="bullshit86" href="img/mgal-2101625.jpg" media-type="image/jpeg" />
+    <item id="bullshit87" href="img/mgal-2101703.jpg" media-type="image/jpeg" />
+    <item id="bullshit88" href="img/mgal-2101759.jpg" media-type="image/jpeg" />
+    <item id="bullshit89" href="img/overlay-button2.png" media-type="image/png" />
+    <item id="bullshit90" href="img/avatar_11a9a41db162_16.png" media-type="image/png" />
+    <item id="bullshit91" href="img/avatar_1f4de31b90f0_16.png" media-type="image/png" />
+    <item id="bullshit92" href="img/avatar_74e5809d9b41_16.png" media-type="image/png" />
+    <item id="bullshit93" href="img/avatar_6e010f39a1b8_16.png" media-type="image/png" />
+    <item id="bullshit94" href="img/avatar_17cdf4daa38b_16.png" media-type="image/png" />
+    <item id="bullshit95" href="img/avatar_4bc45d05405c_16.png" media-type="image/png" />
+    <item id="bullshit96" href="img/avatar_514fc13d9b59_16.png" media-type="image/png" />
+    <item id="bullshit97" href="img/avatar_51953b7061ad_16.png" media-type="image/png" />
+    <item id="bullshit98" href="img/avatar_59c84bd4ef03_16.png" media-type="image/png" />
+    <item id="bullshit99" href="img/avatar_54bddc2c5ea0_16.png" media-type="image/png" />
+    <item id="bullshit100" href="img/avatar_5103dc9aae5d_16.png" media-type="image/png" />
+    <item id="bullshit101" href="img/avatar_fdb9a85cc29b_16.png" media-type="image/png" />
+    <item id="bullshit102" href="img/avatar_0e38d70b8377_16.png" media-type="image/png" />
+    <item id="bullshit103" href="img/avatar_0a577d5b8194_16.png" media-type="image/png" />
+    <item id="bullshit105" href="img/avatar_106e68f92c01_16.png" media-type="image/png" />
+    <item id="bullshit106" href="img/avatar_8c79a91ca1a6_16.png" media-type="image/png" />
+    <item id="bullshit107" href="img/avatar_56f2c739590e_16.png" media-type="image/png" />
+    <item id="bullshit108" href="img/avatar_0cf7a48f2b93_16.png" media-type="image/png" />
+    <item id="bullshit109" href="img/avatar_4adb3fbc076f_16.png" media-type="image/png" />
+    <item id="bullshit111" href="img/avatar_981a26aeb659_16.png" media-type="image/png" />
+    <item id="bullshit112" href="img/avatar_fc8132af468d_16.png" media-type="image/png" />
+    <item id="bullshit113" href="img/avatar_5570f31ebc85_16.png" media-type="image/png" />
+    <item id="bullshit114" href="img/avatar_24bc9c9a565c_16.png" media-type="image/png" />
+    <item id="bullshit115" href="img/avatar_6bb86319a578_16.png" media-type="image/png" />
+    <item id="bullshit116" href="img/avatar_6d6616f65f25_16.png" media-type="image/png" />
+    <item id="bullshit117" href="img/avatar_113feedc05dd_16.png" media-type="image/png" />
+    <item id="bullshit118" href="img/avatar_4a0ab7e65e7b_16.png" media-type="image/png" />
+    <item id="bullshit119" href="img/avatar_b2689050fe78_16.png" media-type="image/png" />
+    <item id="bullshit120" href="img/avatar_209fedb2f81a_16.png" media-type="image/png" />
+    <item id="bullshit121" href="img/avatar_b261f5d1053d_16.png" media-type="image/png" />
+    <item id="bullshit122" href="img/avatar_c220aa73a9e0_16.png" media-type="image/png" />
+    <item id="bullshit123" href="img/avatar_590968fab2a9_16.png" media-type="image/png" />
+    <item id="bullshit124" href="img/avatar_274e8a25c672_16.png" media-type="image/png" />
+    <item id="bullshit125" href="img/avatar_7bc2d8237da3_16.png" media-type="image/png" />
+    <item id="bullshit126" href="img/avatar_879998e9d600_16.png" media-type="image/png" />
+    <item id="bullshit127" href="img/avatar_64d8072b14b5_16.png" media-type="image/png" />
+    <item id="bullshit128" href="img/avatar_b1907a0b1fc0_16.png" media-type="image/png" />
+    <item id="bullshit129" href="img/avatar_b7088d34d83d_16.png" media-type="image/png" />
+    <item id="bullshit130" href="img/avatar_ae9cbd63f7ca_16.png" media-type="image/png" />
+    <item id="bullshit131" href="img/avatar_37f220264740_16.png" media-type="image/png" />
+    <item id="bullshit132" href="img/avatar_a0628647a69c_16.png" media-type="image/png" />
+    <item id="bullshit133" href="img/avatar_3d9d88f0587f_24.png" media-type="image/png" />
+    <item id="bullshit134" href="img/avatar_35db3caae213_24.png" media-type="image/png" />
+    <item id="bullshit135" href="img/avatar_caefcf8198ea_24.png" media-type="image/png" />
+    <item id="bullshit136" href="img/avatar_fdd57c68a8c7_24.png" media-type="image/png" />
+    <item id="bullshit137" href="img/avatar_497263f12ee6_24.png" media-type="image/png" />
+    <item id="bullshit138" href="img/avatar_0b40f0b4b066_24.png" media-type="image/png" />
+    <item id="bullshit139" href="img/avatar_8e23d6ed0f81_24.png" media-type="image/png" />
+    <item id="bullshit140" href="img/avatar_81ac1531cfd6_24.png" media-type="image/png" />
+    <item id="bullshit141" href="img/avatar_d07723116ffd_24.png" media-type="image/png" />
+    <item id="bullshit142" href="img/avatar_f0862003d4bc_24.png" media-type="image/png" />
+    <item id="bullshit143" href="img/avatar_589834033ff6_24.png" media-type="image/png" />
+    <item id="bullshit144" href="img/avatar_583bd6996a10_24.png" media-type="image/png" />
+    <item id="bullshit146" href="img/avatar_4cf2f1aa9651_24.png" media-type="image/png" />
+    <item id="bullshit148" href="img/avatar_a55437f12167_24.png" media-type="image/png" />
+    <item id="bullshit149" href="img/avatar_f52baf3ae93f_24.png" media-type="image/png" />
+    <item id="bullshit151" href="img/avatar_60ade34a7881_24.png" media-type="image/png" />
+    <item id="bullshit152" href="img/avatar_b2fb28985bbf_24.png" media-type="image/png" />
+    <item id="bullshit153" href="img/hqdefault.jpg" media-type="image/jpeg" />
+    <item id="bullshit154" href="img/avatar_e55e4bc53f2d_24.png" media-type="image/png" />
+    <item id="bullshit155" href="img/avatar_54ea3ac86de8_24.png" media-type="image/png" />
+    <item id="bullshit156" href="img/avatar_5b8e18471142_24.png" media-type="image/png" />
+    <item id="bullshit157" href="img/avatar_d3cd3be6ffdc_24.png" media-type="image/png" />
+    <item id="bullshit158" href="img/avatar_c55ae5feb330_24.png" media-type="image/png" />
+    <item id="bullshit159" href="img/avatar_52e9d196b285_24.png" media-type="image/png" />
+    <item id="bullshit160" href="img/avatar_5a4e920cf90c_24.png" media-type="image/png" />
+    <item id="bullshit161" href="img/avatar_e561dcbd3de9_24.png" media-type="image/png" />
+    <item id="bullshit162" href="img/avatar_a512b52a3814_24.gif" media-type="image/gif" />
+    <item id="bullshit163" href="img/avatar_692d27800ec0_24.png" media-type="image/png" />
+    <item id="bullshit164" href="img/avatar_56377ed12d4e_24.png" media-type="image/png" />
+    <item id="bullshit165" href="img/avatar_db3b12ed0e58_24.png" media-type="image/png" />
+    <item id="bullshit166" href="img/avatar_7f66e1f7f0fb_24.png" media-type="image/png" />
+    <item id="bullshit167" href="img/avatar_b482f7ba65fe_24.png" media-type="image/png" />
+    <item id="bullshit168" href="img/avatar_a8e09c08aafb_24.png" media-type="image/png" />
+    <item id="bullshit169" href="img/avatar_1b2b77ab12b1_24.png" media-type="image/png" />
+    <item id="bullshit170" href="img/avatar_dc2cc02d076a_24.png" media-type="image/png" />
+    <item id="bullshit171" href="img/avatar_44c5f6665b35_24.png" media-type="image/png" />
+    <item id="bullshit172" href="img/tumblr_my46hlZdIj1ralxhxo1_400.jpg" media-type="image/jpeg" />
+    <item id="bullshit173" href="img/tumblr_mwu3u9VVaB1sfotnbo1_400.gif" media-type="image/gif" />
+    <item id="bullshit174" href="img/tumblr_mq3fn0E7p71rzhrhzo1_400.jpg" media-type="image/jpeg" />
+    <item id="bullshit175" href="img/tumblr_mn46179Vff1rnvb0co1_400.gif" media-type="image/gif" />
+    <item id="bullshit176" href="img/tumblr_m1h9ozGz0C1qdj7i6o1_400.jpg" media-type="image/jpeg" />
+    <item id="bullshit177" href="img/tumblr_m4c1no5Aix1ruoh7ao1_400.gif" media-type="image/gif" />
+    <item id="bullshit178" href="img/tumblr_mubuqesWHG1sugau9o1_400.jpg" media-type="image/jpeg" />
+    <item id="bullshit191" href="img/avatar_323b8b9cae62_24.png" media-type="image/png" />
+    <item id="bullshit195" href="img/avatar_e9e5e0fe1231_24.png" media-type="image/png" />
+    <item id="bullshit196" href="img/avatar_cc5e9efea7b5_24.png" media-type="image/png" />
+    <item id="bullshit197" href="img/avatar_917fec07aaf5_24.png" media-type="image/png" />
+    <item id="bullshit198" href="img/avatar_cf359cadc27b_24.png" media-type="image/png" />
+    <item id="bullshit199" href="img/avatar_ecf273ae4229_24.png" media-type="image/png" />
+    <item id="bullshit200" href="img/header-bg.png" media-type="image/png" />
+    <item id="bullshit201" href="img/header-h2-bg.png" media-type="image/png" />
+    <item id="bullshit202" href="img/text-bg.png" media-type="image/png" />
+    <item id="bullshit203" href="img/permalink.png" media-type="image/png" />
+    <item id="bullshit204" href="img/photo-bg.png" media-type="image/png" />
+    <item id="bullshit205" href="img/video-bg.png" media-type="image/png" />
+    <item id="bullshit206" href="img/video-projector.png" media-type="image/png" />
+    <item id="bullshit207" href="img/video-top.png" media-type="image/png" />
+    <item id="bullshit208" href="img/video-projector-anim.gif" media-type="image/gif" />
+    <item id="bullshit209" href="img/footer-bg.png" media-type="image/png" />
+    <item id="bullshit210" href="img/tumblr-logo.png" media-type="image/png" />
+    <item id="bullshit211" href="img/search-bg.png" media-type="image/png" />
+    <item id="bullshit212" href="img/footer-controls.png" media-type="image/png" />
+    <item id="bullshit213" href="img/nav-older-bg.png" media-type="image/png" />
+    <item id="bullshit214" href="img/nav-older.png" media-type="image/png" />
+    <item id="bullshit215" href="img/nav-newer-bg.png" media-type="image/png" />
+    <item id="bullshit216" href="img/header-following.png" media-type="image/png" />
+    <item id="bullshit218" href="img/avatar-bg.png" media-type="image/png" />
+    <item id="bullshit219" href="img/tumblr_mywqbb7vdB1qb5gkjo3_400.gif" media-type="image/gif" />
+    <item id="bullshit220" href="img/tumblr_mywqbb7vdB1qb5gkjo1_400.gif" media-type="image/gif" />
+    <item id="bullshit221" href="img/tumblr_mywqbb7vdB1qb5gkjo4_400.gif" media-type="image/gif" />
+    <item id="bullshit222" href="img/tumblr_mywqbb7vdB1qb5gkjo2_400.gif" media-type="image/gif" />
+    <item id="bullshit223" href="img/tumblr_mxbep12bsY1qmtcvxo3_r1_400.gif" media-type="image/gif" />
+    <item id="bullshit224" href="img/tumblr_mxbep12bsY1qmtcvxo4_r1_250.gif" media-type="image/gif" />
+    <item id="bullshit225" href="img/tumblr_mxbep12bsY1qmtcvxo5_r1_250.gif" media-type="image/gif" />
+
+
+	<item id="miso-bold" href="fonts/miso-bold.otf" media-type="font/opentype" />
+	<item id="miso-regular" href="fonts/miso-regular.otf" media-type="font/opentype" />
+	<item id="miso-light" href="fonts/miso-light.otf" media-type="font/opentype" />
+    </manifest>
+    <spine>     
+	<!--<itemref idref="index" />-->
+	<itemref idref="description" />        
+	<itemref idref="content" /> 
+    <itemref idref="nav" />  
+	<itemref idref="ip213" />   
+	<itemref idref="ip41" />   
+	<itemref idref="ip113" />
+	<itemref idref="ip118" />
+	<itemref idref="ip130" />
+	<itemref idref="ip182" />
+	<itemref idref="ip125" />
+    </spine>    
+</package>

@@ -1,0 +1,33 @@
+@font-face {
+    font-family: "miso";
+    src: url('../fonts/miso-regular.otf');
+}
+@font-face {
+    font-family: "miso";
+    font-style: italic;
+    src: url('../fonts/miso-light.otf');
+}
+@font-face {
+    font-family: "miso";
+    font-weight: bold;
+    src: url('../fonts/miso-bold.otf');
+}
+body{
+	font-family: miso;
+	color : #008080;
+}
+
+h1{
+	color: #ff0060;
+}
+
+b{
+	color: #ff0060;
+}
+
+a{
+    color: #ff0060;    
+}
+
+img{
+}

@@ -23,9 +23,16 @@
             ul {
                 list-style: none;
             }
+            
+            h1 {
+                font-size: 64px;
+                font-weight: normal;
+                margin-bottom: 48px;
+            }
         </style>
     </head>
     <body>
+        <h1>Sharing epubs on <a href="{{ address }}">{{ address }}</a></h1>
         <ul>
             {% for generated_epub in generated_epubs %}
                 <li><a href="{{ generated_epub.link }}">{{ generated_epub.name }}</a></li>

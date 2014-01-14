@@ -7,6 +7,7 @@
         <dc:language>en-GB</dc:language>
         <dc:date>2014-01-06</dc:date>
         <meta property="dcterms:modified">2014-01-06T15:28:00Z</meta>
+        <meta name="cover" content="cover-image"/>
         <!-- rights expressions for the work as a whole -->
         <dc:rights>This work is shared with the public using the Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0) license http://creativecommons.org/licenses/by-sa/3.0/ and the Free Art license, http://artlibre.org/licence/lal/en .</dc:rights>
     </metadata> 
@@ -14,9 +15,14 @@
         <item id="content" href="content.xhtml" media-type="application/xhtml+xml" properties="scripted"/>
         <item id="nav" href="nav.xhtml" properties="nav" media-type="application/xhtml+xml" />
         <item id="css" href="styles/style.css" media-type="text/css" />
-	<item id="jquery" href="js/jquery.js" media-type="text/javascript" />
-	<item id="jqueryui" href="js/jquery-ui.js" media-type="text/javascript" />
-	<item id="wall-street-rally-chaplin" href="images/wall-street-rally-chaplin.jpg" media-type="image/jpeg" />
+	     <item id="jquery" href="js/jquery.js" media-type="text/javascript" />
+        <item id="century" href="fonts/CenturySchL-Roma.otf" media-type="application/vnd.ms-opentype" />
+        <item id="centurybold" href="fonts/CenturySchL-Bold.otf" media-type="application/vnd.ms-opentype" />
+        <item id="lm" href="fonts/lmmonolt10-regular.otf" media-type="application/vnd.ms-opentype" />
+        <item id="lmb" href="fonts/lmmono10-regular.otf" media-type="application/vnd.ms-opentype" />
+        <item id="lmb2" href="fonts/lmmonolt10-bold.otf" media-type="application/vnd.ms-opentype" />
+        <item id="lmr" href="fonts/lmroman10-regular.otf" media-type="application/vnd.ms-opentype" />
+        <item id="cover-image" href="images/cover.jpg" media-type="image/jpeg" />
         <!-- ncx included for 2.0 reading system compatibility: -->
         <item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml" />
     </manifest>
