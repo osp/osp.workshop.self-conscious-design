@@ -1,0 +1,70 @@
+@charset "UTF-8";
+@namespace "http://www.w3.org/1999/xhtml";
+@namespace epub "http://www.idpf.org/2007/ops";
+@font-face{font-family:IM_FELL_ITAL; src:url(../font/IM_FELL_DW_Pica_Italic.otf)format(opentype);}
+@font-face{font-family:IM_FELL; src:url(../font/IM_FELL_DW_Pica_Roman.otf)format(opentype);}
+
+body {
+    margin-left: 6em;
+    margin-right: 16em;
+    color: black;    
+    font-family: IM_FELL, serif; 
+    font-size: 1.2em;   
+    background-color: rgb(255,255,255);
+    line-height: 1.4em;
+    margin-left:20%;
+    margin-right:20%;
+}
+
+h2 {
+    margin-top: 5em;
+    margin-bottom: 2em;
+}
+
+h3 {
+    margin-top: 3em;
+}
+
+
+span.lnum {
+    float: right;
+    color: gray;
+    font-size : 90%;
+}
+
+a.noteref {    
+    color: rgb(215,215,195);
+    text-decoration: none;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+}
+
+.ital{   
+    font-family: IM_FELL_ITAL, serif;    
+}
+
+
+*[epub|type~='dedication'] {
+    padding-left: 2em;
+}
+.lista {
+    
+    margin-left:30%;
+    margin-right:30%;
+}
+
+
+p.dropcap:first-letter {
+    float: left;
+    font-size: 64px;
+    line-height: 60px;
+    padding: 4px 4px 0px 2px;    
+}
+
+p.indent {
+    text-indent: 32px;
+}
+
+table, tr, th, td {
+    border: none;
+}

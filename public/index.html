@@ -25,12 +25,16 @@
     </head>
 <body>
 	<div id="fb-root"></div>
-	<fb:login-button id="FB_login"></fb:login-button>
+	<div id="readerInfos">
+		<fb:login-button id="FB_login"></fb:login-button>
+	</div>
+
 	<script>
 
 		var shrinkBarId; // intervaled function’s id
 		var friends = new Array();
-		var friendMeterSpeed = 10; // the lower the faster
+		var totalInitialFriends;
+		var friendMeterSpeed = 500; // the lower the faster
 
 		window.fbAsyncInit = function() {
 			FB.init({
@@ -70,9 +74,10 @@
 				if (response.status === 'connected') {
 					toggleFBLogin(false);
 					FB.api('/me/friends', {fields: 'name'}, function(friends) {
+						totalInitialFriends = friends.data.length;
 						setFriendsArray(friends);
 						debug_displayFriends();
-						document.getElementById("friendMeter-bar").style.width = "98%";
+						document.getElementById("friendMeter-bar").style.width = "95%";
 						setFriendMeterCounterHTML();
 						shrinkBarId = setInterval(shrinkBar, friendMeterSpeed);
 					});
@@ -85,13 +90,13 @@
 
 		function toggleFBLogin(_displayLogin){
 			if (_displayLogin){
-				document.getElementById("FB_login").style.display = "block";
+				document.getElementById("readerInfos").style.display = "block";
 				document.getElementById("FB_logout").style.visibility = "hidden";
 				document.getElementById("readiumContainer").style.display = "none";
 				document.getElementById("friendMeter").style.visibility = "hidden";
 				document.getElementById("friendMeter").style.height = "0px";
 			}else {
-				document.getElementById("FB_login").style.display = "none";
+				document.getElementById("readerInfos").style.display = "none";
 				document.getElementById("FB_logout").style.visibility = "visible";
 				document.getElementById("readiumContainer").style.display = "block";
 				document.getElementById("friendMeter").style.visibility = "visible";
@@ -109,9 +114,27 @@
 			// FRIEND LOST !
 			if (parseInt(elem.style.width) <= 0){
 				displayLostFriend();
-				setFriendMeterCounterHTML();
 				if (friends.length > 0){
+					document.getElementById("friendMeter-cross").style.backgroundImage = "url(../images/FBCross_small.gif)";
+
+					setTimeout(function(){
+						setFriendMeterCounterHTML();
+					}, 1000);
+
+					setTimeout(function(){
+						document.getElementById("friendMeter-cross").style.backgroundImage = "url(../images/FBCross.png)"
+					}, 2500);
 					elem.style.width = "98%";
+
+				} else if (friends.length == 0){
+					document.getElementById("friendMeter-cross").style.backgroundImage = "url(../images/FBCross_small.gif)";
+
+					setTimeout(function(){
+						setFriendMeterCounterHTML();
+					}, 1000);
+
+					clearInterval(shrinkBarId);
+
 				} else {
 					clearInterval(shrinkBarId);
 				}
@@ -126,7 +149,11 @@
 		}
 
 		function setFriendMeterCounterHTML(){
-			document.getElementById("friendMeter-counter-text").innerHTML = friends.length;
+			if (friends.length > 0){
+				document.getElementById("friendMeter-counter-text").innerHTML = friends.length+"/"+totalInitialFriends;
+			} else {
+				document.getElementById("friendMeter-counter-text").innerHTML = "Sorry ! You’re too asocial to have Facebook friends";
+			}
 		}
 
 		function FB_logout(){
@@ -211,9 +238,8 @@
 			<!-- Friend Meter --!>
 			<div id="friendMeter">
 				<div id="friendMeter-bar"></div>
-				<div id="friendMeter-counter">
-					<div id= "friendMeter-counter-text"></div>
-				</div>
+				<div id="friendMeter-cross"></div>
+				<div id= "friendMeter-counter-text"></div>
 				<div id="friendMeter-friendData">
 					<div id= "friendMeter-friendData-text"></div>
 				</div>

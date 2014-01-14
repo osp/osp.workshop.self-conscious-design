@@ -18,6 +18,41 @@
             </navLabel>
             <content src="Text/text1.xhtml"/>
         </navPoint>
+
+        <navPoint id="ch2">
+            <navLabel>
+                <text>Cadavre Exquis</text>
+            </navLabel>
+            <content src="Text/text2.xhtml"/>
+        </navPoint>
+
+        <navPoint id="ch3">
+            <navLabel>
+                <text>Cadavre Exquis</text>
+            </navLabel>
+            <content src="Text/text3.xhtml"/>
+        </navPoint>
+
+        <navPoint id="ch4">
+            <navLabel>
+                <text>Cadavre Exquis</text>
+            </navLabel>
+            <content src="Text/text4.xhtml"/>
+        </navPoint>
+
+        <navPoint id="ch5">
+            <navLabel>
+                <text>Cadavre Exquis</text>
+            </navLabel>
+            <content src="Text/text5.xhtml"/>
+        </navPoint>
+
+        <navPoint id="ch6">
+            <navLabel>
+                <text>Cadavre Exquis</text>
+            </navLabel>
+            <content src="Text/text6.xhtml"/>
+        </navPoint>
         
     </navMap>
 </ncx>

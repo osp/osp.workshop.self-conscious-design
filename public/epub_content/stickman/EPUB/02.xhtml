@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"
+	xmlns:epub="http://www.idpf.org/2007/ops">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Stickman | panel 2</title>
+  <link rel="stylesheet" href="styles/jquery.mobile-git.min.css" />
+  <script type="text/javascript" src="scripts/jquery-1.10.2.min.js"></script>
+  <script type="text/javascript" src="scripts/jquery.mobile-git.min.js"></script>
+  <script type="text/javascript">
+		// <![CDATA[
+   			$(document).ready (function () {
+				var scene = document.getElementById('scene');
+				var parallax = new Parallax(scene);
+
+				$(window).on("orientationchange", function( event ) {
+				  if(event.orientation == "landscape"){
+					document.location.href = "03.xhtml";
+				  }
+				});
+
+			});
+   		// ]]>
+  </script>
+<!-- Behavioral Meta Data -->
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+
+	<!-- Styles -->
+	<link rel="stylesheet" type="text/css" href="styles/styles.css" />
+
+</head>
+<body>
+	<!-- <h1 id="orientation">orientationchange Not Supported on this Device.</h1> -->
+   <script type="text/javascript" src="scripts/parallax.js"></script>
+   <div id="panelTop"></div><div id="panelRight"></div><div id="panelBottom"></div><div id="panelLeft"></div>
+   <div id="container" class="container">
+		<ul id="scene" class="scene">
+			<li class="layer" data-depth="0.60"><img src="img/02/z2.png" /></li>
+			<li class="layer" data-depth="0.20"><img src="img/02/z1.png" /></li>
+		</ul>
+	</div>
+</body>
+</html>

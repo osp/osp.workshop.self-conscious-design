@@ -9,25 +9,24 @@
   
   <script type="text/javascript">
   //choose words
-  var adjectives=new Array ('The living', 'The logical', 'The secondary', 'The absolute', 'The fashion','The relevent', 'The difficult', 'The immediate', 'The right', 'The intellectual');
-  var subjects=new Array ('logic', 'process', 'time', 'solution', 'problem', 'interest', 'rationalism', 'consideration', 'fact', 'experience');
-  var verbs=new Array ('shall apply to', 'shall remain in', 'shall allow', 'shall escape from', 'shall assign', 'shall become', 'shall depend on', 'shall guard', 'shall succeed in', 'shall dismiss');
-  var adjectivesTwo=new Array ('living', 'logical', 'secondary', 'absolute', 'fashion', 'relevent', 'difficult', 'immediate', 'wrong', 'intellectual');
-  var nouns=new Array ('logic', 'process', 'time', 'solution', 'problem', 'interest', 'rationalism', 'consideration', 'fact', 'experience');
+  var adjectives=new Array ('The living', 'The logical', 'The secondary', 'The absolute', 'The fashion','The relevent', 'The difficult', 'The immediate', 'The right', 'The intellectual', 'The waking');
+  var subjects=new Array ('logic', 'process', 'time', 'solution', 'problem', 'interest', 'rationalism', 'consideration', 'fact', 'experience', 'birth', 'death', 'present', 'solution', 'moment', 'sleep', 'view', 'time', 'disproportion', 'tongue', 'secret', 'beginning', 'suggestion');
+  var verbs=new Array ('shall apply to', 'shall remain in', 'shall allow', 'shall escape from', 'shall assign', 'shall become', 'shall depend on', 'shall guard', 'shall succeed in', 'shall dismiss', 'shall refuse', 'shall expect', 'shall oppress', 'shall begin with');
+  var adjectivesTwo=new Array ('the living', 'the logical', 'the secondary', 'the absolute', 'the fashion', 'the relevent', 'the difficult', 'the immediate', 'the wrong', 'the intellectual', 'the waking');
+  var nouns=new Array ('logic.', 'process.', 'time.', 'solution.', 'problem.', 'interest.', 'rationalism.', 'consideration.', 'fact.', 'experience.', 'birth.', 'death.', 'present.', 'solution.', 'moment.', 'sleep.', 'view.', 'time.', 'disproportion.', 'tongue.', 'secret.', 'beginning.', 'suggestion.');
 
   var motCourrant = 1;
   var factor = 40;
 
   var wordOrder=new Array (
-    {'wordList': adjectives, 'elementId': 'adjective'},
     {'wordList': subjects, 'elementId': 'subject'},
     {'wordList': verbs, 'elementId': 'verb'},
     {'wordList': adjectivesTwo, 'elementId': 'adjective_two'},
-    {'wordList': nouns, 'elementId': 'noun'}
+    {'wordList': nouns, 'elementId': 'noun'},
+    {'wordList': adjectives, 'elementId': 'adjective'}
   );
 
   document.addEventListener ('DOMContentLoaded', function () {
-    blessWord ();
     var target=document.getElementById("fullsize");
     target.addEventListener('click', blessWord, false)
   }, false);
@@ -47,7 +46,6 @@
       }
       
       elem = document.getElementById (wordObj.elementId);
-      console.log (elem);
 
       // never the same word twice in a row
       var currentWord = elem.innerText;
@@ -62,11 +60,11 @@
     //change color and size
   function changeColorSize(wordObj){
     var minSize=150;
-    var maxSize=300;
+    var maxSize=400;
     //var colorise=true;
     //var colorArray=['red', 'black', 'green', 'blue'];
     //var fontArray=['Futura-CondensedExtraBold', 'TimesNewRomanPSMT', 'AmericanTypewriter', 'Palatino-Roman'];
-    var fontArray=['Bebas', 'BigMummy', 'Diplomata', 'OldStandard', 'Rye', 'Stencilia', 'UnicaOne'];
+    var fontArray=['lmmonoltBold', 'lmmonoltRegular', 'lmmonoltBoldOblique', 'lmmonoltcondRegular', 'lmmonoltcondOblique'];
 
     $('#' + wordObj.elementId).css({
         //'color':colorArray[Math.floor(Math.random()*colorArray.length)],
@@ -86,13 +84,13 @@
 
 <body class="poem">
   <div style="position:relative;">
-    <img id="fullsize" src="../Image/LinesPaper.jpg" />
-      <span id="adjective" style="position:absolute; top:100px; left:50px"></span>
-      <span id="subject" style="position:absolute; top:200px; left:50px"></span>
-      <span id="verb" style="position:absolute; top:300px; left:50px"></span>
-      <span id="adjective_two" style="position:absolute; top:400px; left:50px"></span>
-      <span id="noun" style="position:absolute; top:500px; left:50px"></span>
-      <a href="../Text/cover.xhtml"><img id="exit" src="../Image/exit.png" style="position:absolute; top:668px; left:432px" /></a>
+    <img id="fullsize" src="../Image/background2.jpg" />
+      <span id="adjective" style="position:absolute; top:100px; left:30px">The exquisite</span>
+      <span id="subject" style="position:absolute; top:200px; left:30px"></span>
+      <span id="verb" style="position:absolute; top:300px; left:30px"></span>
+      <span id="adjective_two" style="position:absolute; top:400px; left:30px"></span>
+      <span id="noun" style="position:absolute; top:500px; left:30px"></span>
+      <a href="../Text/cover.xhtml"><img id="exit" src="../Image/exit.png" style="position:absolute; top:668px; left:422px" /></a>
   </div>
 </body>
 </html>

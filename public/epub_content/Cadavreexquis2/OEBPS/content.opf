@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<package xmlns="http://www.idpf.org/2007/opf" version="3.0" unique-identifier="uid" xml:lang="en-US" prefix="cc: http://creativecommons.org/ns#">
+<package xmlns="http://www.idpf.org/2007/opf" version="3.0" unique-identifier="uid" xml:lang="en-US" prefix="cc: http://creativecommons.org/ns# rendition: http://www.idpf.org/vocab/rendition/#">
     <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
         <dc:identifier id="uid">osp.workshop.self-conscious-design.Cadavreexquis</dc:identifier>
         <dc:title>Cadavre Exquis</dc:title>
@@ -8,6 +8,12 @@
         <dc:date>2014-01-06</dc:date>
         <meta property="dcterms:modified">2014-01-06T15:28:00Z</meta>
         <meta property="rendition:layout">pre-paginated</meta>
+
+        <!-- Kindle fixed layout-->
+        <meta name="fixed-layout" content="true" />
+        <meta name="original-resolution" content="1024x1496" />
+        <meta name="book-type" content="comic" />
+        <meta name="RegionMagnification" content="false" />
         <!-- rights expressions for the work as a whole -->
         <dc:rights>This work is shared with the public using the Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0) license http://creativecommons.org/licenses/by-sa/3.0/ and the Free Art license, http://artlibre.org/licence/lal/en .</dc:rights>
   </metadata>
@@ -17,13 +23,30 @@
     <item id="toc" href="Text/toc.xhtml" media-type="application/xhtml+xml" properties="nav" />
     <item id="cover" href="Text/cover.xhtml" media-type="application/xhtml+xml" />
     <item id="text1" href="Text/text1.xhtml" media-type="application/xhtml+xml" properties="scripted"/>
+    <item id="text2" href="Text/text2.xhtml" media-type="application/xhtml+xml" properties="scripted"/>
+    <item id="text3" href="Text/text3.xhtml" media-type="application/xhtml+xml" properties="scripted"/>
+    <item id="text4" href="Text/text4.xhtml" media-type="application/xhtml+xml" properties="scripted"/>
+    <item id="text5" href="Text/text5.xhtml" media-type="application/xhtml+xml" properties="scripted"/>
+    <item id="text6" href="Text/text6.xhtml" media-type="application/xhtml+xml" properties="scripted"/>
+    
 
-    <item id="cover-image" href="Image/cover.jpg" media-type="image/jpeg" properties="cover-image"/>
-    <item id="background-image" href="Image/LinesPaper.jpg" media-type="image/jpeg"/>
+    <item id="cover-image" href="Image/cover.png" media-type="image/png" properties="cover-image"/>
     <item id="icon-exit" href="Image/exit.png" media-type="image/png"/>
+    <item id="background1" href="Image/background1.jpg" media-type="image/jpeg"/>
+    <item id="background2" href="Image/background2.jpg" media-type="image/jpeg"/>
+    <item id="background3" href="Image/background3.jpg" media-type="image/jpeg"/>
+    <item id="background5" href="Image/background5.jpg" media-type="image/jpeg"/>
+    <item id="background8" href="Image/background8.jpg" media-type="image/jpeg"/>
+    <item id="background9" href="Image/background9.jpg" media-type="image/jpeg"/>
 
     <item id="style_css" href="Style/style.css" media-type="text/css"/>
     <item id="js_jquery-2.0.3.min" href="JS/jquery-2.0.3.min.js" media-type="text/javascript"/>
+
+    <item id="lmmonoltBold" href="Font/lmmonoltBold.otf" media-type="application/x-font-opentype" />
+    <item id="lmmonoltBoldOblique" href="Font/lmmonoltBoldOblique.otf" media-type="application/x-font-opentype" />
+    <item id="lmmonoltRegular" href="Font/lmmonoltRegular.otf" media-type="application/x-font-opentype" />
+    <item id="lmmonoltcondRegular" href="Font/lmmonoltcondRegular.otf" media-type="application/x-font-opentype" />
+    <item id="lmmonoltcondOblique" href="Font/lmmonoltcondOblique.otf" media-type="application/x-font-opentype" />
 
      <!-- ncx included for 2.0 reading system compatibility: -->
     <item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml" />
@@ -32,5 +55,10 @@
 <spine toc="ncx">
     <itemref idref="cover" />
     <itemref idref="text1" />
+    <itemref idref="text2" />
+    <itemref idref="text3" />
+    <itemref idref="text4" />
+    <itemref idref="text5" />
+    <itemref idref="text6" />
   </spine>
 </package>
