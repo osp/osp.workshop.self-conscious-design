@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" xmlns:epub="http://www.idpf.org/2007/ops">
+<head>
+  <title></title>
+  <meta name="viewport" content="width=512, height=748" />
+  <link href="../Style/style.css" rel="stylesheet" type="text/css"/>
+  <script src="../JS/jquery-2.0.3.min.js" type="text/javascript"></script>
+  
+  <script type="text/javascript">
+  //choose words
+  var adjectives=new Array ('The important', 'The long', 'The current', 'The human', 'The strange','The greatest', 'The new', 'The capricious', 'The incredible', 'The psychic');
+  var subjects=new Array ('conclusion', 'hand', 'boundary', 'cage', 'utility', 'common sense', 'civilization', 'pretext', 'progress', 'mind', 'importance', 'seriousness', 'event', 'observer', 'circumstance', 'consequence', 'hope', 'anxiety', 'illusion', 'parenthesis', 'equilibrium', 'idea', 'effect', 'subjectivism');
+  var verbs=new Array ('shall seek', 'shall confirm to', 'shall appear', 'shall bring', 'shall develop', 'shall extend', 'shall empower', 'shall deal with', 'shall recover', 'shall conceal', 'shall owe to', 'shall retain', 'shall show', 'shall function');
+  var adjectivesTwo=new Array ('the important', 'the long', 'the current', 'the human', 'the strange','the greatest', 'the new', 'the capricious', 'the incredible', 'the psychic');
+  var nouns=new Array ('conclusion.', 'hand.', 'boundary.', 'cage.', 'utility.', 'common sense.', 'civilization.', 'pretext.', 'progress.', 'mind.', 'importance.', 'seriousness.', 'event.', 'observer.', 'circumstance.', 'consequence.', 'hope.', 'anxiety.', 'illusion.', 'parenthesis.', 'equilibrium.', 'idea.', 'effect.', 'subjectivism.');
+
+  var motCourrant = 1;
+  var factor = 40;
+
+  var wordOrder=new Array (
+    {'wordList': verbs, 'elementId': 'verb'},
+    {'wordList': adjectivesTwo, 'elementId': 'adjective_two'},
+    {'wordList': nouns, 'elementId': 'noun'},
+    {'wordList': adjectives, 'elementId': 'adjective'},
+    {'wordList': subjects, 'elementId': 'subject'}
+  );
+
+  document.addEventListener ('DOMContentLoaded', function () {
+    var target=document.getElementById("fullsize");
+    target.addEventListener('click', blessWord, false)
+  }, false);
+
+  var elem = null
+
+  var blessWord = function () {
+    event.preventDefault();
+    if (wordOrder.length > 0) {
+      var wordObj = wordOrder.shift ();
+      wordOrder.push (wordObj);
+
+      changeColorSize(wordObj);
+      motCourrant++;
+      if (motCourrant === 6) {
+        motCourrant = 1;
+      }
+      
+      elem = document.getElementById (wordObj.elementId);
+
+      // never the same word twice in a row
+      var currentWord = elem.innerText;
+      var newWord = wordObj.wordList[Math.floor(Math.random()*wordObj.wordList.length)]
+      while (newWord === currentWord) {
+        newWord = wordObj.wordList[Math.floor(Math.random()*wordObj.wordList.length)];
+      }
+      elem.innerText = newWord;
+    }
+  }
+
+    //change color and size
+  function changeColorSize(wordObj){
+    var minSize=150;
+    var maxSize=400;
+    //var colorise=true;
+    //var colorArray=['red', 'black', 'green', 'blue'];
+    //var fontArray=['Futura-CondensedExtraBold', 'TimesNewRomanPSMT', 'AmericanTypewriter', 'Palatino-Roman'];
+    var fontArray=['lmmonoltBold', 'lmmonoltRegular', 'lmmonoltBoldOblique', 'lmmonoltcondRegular', 'lmmonoltcondOblique'];
+
+    $('#' + wordObj.elementId).css({
+        //'color':colorArray[Math.floor(Math.random()*colorArray.length)],
+        'font-family':fontArray[Math.floor(Math.random()*fontArray.length)],
+        'font-size': (minSize + (Math.floor(Math.random()*(maxSize-minSize)))) + '%'
+    });
+  }
+  function getRandomInt(min, max){
+    return Math.floor(Math.random()*(max-min+1))+min;
+  }
+  $(document).ready(function(){
+    changeColorSize();
+  });
+
+  </script>
+</head>
+
+<body class="poem">
+  <div style="position:relative;">
+    <img id="fullsize" src="../Image/background3.jpg" />
+    <div id="poemTwo">
+      <span id="adjective" style="position:absolute; top:100px; left:30px"></span>
+      <span id="subject" style="position:absolute; top:200px; left:30px">corpse</span>
+      <span id="verb" style="position:absolute; top:300px; left:30px"></span>
+      <span id="adjective_two" style="position:absolute; top:400px; left:30px"></span>
+      <span id="noun" style="position:absolute; top:500px; left:30px"></span>
+    </div>
+<!--      <a href="../Text/cover.xhtml"><img id="exit" src="../Image/exit.png" style="position:absolute; top:668px; left:30px" /></a> -->
+  </div>
+</body>
+</html>

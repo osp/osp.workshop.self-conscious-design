@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" xmlns:epub="http://www.idpf.org/2007/ops">
+<head>
+  <title></title>
+  <meta name="viewport" content="width=512, height=748" />
+  <link href="../Style/style.css" rel="stylesheet" type="text/css"/>
+  <script src="../JS/jquery-2.0.3.min.js" type="text/javascript"></script>
+  
+  <script type="text/javascript">
+  //choose words
+  var adjectives=new Array ('The relative', 'The hard', 'The glorious', 'The obscure', 'The same','The lost', 'The satisfied', 'The agnizing', 'The quick', 'The inestimabl', 'The easy');
+  var subjects=new Array ('enterprise', 'order', 'poet', 'scholar', 'success', 'route', 'critique', 'dream', 'activity', 'attention', 'assurance', 'sign', 'consciousness', 'sanction', 'phenomenon', 'interference', 'tendency', 'disorientation', 'condition', 'clue', 'question', 'possibility', 'name', 'everything');
+  var verbs=new Array ('shall present', 'shall lead to', 'shall regret', 'shall discuss', 'shall exclude', 'shall read', 'shall open', 'shall stop', 'shall prevail', 'shall exist in', 'shall happen to', 'shall kill', 'shall wish', 'shall tolerate');
+  var adjectivesTwo=new Array ('the relative', 'the hard', 'the glorious', 'the obscure', 'the same','the lost', 'the satisfied', 'the agnizing', 'the quick', 'the inestimabl', 'the easy');
+  var nouns=new Array ('enterprise.', 'order.', 'poet.', 'scholar.', 'success.', 'route.', 'critique.', 'dream.', 'activity.', 'attention.', 'assurance.', 'sign.', 'consciousness.', 'sanction.', 'phenomenon.', 'interference.', 'tendency.', 'disorientation.', 'condition.', 'clue.', 'question.', 'possibility.', 'name.', 'everything.');
+
+  var motCourrant = 1;
+  var factor = 40;
+
+  var wordOrder=new Array (
+    {'wordList': adjectives, 'elementId': 'adjective'},
+    {'wordList': subjects, 'elementId': 'subject'},
+    {'wordList': verbs, 'elementId': 'verb'},
+    {'wordList': adjectivesTwo, 'elementId': 'adjective_two'},
+    {'wordList': nouns, 'elementId': 'noun'}
+  );
+
+  document.addEventListener ('DOMContentLoaded', function () {
+    var target=document.getElementById("fullsize");
+    target.addEventListener('click', blessWord, false)
+  }, false);
+
+  var elem = null
+
+  var blessWord = function () {
+    event.preventDefault();
+    if (wordOrder.length > 0) {
+      var wordObj = wordOrder.shift ();
+      wordOrder.push (wordObj);
+
+      changeColorSize(wordObj);
+      motCourrant++;
+      if (motCourrant === 6) {
+        motCourrant = 1;
+      }
+      
+      elem = document.getElementById (wordObj.elementId);
+
+      // never the same word twice in a row
+      var currentWord = elem.innerText;
+      var newWord = wordObj.wordList[Math.floor(Math.random()*wordObj.wordList.length)]
+      while (newWord === currentWord) {
+        newWord = wordObj.wordList[Math.floor(Math.random()*wordObj.wordList.length)];
+      }
+      elem.innerText = newWord;
+    }
+  }
+
+    //change color and size
+  function changeColorSize(wordObj){
+    var minSize=150;
+    var maxSize=400;
+    //var colorise=true;
+    //var colorArray=['red', 'black', 'green', 'blue'];
+    //var fontArray=['Futura-CondensedExtraBold', 'TimesNewRomanPSMT', 'AmericanTypewriter', 'Palatino-Roman'];
+    var fontArray=['lmmonoltBold', 'lmmonoltRegular', 'lmmonoltBoldOblique', 'lmmonoltcondRegular', 'lmmonoltcondOblique'];
+
+    $('#' + wordObj.elementId).css({
+        //'color':colorArray[Math.floor(Math.random()*colorArray.length)],
+        'font-family':fontArray[Math.floor(Math.random()*fontArray.length)],
+        'font-size': (minSize + (Math.floor(Math.random()*(maxSize-minSize)))) + '%'
+    });
+  }
+  function getRandomInt(min, max){
+    return Math.floor(Math.random()*(max-min+1))+min;
+  }
+  $(document).ready(function(){
+    changeColorSize();
+  });
+
+  </script>
+</head>
+
+<body class="poem">
+  <div style="position:relative;">
+    <img id="fullsize" src="../Image/background8.jpg" />
+      <span id="adjective" style="position:absolute; top:100px; left:30px"></span>
+      <span id="subject" style="position:absolute; top:200px; left:30px"></span>
+      <span id="verb" style="position:absolute; top:300px; left:30px"></span>
+      <span id="adjective_two" style="position:absolute; top:400px; left:30px"></span>
+      <span id="noun" style="position:absolute; top:500px; left:30px">wine</span>
+      <a href="../Text/cover.xhtml"><img id="exit" src="../Image/exit.png" style="position:absolute; top:668px; left:422px" /></a>
+  </div>
+</body>
+</html>
