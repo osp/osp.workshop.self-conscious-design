@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"
+	xmlns:epub="http://www.idpf.org/2007/ops">
+	<head>
+		<meta charset="utf-8"></meta>
+		<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'/>
+
+		<title>Un Epub dont vous êtes le manipulateur</title>
+		<link rel="stylesheet" type="text/css" href="css/styleSwipe.css" class="day" title="day"/> 
+
+		<style>
+
+		<!-- Swipe 2 required styles !-->
+
+		.swipe {
+		  overflow: hidden;
+		  visibility: hidden;
+		  position: relative;
+		}
+		.swipe-wrap {
+		  overflow: hidden;
+		  position: relative;
+		}
+		.swipe-wrap > div {
+		  float:left;
+		  width:100%;
+		  position: relative;
+		}
+
+		<!-- END required styles !-->
+
+		</style>
+
+
+</head>
+
+	<body style="background: linear-gradient( to bottom, white, #cccccc);">
+		<div class="entete">  		
+		<h1>Un Epub dont vous êtes le caresseur</h1>
+		</div>
+		<div>
+		<h2>A little more interactive chapter</h2>
+		<h3>In this chapter, you could test the possiblity to swipe some images.</h3><br />
+		</div>
+  		<div>
+	<h4>Ten shades of grey !</h4></div>
+
+	<div id='mySwipe' style='min-width:200px; margin:0 auto' class='swipe'>
+  	<div class='swipe-wrap'>
+      <div><b><img src="Images/rond.png" /></b></div>
+    <div><b><img src="Images/rond1.png" /></b></div>
+    <div><b><img src="Images/rond2.png" /></b></div>
+    <div><b><img src="Images/rond3.png" /></b></div>
+    <div><b><img src="Images/rond4.png" /></b></div>
+    <div><b><img src="Images/rond5.png" /></b></div>
+    <div><b><img src="Images/rond6.png" /></b></div>
+    <div><b><img src="Images/rond7.png" /></b></div>
+    <div><b><img src="Images/rond8.png" /></b></div>
+    <div><b><img src="Images/rond9.png" /></b></div>
+    <div><b><img src="Images/rond10.png" /></b></div>
+    <div><b><img src="Images/rond9.png" /></b></div>
+    <div><b><img src="Images/rond8.png" /></b></div>
+    <div><b><img src="Images/rond7.png" /></b></div>
+    <div><b><img src="Images/rond6.png" /></b></div>
+    <div><b><img src="Images/rond5.png" /></b></div>
+    <div><b><img src="Images/rond4.png" /></b></div>
+    <div><b><img src="Images/rond3.png" /></b></div>
+    <div><b><img src="Images/rond2.png" /></b></div>
+    <div><b><img src="Images/rond1.png" /></b></div>
+
+   </div>
+</div>
+
+
+
+<div style='text-align:center; padding-top:10px;'>
+  
+  <button onclick='mySwipe.prev()'>prev</button>
+  <button onclick='mySwipe.next()'>next</button>
+
+</div>
+	<div class="link_footer">	Choose between this
+   			 <a href="EpubStory4.xhtml">link </a><br />
+			or this
+ 			 <a href="EpubStory2.xhtml">one</a><br />
+		You don't know where your'e going, but the Epub knows.
+  		</div>
+
+<!-- Styles <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>-->
+
+<script src='scripts/swipe.js'></script>
+<script>
+
+<!-- pure JS-->
+var elem = document.getElementById('mySwipe');
+window.mySwipe = Swipe(elem, {
+   <!-- startSlide: 10,
+   // auto: 3000,
+   // continuous: true,
+   // disableScroll: true,
+   // stopPropagation: true,
+   // callback: function(index, element) {},
+   // transitionEnd: function(index, element) {}-->
+});
+
+<!-- with jQuery
+// window.mySwipe = $('#mySwipe').Swipe().data('Swipe');-->
+
+</script>
+	</body>
+</html>

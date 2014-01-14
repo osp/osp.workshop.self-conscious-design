@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"
+	xmlns:epub="http://www.idpf.org/2007/ops">
+	<head>
+		<meta charset="utf-8"></meta>
+		<title>Effet de Parallaxe</title>
+		<link rel="stylesheet" type="text/css" href="css/parallaxe.css" class="day" title="day"/> 
+
+	<!-- Behavioral Meta Data -->
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+
+	</head>
+
+<body>
+
+  	<div class="entete">
+	<h1>Un Epub dont vous êtes le testeur</h1>
+  	</div>
+	 
+	<h2>This is a test for a script named " Parallax.js ", <br/>created by Matthew Wagerfield</h2>	
+	 
+
+	<div id="container" class="container">
+		<ul id="scene" class="scene">
+			<li class="layer" data-depth="1.00"><img src="Images/layer1.png" /></li>
+			<li class="layer" data-depth="0.80"><img src="Images/layer2.png" /></li>
+			<li class="layer" data-depth="0.60"><img src="Images/layer3.png" /></li>
+			<li class="layer" data-depth="0.40"><img src="Images/layer4.png" /></li>
+			<li class="layer" data-depth="0.20"><img src="Images/layer5.png" /></li>
+			<li class="layer" data-depth="0.00"><img src="Images/layer6.png" /></li>
+		</ul>
+	</div>
+
+		
+	<!-- Scripts -->
+	<script src="scripts/parallax.js"></script>
+	<script>
+	var scene = document.getElementById('scene');
+	var parallax = new Parallax(scene);
+	</script> 
+
+	<p> It follows your moves and give a impression of deep depth.</p>
+  	<div class="link_footer">
+    	<a href="EpubStory3.xhtml">Get somewhere else in the Epub</a><br />
+ 
+    	<a href="EpubStory6.xhtml">A funny link</a><br />
+  	</div>
+</body>
+</html>

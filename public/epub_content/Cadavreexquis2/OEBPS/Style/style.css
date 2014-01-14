@@ -3,17 +3,28 @@
 
 body{width:512px; height:748px; margin:0; background-repeat:no-repeat; background-size:contain;}
 
-
 img{display:block; position:absolute; margin:0;}
 #fullsize{top:0; left:0; width:512px; height:748px;}
 #exit{top:0; left:0; width:60px; height:60px;}
 
-@font-face{font-family:Bebas; src:url(../Font/BEBAS.ttf)format(truetype);}
-@font-face{font-family:BigMummy; src:url(../Font/BigMummy.ttf)format(truetype);}
-@font-face{font-family:Diplomata; src:url(../Font/Diplomata.ttf)format(truetype);}
-@font-face{font-family:OldStandard; src:url(../Font/OldStandard.ttf)format(truetype);}
-@font-face{font-family:Rye; src:url(../Font/Rye.ttf)format(truetype);}
-@font-face{font-family:Stencilia; src:url(../Font/Stencilia.ttf)format(truetype);}
-@font-face{font-family:UnicaOne; src:url(../Font/UnicaOne.ttf)format(truetype);}
+@font-face{font-family:lmmonoltRegular; src:url(../Font/lmmonoltRegular.otf)format(opentype);}
+@font-face{font-family:lmmonoltBold; src:url(../Font/lmmonoltBold.otf)format(opentype);}
+@font-face{font-family:lmmonoltBoldOblique; src:url(../Font/lmmonoltBoldOblique.otf)format(opentype);}
+@font-face{font-family:lmmonoltcondRegular; src:url(../Font/lmmonoltcondRegular.otf)format(opentype);}
+@font-face{font-family:lmmonoltcondOblique; src:url(../Font/lmmonoltcondOblique.otf)format(opentype);}
 
 span{font-family:"AmericanTypewriter", "Avenir-Book", "sans-serif";}
+span{font-size:50px;}
+#myName{font-size:24px;}
+
+#poemTwo{-webkit-transform:rotateY(180deg);
+			-moz-transform:rotateY(180deg);
+			}
+
+#poemThree{-webkit-transform:rotate(-90deg);
+			-moz-transform:rotate(-90deg);
+			}
+
+#poemFour{-webkit-transform:rotate(-90deg);
+			-moz-transform:rotate(-90deg);
+			}
