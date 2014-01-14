@@ -2,18 +2,22 @@
 @namespace "http://www.w3.org/1999/xhtml";
 @namespace epub "http://www.idpf.org/2007/ops";
 
+@font-face{font-family:DroidSansMono; src:url('../fonts/DroidSansMono.otf') format('opentype');}
+
+@font-face{font-family:Balthazar; src:url('../fonts/Balthazar-Regular.otf') format('opentype');}
+
 body {
     margin-left: 6em;
     margin-right: 16em;
     color: black;   
-    font-family: 'Balthazar', serif;
+    font-family: Balthazar, serif;
     background-color: rgb(242,242,242);
     line-height: 1.5em;
 }
 
 h1 {
 margin-left: -0.5em;
-font-family: 'Droid Sans Mono', sans-serif;
+font-family: DroidSansMono, sans-serif;
 font-size: 5em;
    
 line-height: 1.5em;
