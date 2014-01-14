@@ -9,6 +9,7 @@ body {
     font-family: times, 'times new roman', serif;    
     background-color: rgb(255,255,245);
     line-height: 1.5em;
+
 }
 
 h2 {
@@ -38,4 +39,27 @@ a.noteref {
 
 *[epub|type~='dedication'] {
     padding-left: 2em;
+}
+
+.cellule {
+    float:right;
+}
+
+img {
+    display: block;
+}
+
+.bis {
+    display: none;
+}
+
+.story{
+    position: relative;
+    float:right;
+    width: 20%;
+}
+
+a, a:active, a:visited {
+    text-decoration: none;
+    color: black;
 }

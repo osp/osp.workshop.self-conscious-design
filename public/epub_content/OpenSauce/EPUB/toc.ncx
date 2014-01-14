@@ -2,10 +2,10 @@
 <ncx xmlns:ncx="http://www.daisy.org/z3986/2005/ncx/" xmlns="http://www.daisy.org/z3986/2005/ncx/"
     version="2005-1" xml:lang="en">
     <head>
-        <meta name="dtb:uid" content="osp.workshop.self-conscious-design.ground-zero"/>
+        <meta name="dtb:uid" content="osp.workshop.self-conscious-design.OpenSauce"/>
     </head>
     <docTitle>
-        <text>Ground zero</text>
+        <text>OpenSauce</text>
     </docTitle>
     <navMap>
         <!-- 2.01 NCX: playOrder is optional -->
@@ -13,7 +13,7 @@
             <navLabel>
                 <text>I. Welcome</text>
             </navLabel>
-            <content src="content.xhtml#ch1"/>
+            <content src="content.xhtml"/>
         </navPoint>
         
     </navMap>

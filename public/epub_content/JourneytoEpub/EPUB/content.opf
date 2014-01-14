@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package xmlns="http://www.idpf.org/2007/opf" version="3.0" unique-identifier="uid" xml:lang="en-US" prefix="cc: http://creativecommons.org/ns#">
+    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+	<meta name="cover" content="cover-image" />
+        <dc:identifier id="uid">osp.workshop.self-conscious-design.EpubStory</dc:identifier>
+        <dc:title>Epub Story</dc:title>
+        <dc:creator>OSP HEAD</dc:creator>
+        <dc:language>en-GB</dc:language>
+        <dc:date>2014-01-07</dc:date>
+        <meta property="dcterms:modified">2013-11-25T12:47:00Z</meta>
+        <!-- rights expressions for the work as a whole -->
+        <dc:rights>This work is shared with the public using the Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0) license http://creativecommons.org/licenses/by-sa/3.0/ and the Free Art license, http://artlibre.org/licence/lal/en .</dc:rights>
+    </metadata> 
+    <manifest>
+	<item id="cover" href="CoverImage.xhtml" media-type="application/xhtml+xml" />
+        <item id="content" href="EpubStory.xhtml" media-type="application/xhtml+xml" />
+        <item id="content2" href="EpubStory2.xhtml" media-type="application/xhtml+xml"  />
+        <item id="content3" href="EpubStory3.xhtml" media-type="application/xhtml+xml" properties="scripted" />        
+	<item id="content4" href="EpubStory4.xhtml" media-type="application/xhtml+xml" />
+	<item id="content5" href="EpubStory5.xhtml" media-type="application/xhtml+xml" properties="scripted" />
+	<item id="content6" href="EpubStory6.xhtml" media-type="application/xhtml+xml" properties="scripted" />
+        <item id="nav" href="nav.xhtml" properties="nav" media-type="application/xhtml+xml" />
+        <item id="css1" href="css/style.css" media-type="text/css" />
+        <item id="css2" href="css/parallaxe.css" media-type="text/css" />
+        <item id="css3" href="css/styleSwipe.css" media-type="text/css" />
+        <item id="scripts1" href="scripts/parallax.js" media-type="text/javascript" />
+        <item id="scripts2" href="scripts/swipe.js" media-type="text/javascript" />
+        <item id="scripts3" href="scripts/Finger.js" media-type="text/javascript" />
+	<item id="Museo300" href="Font/Museo300-Regular.otf" media-type="font/opentype" />
+	<item id="Museo500" href="Font/Museo500-Regular.otf" media-type="font/opentype" />
+	<item id="Museo700" href="Font/Museo700-Regular.otf" media-type="font/opentype" />
+	
+        <!-- ncx included for 2.0 reading system compatibility: -->
+        <item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml" />
+	<item id="coverImage" href="Images/Image_cover.jpeg" media-type="image/jpeg" properties ="cover-image" />
+	<item id="jpg1" href="Images/capitaine.jpeg" media-type="image/jpeg" />
+	<item id="png1" href="Images/layer1.png" media-type="image/png" />
+	<item id="png2" href="Images/layer2.png" media-type="image/png" />
+	<item id="png3" href="Images/layer3.png" media-type="image/png" />
+	<item id="png4" href="Images/layer4.png" media-type="image/png" />
+	<item id="png5" href="Images/layer5.png" media-type="image/png" />
+	<item id="png6" href="Images/layer6.png" media-type="image/png" />
+	<item id="png7" href="Images/rond.png" media-type="image/png" />
+	<item id="png17" href="Images/rond1.png" media-type="image/png" />
+	<item id="png8" href="Images/rond2.png" media-type="image/png" />
+	<item id="png9" href="Images/rond3.png" media-type="image/png" />
+	<item id="png10" href="Images/rond4.png" media-type="image/png" />
+	<item id="png11" href="Images/rond5.png" media-type="image/png" />
+	<item id="png12" href="Images/rond6.png" media-type="image/png" />		
+	<item id="png13" href="Images/rond7.png" media-type="image/png" />
+	<item id="png14" href="Images/rond8.png" media-type="image/png" />	
+	<item id="png15" href="Images/rond9.png" media-type="image/png" />
+	<item id="png16" href="Images/rond10.png" media-type="image/png" />
+	<item id="gif1" href="Images/layers.gif" media-type="image/gif" />
+	<item id="video1" href="Videos/Peur.mp4" media-type="video/mp4" />
+	<item id="video2" href="Videos/Peur.webm" media-type="video/webm" />
+
+
+    </manifest>
+    <spine toc="ncx">
+	<itemref idref="cover" linear="no" />
+        <itemref idref="content" />
+        <itemref idref="content2" linear="no"/>        
+        <itemref idref="content3" linear="no"/>        
+        <itemref idref="content4" linear="no"/>
+        <itemref idref="content5" linear="no"/>
+        <itemref idref="content6" linear="no"/>
+    </spine>    
+</package>
