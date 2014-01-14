@@ -7,15 +7,17 @@
         <dc:language>en-GB</dc:language>
         <dc:date>2013-12-02</dc:date>
         <meta property="dcterms:modified">2013-11-25T12:47:00Z</meta>
-	<meta property="coverimage"></meta>
+	<meta name="cover" content="cover"/>
         <!-- rights expressions for the work as a whole -->
         <dc:rights>This work is shared with the public using the Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0) license http://creativecommons.org/licenses/by-sa/3.0/ and the Free Art license, http://artlibre.org/licence/lal/en .</dc:rights>
     </metadata> 
     <manifest>
         <item id="content" href="content.xhtml" media-type="application/xhtml+xml" />
-<item id="coverimage" href="coverimage.xhtml" media-type="application/xhtml+xml" />
+<item id="cover" href="coverimage.xhtml" media-type="application/xhtml+xml" />
         <item id="nav" href="nav.xhtml" properties="nav" media-type="application/xhtml+xml" />
         <item id="css" href="styles/ground-zero.css" media-type="text/css" />
+        <item id="coverimage" href="image/bandeau.jpg" media-type="image/jpeg" />
+        <item id="bandeauimage" href="image/cover.jpg" media-type="image/jpeg" />
         <!-- ncx included for 2.0 reading system compatibility: -->
         <item id="ncx" href="ground-zero.ncx" media-type="application/x-dtbncx+xml" />
     </manifest>
