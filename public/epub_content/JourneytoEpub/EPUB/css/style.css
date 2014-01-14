@@ -38,13 +38,19 @@ body {
     	line-height: 2em;
 	}
 	
+div.english {
+	text-align:left;
+	font-weight:500;
+	font-size: 0.8em;
+	background-color:#c2c2c2;
+	}
 
 div.entete {
 	background-color: #f3f3f3;
 	}
 
 div.link_footer {
-	background-color:#f3f3f3 ;
+	background-color:#f5f5f5;
 	color:#463F32;
 	text-align:center;
 	}
@@ -90,9 +96,6 @@ h3 {	color:#9E9E9E;
 			color:#9E9E9E;
 		}
 
-	p{	color:black;
-
-		}
 	div.warning{	color:white;
 			
 			text-align: center;			
