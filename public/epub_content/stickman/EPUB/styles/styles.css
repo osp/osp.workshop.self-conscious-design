@@ -1,0 +1,55 @@
+body {
+  background: white;
+  /*margin: 3%;*/
+}
+
+img {
+  display: block;
+  /*width: 100%;
+  height:100%;*/
+
+}
+
+#panelTop{position:absolute; z-index:-10; width:100%; height:15%; top:0; margin:0 auto; background:black; /*border:40px solid black;*/}
+#panelRight{position:absolute; z-index:-10; width:15%; height:100%; right:0; margin:0 auto; background:black; /*border:40px solid black;*/}
+#panelBottom{position:absolute; z-index:-10; width:100%; height:15%; bottom:0; margin:0 auto; background:black; /*border:40px solid black;*/}
+#panelLeft{position:absolute; z-index:-10; width:15%; height:100%; left:0; margin:0 auto; background:black; /*border:40px solid black;*/}
+
+
+#container{
+  overflow:hidden;
+  /*margin:5%;
+  border:3px solid black;*/
+}
+
+.scene {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.scene img {margin:0 auto; height:100%;}
+
+.text{margin-left:4%; font-size:1.3em; margin: 3% 0 0 6%}
+
+
+/*
+.layer:nth-child(1) {
+  opacity: 0.15;
+}
+.layer:nth-child(2) {
+  opacity: 0.30;
+}
+.layer:nth-child(3) {
+  opacity: 0.45;
+}
+.layer:nth-child(4) {
+  opacity: 0.60;
+}
+.layer:nth-child(5) {
+  opacity: 0.75;
+}
+.layer:nth-child(6) {
+  opacity: 0.90;
+}
+*/

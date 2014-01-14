@@ -11,11 +11,23 @@
         <dc:rights>This work is shared with the public using the Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0) license http://creativecommons.org/licenses/by-sa/3.0/ and the Free Art license, http://artlibre.org/licence/lal/en .</dc:rights>
     </metadata> 
     <manifest>
-        <item id="content" href="content.xhtml" media-type="application/xhtml+xml" />
+        <item id="content" href="content.xhtml" media-type="application/xhtml+xml" properties="scripted" />
         <item id="nav" href="nav.xhtml" properties="nav" media-type="application/xhtml+xml" />
         <item id="css" href="styles/style.css" media-type="text/css" />
+        <item id="jquery" href="js/jquery.js" media-type="text/javascript" />
+        <item id="jqueryui" href="js/jquery-ui.js" media-type="text/javascript" />
         <!-- ncx included for 2.0 reading system compatibility: -->
         <item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml" />
+        <item id="images_10tif_png" href="Images/10tif.png" media-type="image/png" />
+        <item id="images_MacaronFinal_gif" href="Images/MacaronFinal.gif" media-type="image/gif" />
+        <item id="images_gif1_png" href="Images/gif1.png" media-type="image/png" />
+        <item id="images_Macaron2_gif" href="Images/Macaron2.gif" media-type="image/gif" />
+        <item id="images_21tif_png" href="Images/21tif.png" media-type="image/png" />
+        <item id="images_MacaronLundi_gif" href="Images/MacaronLundi.gif" media-type="image/gif" />
+        
+    
+        
+        
     </manifest>
     <spine toc="ncx">
         <itemref idref="content" />        

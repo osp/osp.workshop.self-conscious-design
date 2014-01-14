@@ -74,9 +74,19 @@
 	overflow: hidden;
 	display: block;
 	position: absolute;
-	top: 97%;
+	bottom: 6px;
+	margin-left: 25px;
 	margin-right: 50px;
 	z-index:100;
+}
+
+*#friendMeter-cross {
+	background: url('../images/FBCross.png') no-repeat;
+	height: 40px;
+	width: 22px;
+	position: absolute;
+	display: block;
+	bottom: 1%;
 }
 
 *#friendMeter-counter {
@@ -108,19 +118,14 @@
 
 *#friendMeter-friendData {
 	background: transparent url('../images/friendMeter_friendData.png') center top no-repeat;
-	left: 0;
-	min-width: 300px;
-	min-height: 200px;
 	width: 300px;
 	height: 200px;
-	margin-top: -60px;
-	margin-left: 10px;
 	padding: 0;
 	overflow: hidden;
 	display: block;
 	position: absolute;
-	top: 97%;
-	left: 0px;
+	top: 85%;
+	left: 25px;
 	z-index:100;
 	opacity:0;
 	transition: opacity 0.5s linear;
@@ -136,11 +141,14 @@
 }
 
 #FB_login{
-	position: absolute;
+	position: relative;
 	display: block;
-	top: 50%;
+	top: 80%;
 	left: 50%;
+	margin-left: -35px;
+	margin-top: -10px;
 	visibility: visible;
+	z-index: 100;
 }
 
 #FB_logout{
@@ -155,8 +163,19 @@
 	border: none;
 }
 
+#readerInfos{
+	background: transparent url('../images/AsocialReader_Infos.png') left top no-repeat;
+	position: absolute;
+	display: block;
+	top: 50%;
+	left: 50%;
+	margin-left: -114px;
+	margin-top: -51px;
+	width: 227px;
+	height: 113px;
+	border: none;
+}
+
 #readiumContainer{
 	display: none;
 }
-
-

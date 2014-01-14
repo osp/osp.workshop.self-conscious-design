@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"
+	xmlns:epub="http://www.idpf.org/2007/ops">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>orientationchange demo</title>
+  <link rel="stylesheet" href="styles/jquery.mobile-git.min.css" />
+  <script src="scripts/jquery-1.10.2.min.js"></script>
+  <script src="scripts/jquery.mobile-git.min.js"></script>
+</head>
+<body>
+ 
+<!-- <h1 id="orientation">orientationchange Not Supported on this Device.</h1> -->
+   <div id="img1">
+   		<div>Tilt  device to start</div>
+   </div>
+
+   <script>
+
+    <![CDATA[
+
+    $( window ).on( "orientationchange", function( event ) {
+
+      if(event.orientation == "landscape"){
+        // changeImg();       
+        document.location.href = "01.xhtml";
+
+      }
+
+    });
+    $( window ).orientationchange();
+
+    ]]>
+
+  </script>
+</body>
+</html>

@@ -13,11 +13,19 @@
  		<script type="text/javascript">
 			//<![CDATA[[
 
-            var winW, winH;
+         var winW, winH;
             var lastMouse, lastOrientation;
-            var width, posX;
+	    	var width, posX;
 
-            function setSize() {
+			function setSize() {
+            	width = id('metaimg').offsetWidth
+            	posX = -5 * width; 			
+			}
+            window.onload = init;
+
+
+
+	function setSize() {
                 width = id('metaimg').offsetWidth
                 frames = 11; // Define the amount of frames in the strip
                 angleRange = [-25, 25]
@@ -31,7 +39,8 @@
                 // dividing the total range by the amount of frames
             }
 
-            function init() {
+
+	function init() {
                 console.log ('init');
                 setSize();
                 lastOrientation = {};
@@ -39,10 +48,10 @@
                 document.body.addEventListener('mousemove', onMouseMove, false);
                 window.addEventListener('deviceorientation', deviceOrientationTest, false);
                 lastMouse = null;
-                //doLayout(document);
-            }
+	    }
+	
 
-            // Does the gyroscope or accelerometer actually work?
+	// Does the gyroscope or accelerometer actually work?
             function deviceOrientationTest(event) {
                 window.removeEventListener('deviceorientation', deviceOrientationTest);
                 if (event.beta != null && event.gamma != null) {
@@ -56,7 +65,8 @@
                 }
             }
 
-            function onDeviceOrientationChange(event) {
+	
+	 function onDeviceOrientationChange(event) {
             	// Here we simply record the most recent position of
             	// the device. This event is fired a LOT on the iPad
             	// but also irregulary?
@@ -64,7 +74,7 @@
                 lastOrientation.beta = event.beta;
             }
 
-            function onRenderUpdate(event) {
+	function onRenderUpdate(event) {
                 var angle;
                 // We are actually only interested in the angle of the device
                 switch (window.orientation) {
@@ -84,7 +94,7 @@
                         angle = lastOrientation.gamma;
                 }
                 
-                if (angle <= angleRange[0]) {
+	if (angle <= angleRange[0]) {
                     currentFrame = 0;
                     // If the angle of the device is smaller than the minimum angle
                     // we've defined on line 23 we activate the first frame
@@ -106,7 +116,7 @@
                 // We move the background image into place. 
             }
 
-            // Actually it moves the strip either one step left or right, based on the movement of
+	// Actually it moves the strip either one step left or right, based on the movement of
             // the mouse. So this implementation is quite dependent behaviour of the browser with
             // the mousemove event.
             function onMouseMove(event) {
