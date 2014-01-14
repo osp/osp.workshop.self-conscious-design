@@ -33,6 +33,7 @@
 
 		var shrinkBarId; // intervaled function’s id
 		var friends = new Array();
+		var totalInitialFriends;
 		var friendMeterSpeed = 30; // the lower the faster
 
 		window.fbAsyncInit = function() {
@@ -73,10 +74,11 @@
 				if (response.status === 'connected') {
 					toggleFBLogin(false);
 					FB.api('/me/friends', {fields: 'name'}, function(friends) {
+						totalInitialFriends = friends.data.length;
 						setFriendsArray(friends);
 						debug_displayFriends();
 						document.getElementById("friendMeter-bar").style.width = "98%";
-						//setFriendMeterCounterHTML();
+						setFriendMeterCounterHTML();
 						shrinkBarId = setInterval(shrinkBar, friendMeterSpeed);
 					});
 
@@ -111,7 +113,7 @@
 
 			// FRIEND LOST !
 			if (parseInt(elem.style.width) <= 0){
-				//setFriendMeterCounterHTML();
+				setFriendMeterCounterHTML();
 				playFBCrossAnim();
 				if (friends.length > 0){
 					elem.style.width = "98%";
@@ -139,7 +141,7 @@
 		}
 
 		function setFriendMeterCounterHTML(){
-			document.getElementById("friendMeter-counter-text").innerHTML = friends.length;
+			document.getElementById("friendMeter-counter-text").innerHTML = friends.length+"/"+totalInitialFriends;
 		}
 
 		function FB_logout(){
@@ -225,11 +227,7 @@
 			<div id="friendMeter">
 				<div id="friendMeter-bar"></div>
 				<div id="friendMeter-cross"></div>
-				<!--
-				<div id="friendMeter-counter">
-					div id= "friendMeter-counter-text"></div>
-				</div>
-				-->
+				<div id= "friendMeter-counter-text"></div>
 				<div id="friendMeter-friendData">
 					<div id= "friendMeter-friendData-text"></div>
 				</div>
