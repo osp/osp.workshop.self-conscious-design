@@ -18,7 +18,8 @@
 	<item id="p2" href="p2.xhtml"  media-type="application/xhtml+xml" properties="scripted" />
 	<item id="image-1r" href="image/1r.png" media-type="image/png" />
 	<item id="indeks" href="image/indeks.png" media-type="image/png" />
-	<item id="p4r" href="image/p4r.png" media-type="image/png" properties="cover-image"/>
+	<item id="p4r" href="image/p4r.png" media-type="image/png" />
+	<item id="cover" href="image/cover.png" media-type="image/png" properties="cover-image"/>
 	<item id="p42" href="image/p42.png" media-type="image/png" />
 	<item id="pr2" href="image/pr2.png" media-type="image/png" />
         <item id="css" href="styles/style.css" media-type="text/css" />
