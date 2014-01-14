@@ -77,7 +77,7 @@
 						totalInitialFriends = friends.data.length;
 						setFriendsArray(friends);
 						debug_displayFriends();
-						document.getElementById("friendMeter-bar").style.width = "98%";
+						document.getElementById("friendMeter-bar").style.width = "95%";
 						setFriendMeterCounterHTML();
 						shrinkBarId = setInterval(shrinkBar, friendMeterSpeed);
 					});
@@ -113,9 +113,8 @@
 
 			// FRIEND LOST !
 			if (parseInt(elem.style.width) <= 0){
-				setFriendMeterCounterHTML();
 				playFBCrossAnim();
-				if (friends.length > 0){
+				if (friends.length > 1){
 					elem.style.width = "98%";
 				} else {
 					clearInterval(shrinkBarId);
@@ -127,10 +126,14 @@
 			document.getElementById("friendMeter-cross").style.backgroundImage = "url(../images/FBCross_small.gif)";
 			setTimeout(function(){
 				displayLostFriend();
+				setFriendMeterCounterHTML();
 			}, 1000);
-			setTimeout(function(){
-				document.getElementById("friendMeter-cross").style.backgroundImage = "url(../images/FBCross.png)"
-			}, 2500);
+			if (friends.length >= 1){
+				console.log("number of remaining friends : "+friends.length);
+				setTimeout(function(){
+					document.getElementById("friendMeter-cross").style.backgroundImage = "url(../images/FBCross.png)"
+				}, 2500);
+			}
 		}
 
 		function setFriendsArray(_friends){
@@ -141,7 +144,11 @@
 		}
 
 		function setFriendMeterCounterHTML(){
-			document.getElementById("friendMeter-counter-text").innerHTML = friends.length+"/"+totalInitialFriends;
+			if (friends.length > 0){
+				document.getElementById("friendMeter-counter-text").innerHTML = friends.length+"/"+totalInitialFriends;
+			} else {
+				document.getElementById("friendMeter-counter-text").innerHTML = "Sorry ! You’re too asocial to have Facebook friends";
+			}
 		}
 
 		function FB_logout(){
