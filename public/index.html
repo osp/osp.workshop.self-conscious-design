@@ -25,11 +25,15 @@
     </head>
 <body>
 	<div id="fb-root"></div>
-	<fb:login-button id="FB_login"></fb:login-button>
+	<div id="readerInfos">
+		<fb:login-button id="FB_login"></fb:login-button>
+	</div>
+
 	<script>
 
-		var id; // intervaled function’s id
+		var shrinkBarId; // intervaled function’s id
 		var friends = new Array();
+		var friendMeterSpeed = 30; // the lower the faster
 
 		window.fbAsyncInit = function() {
 			FB.init({
@@ -45,10 +49,11 @@
 			// whenever someone who was previously logged out tries to log in again, the correct case below
 			// will be handled.
 			FB.Event.subscribe('auth.authResponseChange', function(response) {
+				// if we’re not already connected
 				if (response.status === 'not_authorized' || response.status === 'unknown') {
 					FB.login();
-				init();
 				}
+				clearInterval(shrinkBarId);
 				init();
 			});
 		};
@@ -66,19 +71,64 @@
 		function init(){
 			FB.getLoginStatus(function(response) {
 				if (response.status === 'connected') {
-					displayFBLogin(false);
+					toggleFBLogin(false);
 					FB.api('/me/friends', {fields: 'name'}, function(friends) {
 						setFriendsArray(friends);
-						setFriendMeterCounterHTML();
 						debug_displayFriends();
+						document.getElementById("friendMeter-bar").style.width = "98%";
+						//setFriendMeterCounterHTML();
+						shrinkBarId = setInterval(shrinkBar, friendMeterSpeed);
 					});
-					showFriendMeterDiv(true);
 
 				} else {
-					displayFBLogin(true);
-					showFriendMeterDiv(false);
+					toggleFBLogin(true);
 				}
 			});
+		}
+
+		function toggleFBLogin(_displayLogin){
+			if (_displayLogin){
+				document.getElementById("readerInfos").style.display = "block";
+				document.getElementById("FB_logout").style.visibility = "hidden";
+				document.getElementById("readiumContainer").style.display = "none";
+				document.getElementById("friendMeter").style.visibility = "hidden";
+				document.getElementById("friendMeter").style.height = "0px";
+			}else {
+				document.getElementById("readerInfos").style.display = "none";
+				document.getElementById("FB_logout").style.visibility = "visible";
+				document.getElementById("readiumContainer").style.display = "block";
+				document.getElementById("friendMeter").style.visibility = "visible";
+				document.getElementById("friendMeter").style.height = "auto";
+			}
+		}
+
+		function shrinkBar(){
+			var elem = document.getElementById("friendMeter-bar");
+			if (elem.style.width == ""){
+				elem.style.width = "98%";
+			}
+			elem.style.width = parseInt(elem.style.width)-1+"%";
+
+			// FRIEND LOST !
+			if (parseInt(elem.style.width) <= 0){
+				//setFriendMeterCounterHTML();
+				playFBCrossAnim();
+				if (friends.length > 0){
+					elem.style.width = "98%";
+				} else {
+					clearInterval(shrinkBarId);
+				}
+			}
+		}
+
+		function playFBCrossAnim(){
+			document.getElementById("friendMeter-cross").style.backgroundImage = "url(../images/FBCross_small.gif)";
+			setTimeout(function(){
+				displayLostFriend();
+			}, 1000);
+			setTimeout(function(){
+				document.getElementById("friendMeter-cross").style.backgroundImage = "url(../images/FBCross.png)"
+			}, 2500);
 		}
 
 		function setFriendsArray(_friends){
@@ -92,54 +142,8 @@
 			document.getElementById("friendMeter-counter-text").innerHTML = friends.length;
 		}
 
-		function shrinkBar(){
-			var elem = document.getElementById("friendMeter-bar");
-			if (elem.style.width === ""){
-				elem.style.width = "98%";
-			}
-			elem.style.width = parseInt(elem.style.width)-1+"%";
-
-			// FRIEND LOST !
-			if (parseInt(elem.style.width) <= 0){
-				displayLostFriend();
-				setFriendMeterCounterHTML();
-				if (friends.length > 0){
-					elem.style.width = "98%";
-				} else {
-					clearInterval(id);
-				}
-			}
-		}
-
-		function FB_logout(){//check if logout is
+		function FB_logout(){
 			FB.logout();
-		}
-
-		function showFriendMeterDiv(_show){
-			if(_show){
-				// Contenu caché, le montrer
-				document.getElementById("friendMeter").style.visibility = "visible";
-				document.getElementById("friendMeter").style.height = "auto";			// Optionnel rétablir la hauteur
-				id = setInterval(shrinkBar, 10);
-			} else {
-				// Contenu caché, le montrer
-				document.getElementById("friendMeter").style.visibility = "hidden";
-				document.getElementById("friendMeter").style.height = "0px";			// Optionnel rétablir la hauteur
-				clearInterval(id);
-			}
-		}
-
-
-		function displayFBLogin(_displayLogin){
-			if (_displayLogin){
-				document.getElementById("FB_login").style.display = "block";
-				document.getElementById("FB_logout").style.visibility = "hidden";
-				document.getElementById("readiumContainer").style.display = "none";
-			}else {
-				document.getElementById("FB_login").style.display = "none";
-				document.getElementById("FB_logout").style.visibility = "visible";
-				document.getElementById("readiumContainer").style.display = "block";
-			}
 		}
 
 		function displayLostFriend(){
@@ -220,9 +224,12 @@
 			<!-- Friend Meter --!>
 			<div id="friendMeter">
 				<div id="friendMeter-bar"></div>
+				<div id="friendMeter-cross"></div>
+				<!--
 				<div id="friendMeter-counter">
-					<div id= "friendMeter-counter-text"></div>
+					div id= "friendMeter-counter-text"></div>
 				</div>
+				-->
 				<div id="friendMeter-friendData">
 					<div id= "friendMeter-friendData-text"></div>
 				</div>
