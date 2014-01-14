@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<package xmlns="http://www.idpf.org/2007/opf" version="3.0" unique-identifier="uid" xml:lang="en-US" prefix="cc: http://creativecommons.org/ns#">
+    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+        <dc:identifier id="uid">osp.workshop.self-conscious-design.stickman</dc:identifier>
+        <dc:title>Stickman</dc:title>
+        <dc:creator>OSP HEAD</dc:creator>
+        <dc:language>en-GB</dc:language>
+        <dc:date>2014-01-13</dc:date>
+        <meta property="dcterms:modified">2014-01-13T17:57:00Z</meta>
+        
+        <meta property="rendition:layout">pre-paginated</meta>
+        <meta property="rendition:orientation">auto</meta>
+        <meta property="rendition:spread">none</meta>
+        
+        <meta name="cover" content="cover" />
+        <!-- rights expressions for the work as a whole -->
+        <dc:rights>This work is shared with the public using the Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0) license http://creativecommons.org/licenses/by-sa/3.0/ and the Free Art license, http://artlibre.org/licence/lal/en .</dc:rights>
+    </metadata> 
+    <manifest>
+    
+    	<!-- XHTML+XML -->
+        <item id="intro" href="index.xhtml" media-type="application/xhtml+xml" properties="scripted" />
+        <item id="panel-01" href="01.xhtml" media-type="application/xhtml+xml" properties="scripted" />
+        <item id="panel-02" href="02.xhtml" media-type="application/xhtml+xml" properties="scripted" />
+        <item id="panel-03" href="03.xhtml" media-type="application/xhtml+xml" properties="scripted" />
+        <item id="panel-04" href="04.xhtml" media-type="application/xhtml+xml" properties="scripted" />
+        <item id="panel-05" href="05.xhtml" media-type="application/xhtml+xml" properties="scripted" />
+        <item id="panel-06" href="06.xhtml" media-type="application/xhtml+xml" properties="scripted" />
+        <item id="panel-07" href="07.xhtml" media-type="application/xhtml+xml" properties="scripted" />
+        <item id="panel-08" href="08.xhtml" media-type="application/xhtml+xml" properties="scripted" />
+        <item id="panel-09" href="09.xhtml" media-type="application/xhtml+xml" properties="scripted" />
+        <item id="panel-10" href="10.xhtml" media-type="application/xhtml+xml" properties="scripted" />
+        <item id="panel-11" href="11.xhtml" media-type="application/xhtml+xml" properties="scripted" />
+        <item id="nav" href="nav.xhtml" properties="nav" media-type="application/xhtml+xml" />
+        
+        <!-- IMAGES -->
+        <item id="cover" href="img/cover.jpg" media-type="image/jpeg" properties="cover-image" />
+        <item id="css" href="styles/styles.css" media-type="text/css" />
+        <item id="css2" href="styles/jquery.mobile-git.min.css" media-type="text/css" />
+        <item id="ajax-loader" href="styles/ajax-loader.gif" media-type="image/gif" />
+        
+        <!-- SCRIPTS -->
+        <item id="jquery-1.10.2.min" href="scripts/jquery-1.10.2.min.js" media-type="text/javascript" />
+        <item id="jquery" href="scripts/jquery.js" media-type="text/javascript" />
+        <item id="jquery.mobile-git.min" href="scripts/jquery.mobile-git.min.js" media-type="text/javascript" />
+        <item id="parallax" href="scripts/parallax.js" media-type="text/javascript" />
+        <item id="zepto" href="scripts/zepto.js" media-type="text/javascript" />
+        
+        <!-- IMAGES -->
+        <item id="img-01" href="img/01/01.png" media-type="image/png" />
+        <item id="img-01-z2" href="img/01/z2.png" media-type="image/png" />
+        <item id="img-01-z3" href="img/01/z3.jpg" media-type="image/jpeg" />
+        
+        <item id="img-02-z1" href="img/02/z1.png" media-type="image/png" />
+        <item id="img-02-z2" href="img/02/z2.png" media-type="image/png" />
+        
+        <item id="img-03-z1" href="img/03/z1.png" media-type="image/png" />
+        <item id="img-03-z2" href="img/03/z2.jpg" media-type="image/jpeg" />
+        
+        <item id="img-04-z1" href="img/04/z1.png" media-type="image/png" />
+        <item id="img-04-z2" href="img/04/z2.png" media-type="image/png" />
+        
+        <item id="img-05-z2" href="img/05/z2.jpg" media-type="image/jpeg" />
+        
+        <item id="img-06-z2" href="img/06/z2.png" media-type="image/png" />
+        <item id="img-06-z3" href="img/06/z3.png" media-type="image/png" />
+        
+        <item id="img-07-z2" href="img/07/z2.png" media-type="image/png" />
+        <item id="img-07-z3" href="img/07/z3.png" media-type="image/png" />
+        
+        <item id="img-08-z2" href="img/08/z2.png" media-type="image/png" />
+        <item id="img-08-z3" href="img/08/z3.png" media-type="image/png" />
+        
+        <item id="img-09-z2" href="img/09/z2.png" media-type="image/png" />
+        <item id="img-09-z3" href="img/09/z3.png" media-type="image/png" />
+        
+        <item id="img-10" href="img/10/10.png" media-type="image/png" />
+        
+        <item id="img-stickman_p03_bottom_z0" href="img/stickman_p03_bottom_z0.png" media-type="image/png" />
+        <item id="img-stickman_p03_bottom_z1_a" href="img/stickman_p03_bottom_z1_a.png" media-type="image/png" />
+        <item id="img-stickman_p03_bottom_z1_b" href="img/stickman_p03_bottom_z1_b.png" media-type="image/png" />
+        <item id="img-stickman_p03_bottom_z1_c" href="img/stickman_p03_bottom_z1_c.png" media-type="image/png" />
+        <item id="img-stickman_p03_bottom_z1" href="img/stickman_p03_bottom_z1.gif" media-type="image/gif" />
+        <item id="img-stickman_p03_bottom_z1" href="img/stickman_p03_bottom_z1.png" media-type="image/png" />
+        <item id="img-stickman_p03_bottom_z2" href="img/stickman_p03_bottom_z2.png" media-type="image/png" />
+        <item id="img-stickman_p03_bottom_z3" href="img/stickman_p03_bottom_z3.png" media-type="image/png" />
+        
+        <!-- ncx included for 2.0 reading system compatibility: -->
+        <item id="ncx" href="stickman.ncx" media-type="application/x-dtbncx+xml" />
+    </manifest>
+    <spine toc="ncx">
+        <itemref idref="intro" />
+        <itemref idref="panel-01" /> 
+        <itemref idref="panel-02" />
+        <itemref idref="panel-03" />
+        <itemref idref="panel-04" />
+        <itemref idref="panel-05" />
+        <itemref idref="panel-06" />
+        <itemref idref="panel-07" />
+        <itemref idref="panel-08" />
+        <itemref idref="panel-09" />
+        <itemref idref="panel-10" />
+        <itemref idref="panel-11" />
+    </spine>    
+</package>

@@ -11,7 +11,7 @@
         <!-- 2.01 NCX: playOrder is optional -->
         <navPoint id="ch1">
             <navLabel>
-                <text>I. Welcome</text>
+                <text>Bartleby, the Scrivener</text>
             </navLabel>
             <content src="content.xhtml#ch1"/>
         </navPoint>

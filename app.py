@@ -7,6 +7,7 @@ import commands
 
 from flask import Flask, send_from_directory, render_template, jsonify
 
+# A bit hacky but in this way we seem to be getting the IP address on both Ubuntu and OS X:
 try:
     HOST_IP = [ip for ip in socket.gethostbyname_ex(socket.gethostname())[2] if not ip.startswith("127.")][0]
 except:
@@ -26,7 +27,8 @@ def list_generated_epubs():
                     yield {  'name': i, 'link' : "http://%s:5000/epub_content/%s/%s.epub" % (HOST_IP, i, i) }
                     
     generated_epubs = list(find_generated_epubs())
-    return render_template('generated_epubs.html', generated_epubs=generated_epubs)
+    address = "http://%s:5000/" % HOST_IP
+    return render_template('generated_epubs.html', generated_epubs=generated_epubs, address=address)
 
 @app.route("/index.html")
 def static_home():
