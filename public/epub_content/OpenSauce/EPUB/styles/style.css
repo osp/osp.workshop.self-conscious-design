@@ -42,13 +42,11 @@ a.noteref {
 }
 
 .cellule {
-    position: relative;
     float:right;
 }
 
-.cellule img {
-    position: absolute;
-    
+img {
+    display: block;
 }
 
 .bis {
