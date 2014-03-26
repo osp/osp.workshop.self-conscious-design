@@ -7,3 +7,7 @@ for i in $( ls public/epub_content/ | grep -v epub_library.json ); do
     bash zip.sh $i;
 done;
 echo "Done"
+
+echo
+echo "Generating index:"
+python generate_index.py > public/epub_content/epub_library.json

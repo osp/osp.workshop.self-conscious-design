@@ -1,9 +1,76 @@
 {
   "library_epubs": [
     {
-      "url_to_package_doc": "epub_content/vrouwenkiesrecht/21922/content.opf",
-      "title": "Vrouwenkiesrecht"
+      "url_to_package_doc": "epub_content/bartleby/EPUB/content.opf", 
+      "title": "Bartleby"
+    }, 
+    {
+      "url_to_package_doc": "epub_content/Cadavreexquis/OEBPS/content.opf", 
+      "title": "Cadavreexquis"
+    }, 
+    {
+      "url_to_package_doc": "epub_content/Cadavreexquis2/OEBPS/content.opf", 
+      "title": "Cadavreexquis2"
+    }, 
+    {
+      "url_to_package_doc": "epub_content/Cadavreexquis2flex/OEBPS/content.opf", 
+      "title": "Cadavreexquis2Flex"
+    }, 
+    {
+      "url_to_package_doc": "epub_content/clementcoubes/EPUB/ground-zero.opf", 
+      "title": "Clementcoubes"
+    }, 
+    {
+      "url_to_package_doc": "epub_content/external-data-test/EPUB/content.opf", 
+      "title": "External-Data-Test"
+    }, 
+    {
+      "url_to_package_doc": "epub_content/goldenframe-propaganda/EPUB/content.opf", 
+      "title": "Goldenframe-Propaganda"
+    }, 
+    {
+      "url_to_package_doc": "epub_content/ground-zero/EPUB/content.opf", 
+      "title": "Ground-Zero"
+    }, 
+    {
+      "url_to_package_doc": "epub_content/JourneytoEpub/EPUB/content.opf", 
+      "title": "Journeytoepub"
+    }, 
+    {
+      "url_to_package_doc": "epub_content/local-storage-test/EPUB/content.opf", 
+      "title": "Local-Storage-Test"
+    }, 
+    {
+      "url_to_package_doc": "epub_content/OpenSauce/EPUB/content.opf", 
+      "title": "Opensauce"
+    }, 
+    {
+      "url_to_package_doc": "epub_content/paperjs-example/EPUB/content.opf", 
+      "title": "Paperjs-Example"
+    }, 
+    {
+      "url_to_package_doc": "epub_content/public-hotspots/EPUB/content.opf", 
+      "title": "Public-Hotspots"
+    }, 
+    {
+      "url_to_package_doc": "epub_content/salpetriere/EPUB/content.opf", 
+      "title": "Salpetriere"
+    }, 
+    {
+      "url_to_package_doc": "epub_content/self-conscious-epub/EPUB/self-conscious.opf", 
+      "title": "Self-Conscious-Epub"
+    }, 
+    {
+      "url_to_package_doc": "epub_content/stickman/EPUB/stickman.opf", 
+      "title": "Stickman"
+    }, 
+    {
+      "url_to_package_doc": "epub_content/Time-Focus/EPUB/content.opf", 
+      "title": "Time-Focus"
+    }, 
+    {
+      "url_to_package_doc": "epub_content/Unlike-us/OEBPS/content.opf", 
+      "title": "Unlike-Us"
     }
   ]
 }
-
