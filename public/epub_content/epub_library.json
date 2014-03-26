@@ -1,74 +1,92 @@
 {
   "library_epubs": [
     {
+      "epub_download": "epub_content/bartleby/bartleby.epub", 
       "url_to_package_doc": "epub_content/bartleby/EPUB/content.opf", 
       "title": "Bartleby"
     }, 
     {
+      "epub_download": "epub_content/Cadavreexquis/Cadavreexquis.epub", 
       "url_to_package_doc": "epub_content/Cadavreexquis/OEBPS/content.opf", 
       "title": "Cadavreexquis"
     }, 
     {
+      "epub_download": "epub_content/Cadavreexquis2/Cadavreexquis2.epub", 
       "url_to_package_doc": "epub_content/Cadavreexquis2/OEBPS/content.opf", 
       "title": "Cadavreexquis2"
     }, 
     {
+      "epub_download": "epub_content/Cadavreexquis2flex/Cadavreexquis2flex.epub", 
       "url_to_package_doc": "epub_content/Cadavreexquis2flex/OEBPS/content.opf", 
       "title": "Cadavreexquis2Flex"
     }, 
     {
+      "epub_download": "epub_content/clementcoubes/clementcoubes.epub", 
       "url_to_package_doc": "epub_content/clementcoubes/EPUB/ground-zero.opf", 
       "title": "Clementcoubes"
     }, 
     {
+      "epub_download": "epub_content/external-data-test/external-data-test.epub", 
       "url_to_package_doc": "epub_content/external-data-test/EPUB/content.opf", 
       "title": "External-Data-Test"
     }, 
     {
+      "epub_download": "epub_content/goldenframe-propaganda/goldenframe-propaganda.epub", 
       "url_to_package_doc": "epub_content/goldenframe-propaganda/EPUB/content.opf", 
       "title": "Goldenframe-Propaganda"
     }, 
     {
+      "epub_download": "epub_content/ground-zero/ground-zero.epub", 
       "url_to_package_doc": "epub_content/ground-zero/EPUB/content.opf", 
       "title": "Ground-Zero"
     }, 
     {
+      "epub_download": "epub_content/JourneytoEpub/JourneytoEpub.epub", 
       "url_to_package_doc": "epub_content/JourneytoEpub/EPUB/content.opf", 
       "title": "Journeytoepub"
     }, 
     {
+      "epub_download": "epub_content/local-storage-test/local-storage-test.epub", 
       "url_to_package_doc": "epub_content/local-storage-test/EPUB/content.opf", 
       "title": "Local-Storage-Test"
     }, 
     {
+      "epub_download": "epub_content/OpenSauce/OpenSauce.epub", 
       "url_to_package_doc": "epub_content/OpenSauce/EPUB/content.opf", 
       "title": "Opensauce"
     }, 
     {
+      "epub_download": "epub_content/paperjs-example/paperjs-example.epub", 
       "url_to_package_doc": "epub_content/paperjs-example/EPUB/content.opf", 
       "title": "Paperjs-Example"
     }, 
     {
+      "epub_download": "epub_content/public-hotspots/public-hotspots.epub", 
       "url_to_package_doc": "epub_content/public-hotspots/EPUB/content.opf", 
       "title": "Public-Hotspots"
     }, 
     {
+      "epub_download": "epub_content/salpetriere/salpetriere.epub", 
       "url_to_package_doc": "epub_content/salpetriere/EPUB/content.opf", 
       "title": "Salpetriere"
     }, 
     {
+      "epub_download": "epub_content/self-conscious-epub/self-conscious-epub.epub", 
       "url_to_package_doc": "epub_content/self-conscious-epub/EPUB/self-conscious.opf", 
       "title": "Self-Conscious-Epub"
     }, 
     {
+      "epub_download": "epub_content/stickman/stickman.epub", 
       "url_to_package_doc": "epub_content/stickman/EPUB/stickman.opf", 
       "title": "Stickman"
     }, 
     {
+      "epub_download": "epub_content/Time-Focus/Time-Focus.epub", 
       "url_to_package_doc": "epub_content/Time-Focus/EPUB/content.opf", 
       "title": "Time-Focus"
     }, 
     {
+      "epub_download": "epub_content/Unlike-us/Unlike-us.epub", 
       "url_to_package_doc": "epub_content/Unlike-us/OEBPS/content.opf", 
       "title": "Unlike-Us"
     }

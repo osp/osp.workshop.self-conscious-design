@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+        <title>Generated ePubs</title>
+
+        <style type="text/css" >
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            a, a:visited, a:active {
+                color: #FF0000;
+            }
+
+            body {
+                padding: 64px;
+                background-color: #E6E6E6;
+                font-family: Georgia, serif;
+                font-size: 48px;
+            }
+            
+            ul {
+                list-style: none;
+            }
+            
+            h1 {
+                font-size: 64px;
+                font-weight: normal;
+                margin-bottom: 48px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Shared ePubs</h1>
+        <ul id="epub_list">
+
+        </ul>
+    </body>
+    <script src="jquery-1.11.0.min.js"></script>
+    <script src="handlebars-v1.3.0.js"></script>
+    <script id="template" type="text/x-handlebars-template">
+        {{#each library_epubs}}
+            <li><a href="../{{ epub_download }}">{{ title }}</a></li>
+        {{/each}}
+    </script>
+    <script>
+        var templateSource   = $("#template").html();
+        var template = Handlebars.compile(templateSource);
+        $.getJSON( "epub_library.json", function( data ) {
+            $("#epub_list").html(
+                template(data)
+            );
+        });
+    </script>
+</html>

@@ -25,6 +25,7 @@ for i in os.listdir(EPUB_DIR):
             if package:
                 obj['library_epubs'].append( { 
                         'title' : i.replace('_',' ').title(),
+                        'epub_download': os.path.join('epub_content', i, '%s.epub' % i),
                         'url_to_package_doc' : package } )
 
 print json.dumps(obj, indent=2, ensure_ascii=False)
