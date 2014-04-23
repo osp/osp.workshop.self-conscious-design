@@ -15,15 +15,21 @@
 
             body {
                 padding: 64px;
-                background-color: #E6E6E6;
-                font-family: Georgia, serif;
+                background-color: #ffffff;
+                font-family: FreeSerif, times, serif;
                 font-size: 48px;
+            }
+            
+            p {
+                margin-bottom: 1em;
             }
             
             ul {
                 list-style: none;
             }
-            
+            blockquote, ul {
+                margin-bottom: 1em;
+            }
             h1 {
                 font-size: 64px;
                 font-weight: normal;
@@ -32,25 +38,71 @@
         </style>
     </head>
     <body>
-        <h1>Shared ePubs</h1>
-        <ul id="epub_list">
+        <h1>Self-conscious layout</h1>
+        <blockquote>Reader, you have found again the book you were seeking; now you can pick up the broken thread; the smile returns to your lips. But do you imagine it can go on in this way, this story? No, not that of the novel! Yours! How long are you going to let yourself be dragged passively by the plot? You had flung yourself into the action, filled with adventurous impulses: and then? Your function was quickly reduced to that of one who records situations decided by others, who submits to whims, finds himself involved in events that elude his control.</blockquote>
 
-        </ul>
+        <p class="instruction">The following books were constructed in the open ePub format and are available as such. This format is supported by nearly all eReaders. eReading software is available for most platforms: FB Reader is a free and open source option for Android. To view on an iDevice, make sure iBooks is installed. It is possible to download the file on a computer and add it to iTunes, and synch to the iDevice. One can also open the link directly from the device’s browser.</p>
+        
+        <p>Even if the eBooks were checked for conformance to the ePub standard by using the ‘epubcheck’ software, not all devices support all features: the publications have been tested on an iPad running iOS7.</p>
+
+        <ul id="epub_list">
+        
+            <li><a href="../epub_content/bartleby/bartleby.epub">Bartleby</a> Catherine Brand</li>
+        
+            <li><a href="../epub_content/Cadavreexquis2/Cadavreexquis2.epub">Cadavre Exquis</a> Kumiko Kuwabara</li>
+        
+            <li><a href="../epub_content/clementcoubes/clementcoubes.epub">Trapped in the future</a> Clement Coubes</li>
+        
+            <li><a href="../epub_content/goldenframe-propaganda/goldenframe-propaganda.epub">Golden Frame Propaganda</a> Vytautas Jankauskas</li>
+        
+            <!-- <li><a href="../epub_content/ground-zero/ground-zero.epub">Ground zero</a> OSP HEAD</li> -->
+        
+            <li><a href="../epub_content/JourneytoEpub/JourneytoEpub.epub">Epub Story</a> Gaëtan Stierlin</li>
+        
+            <li><a href="../epub_content/OpenSauce/OpenSauce.epub">OpenSauce</a> Sophie Rosko</li>
+        
+            <li><a href="../epub_content/public-hotspots/public-hotspots.epub">Public Hotspots</a> Félicien Goguey</li>
+        
+            <li><a href="../epub_content/salpetriere/salpetriere.epub">la Salpêtriere</a> Marika Magnuszewska</li>
+        
+            <li><a href="../epub_content/stickman/stickman.epub">Stickman</a> Sylvain Joly</li>
+        
+            <li><a href="../epub_content/Time-Focus/Time-Focus.epub">Time Focus</a> Felipe Delgado Lopez</li>
+        
+            <!--<li><a href="../epub_content/Unlike-us/Unlike-us.epub">Unlike Us Reader Remixed</a> Geert Lovink</li>-->
+        
+    </ul>
+    
+    <p>Technical examples</p>
+    <ul>
+            <li><a href="../epub_content/self-conscious-epub/self-conscious-epub.epub">Self-conscious ePub</a> Eric Schrijver for OSP Open Source Publishing</li>
+            
+            <li><a href="../epub_content/paperjs-example/paperjs-example.epub">PaperJS Example</a> OSP HEAD</li>
+            
+            <li><a href="../epub_content/external-data-test/external-data-test.epub">External Data Test</a> OSP HEAD</li>
+            
+            <li><a href="../epub_content/local-storage-test/local-storage-test.epub">Local Storage Test</a> OSP HEAD</li>
+
+    </ul>
+    
+    <p>If you are not afraid to put at risk your Facebook friends, you read the books online in Michael Martin’s interface at http://irrelevantstudio.ch/asocial/</p>
+    
+    <p>OSP for HEAD, Genève, MA Media Design</p>
     </body>
     <script src="jquery-1.11.0.min.js"></script>
     <script src="handlebars-v1.3.0.js"></script>
     <script id="template" type="text/x-handlebars-template">
         {{#each library_epubs}}
-            <li><a href="../{{ epub_download }}">{{ title }}</a></li>
+            <li><a href="../{{ epub_download }}">{{ title }}</a> {{ author }}</li>
         {{/each}}
     </script>
     <script>
         var templateSource   = $("#template").html();
         var template = Handlebars.compile(templateSource);
         $.getJSON( "epub_library.json", function( data ) {
-            $("#epub_list").html(
+            /*$("#epub_list").html(
                 template(data)
-            );
+            );*/
         });
     </script>
 </html>
