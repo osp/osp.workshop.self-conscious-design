@@ -2,8 +2,8 @@
 <package xmlns="http://www.idpf.org/2007/opf" version="3.0" unique-identifier="uid" xml:lang="en-US" prefix="cc: http://creativecommons.org/ns#">
     <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
         <dc:identifier id="uid">osp.workshop.self-conscious-design.ground-zero</dc:identifier>
-        <dc:title>Ground zero</dc:title>
-        <dc:creator>OSP HEAD</dc:creator>
+        <dc:title>Time Focus</dc:title>
+        <dc:creator>OSP HEAD Felipe Delgado Lopez</dc:creator>
         <dc:language>en-GB</dc:language>
         <dc:date>2013-12-02</dc:date>
 	<meta name="cover" content="cover_image"/>
