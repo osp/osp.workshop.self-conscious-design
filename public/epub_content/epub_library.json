@@ -2,93 +2,129 @@
   "library_epubs": [
     {
       "epub_download": "epub_content/bartleby/bartleby.epub", 
+      "author": "OSP HEAD Catherine Brand", 
+      "description": "", 
       "url_to_package_doc": "epub_content/bartleby/EPUB/content.opf", 
       "title": "Bartleby"
     }, 
     {
       "epub_download": "epub_content/Cadavreexquis/Cadavreexquis.epub", 
+      "author": "Kumiko Kuwabara", 
+      "description": "Le Cadavre Exquis with ePub", 
       "url_to_package_doc": "epub_content/Cadavreexquis/OEBPS/content.opf", 
-      "title": "Cadavreexquis"
+      "title": "my Poem"
     }, 
     {
       "epub_download": "epub_content/Cadavreexquis2/Cadavreexquis2.epub", 
+      "author": "Kumiko Kuwabara", 
+      "description": "", 
       "url_to_package_doc": "epub_content/Cadavreexquis2/OEBPS/content.opf", 
-      "title": "Cadavreexquis2"
+      "title": "Cadavre Exquis"
     }, 
     {
       "epub_download": "epub_content/Cadavreexquis2flex/Cadavreexquis2flex.epub", 
+      "author": "Kumiko Kuwabara", 
+      "description": "", 
       "url_to_package_doc": "epub_content/Cadavreexquis2flex/OEBPS/content.opf", 
-      "title": "Cadavreexquis2Flex"
+      "title": "Cadavre Exquis"
     }, 
     {
       "epub_download": "epub_content/clementcoubes/clementcoubes.epub", 
+      "author": "Clement Coubes", 
+      "description": "", 
       "url_to_package_doc": "epub_content/clementcoubes/EPUB/ground-zero.opf", 
-      "title": "Clementcoubes"
+      "title": "Trapped in the future"
     }, 
     {
       "epub_download": "epub_content/external-data-test/external-data-test.epub", 
+      "author": "OSP HEAD", 
+      "description": "", 
       "url_to_package_doc": "epub_content/external-data-test/EPUB/content.opf", 
-      "title": "External-Data-Test"
+      "title": "External Data Test"
     }, 
     {
       "epub_download": "epub_content/goldenframe-propaganda/goldenframe-propaganda.epub", 
+      "author": "OSP HEAD Vytautas JANKAUSKAS", 
+      "description": "", 
       "url_to_package_doc": "epub_content/goldenframe-propaganda/EPUB/content.opf", 
-      "title": "Goldenframe-Propaganda"
+      "title": "Golden Frame Propaganda"
     }, 
     {
       "epub_download": "epub_content/ground-zero/ground-zero.epub", 
+      "author": "OSP HEAD", 
+      "description": "", 
       "url_to_package_doc": "epub_content/ground-zero/EPUB/content.opf", 
-      "title": "Ground-Zero"
+      "title": "Ground zero"
     }, 
     {
       "epub_download": "epub_content/JourneytoEpub/JourneytoEpub.epub", 
+      "author": "OSP HEAD Gaëtan Stierlin", 
+      "description": "", 
       "url_to_package_doc": "epub_content/JourneytoEpub/EPUB/content.opf", 
-      "title": "Journeytoepub"
+      "title": "Epub Story"
     }, 
     {
       "epub_download": "epub_content/local-storage-test/local-storage-test.epub", 
+      "author": "OSP HEAD", 
+      "description": "", 
       "url_to_package_doc": "epub_content/local-storage-test/EPUB/content.opf", 
-      "title": "Local-Storage-Test"
+      "title": "Local Storage Test"
     }, 
     {
       "epub_download": "epub_content/OpenSauce/OpenSauce.epub", 
+      "author": "SophieRosko", 
+      "description": "", 
       "url_to_package_doc": "epub_content/OpenSauce/EPUB/content.opf", 
-      "title": "Opensauce"
+      "title": "OpenSauce"
     }, 
     {
       "epub_download": "epub_content/paperjs-example/paperjs-example.epub", 
+      "author": "OSP HEAD", 
+      "description": "", 
       "url_to_package_doc": "epub_content/paperjs-example/EPUB/content.opf", 
-      "title": "Paperjs-Example"
+      "title": "PaperJS Example"
     }, 
     {
       "epub_download": "epub_content/public-hotspots/public-hotspots.epub", 
+      "author": "OSP - HEAD - felicien ", 
+      "description": "", 
       "url_to_package_doc": "epub_content/public-hotspots/EPUB/content.opf", 
-      "title": "Public-Hotspots"
+      "title": "Public Hotspots"
     }, 
     {
       "epub_download": "epub_content/salpetriere/salpetriere.epub", 
+      "author": "OSP HEAD Marika Magnuszewska", 
+      "description": "", 
       "url_to_package_doc": "epub_content/salpetriere/EPUB/content.opf", 
-      "title": "Salpetriere"
+      "title": "la Salpêtriere"
     }, 
     {
       "epub_download": "epub_content/self-conscious-epub/self-conscious-epub.epub", 
+      "author": "Eric Schrijver for OSP Open Source Publishing", 
+      "description": "", 
       "url_to_package_doc": "epub_content/self-conscious-epub/EPUB/self-conscious.opf", 
-      "title": "Self-Conscious-Epub"
+      "title": "Self-conscious ePub"
     }, 
     {
       "epub_download": "epub_content/stickman/stickman.epub", 
+      "author": "OSP HEAD Sylvain Joly", 
+      "description": "", 
       "url_to_package_doc": "epub_content/stickman/EPUB/stickman.opf", 
       "title": "Stickman"
     }, 
     {
       "epub_download": "epub_content/Time-Focus/Time-Focus.epub", 
+      "author": "OSP HEAD Felipe Delgado Lopez", 
+      "description": "", 
       "url_to_package_doc": "epub_content/Time-Focus/EPUB/content.opf", 
-      "title": "Time-Focus"
+      "title": "Time Focus"
     }, 
     {
       "epub_download": "epub_content/Unlike-us/Unlike-us.epub", 
+      "author": "Geert Lovink", 
+      "description": "The Unlike Us Reader offers a critical examination of social media, bringing together theoretical essays, personal discussions, and artistic manifestos. How can we understand the social media we use everyday, or consciously choose not to use? We know very well that monopolies control social media, but what are the alternatives? While Facebook continues to increase its user population and combines loose privacy restrictions with control over data, many researchers, programmers, and activists turn towards designing a decentralized future. Through understanding the big networks from within, be it by philosophy or art, new perspectives emerge.", 
       "url_to_package_doc": "epub_content/Unlike-us/OEBPS/content.opf", 
-      "title": "Unlike-Us"
+      "title": "Unlike Us Reader Remixed"
     }
   ]
 }
